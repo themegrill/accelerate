@@ -1,0 +1,843 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: accelerate\n"
+"POT-Creation-Date: 2014-06-25 02:08+0545\n"
+"PO-Revision-Date: 2014-08-31 17:40+0100\n"
+"Last-Translator: Gűth Ervin <ervin.guth@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"Language: PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoppá! Nem találjuk az oldalt. "
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "Úgy tűnik, hogy itt nincs semmi. Próbálja meg a keresést."
+
+#: archive.php:34
+#, php-format
+msgid "Author: %s"
+msgstr "Szerző: %s"
+
+#: archive.php:42
+#, php-format
+msgid "Day: %s"
+msgstr "Nap: %s"
+
+#: archive.php:45
+#, php-format
+msgid "Month: %s"
+msgstr "Hónap: %s"
+
+#: archive.php:48
+#, php-format
+msgid "Year: %s"
+msgstr "Év: %s"
+
+#: archive.php:51
+msgid "Asides"
+msgstr "Linkblog"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Képek"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Videók"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Idézetek"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Linkek"
+
+#: archive.php:66 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Archívum"
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Hozzászólások itt: &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Hozzászólás navigáció"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; régebbi hozzászólások"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Újabb hozzászólások &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Hozzászólás lezárva."
+
+#: content-blog-large-image.php:37 content-blog-small-image.php:38
+#: content.php:42 inc/widgets/widgets.php:213
+msgid "Read more"
+msgstr "Tovább"
+
+#: content-page.php:24 content-single.php:27
+msgid "Pages:"
+msgstr "Oldalak:"
+
+#: functions.php:44
+msgid "Primary/Main Menu"
+msgstr "Elsődleges/Főmenü"
+
+#: functions.php:45
+msgid "Footer Menu"
+msgstr "Alsó menü"
+
+#: header.php:93
+msgid "Menu"
+msgstr "Menü"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Layout kiválasztása"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Alapértelmezett layout"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Jobb sidebar"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Bal sidebar"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Oldalsó hasáb nélkül, teljes szélesség"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Oldalsó hasáb nélkül, középen"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr "Téma beállítások"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr "Beállítások mentése"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr "Alapértelmezettek visszaállítása"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Kattints az OK-ra a visszaállításhoz. Minden témabeállítás elvész!"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr "Alapértelmezettek visszaállítva."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr "Beállítások elmentve."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "Nincs fájl kijelölve."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "Feltöltés"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "A teljes médiatámogatáshoz frissítse a Wordpress verzióját."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "Fájl megtekintése"
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr "Nincs ismétlés"
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr "Függőleges ismétlés"
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr "Vízszintes ismétlés"
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr "Mindegyik ismétlése"
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr "Bal felső"
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr "Középen felül"
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr "Jobb felső"
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr "Középen balra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr "Középen"
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr "Középen jobbra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr "Bal alsó"
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr "Alul középen"
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr "Jobb alsó"
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr "Alapértelmezett görgetés"
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr "Rögzített"
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr "Alapértelmezett"
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr "Dőlt"
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr "Félkövér"
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr "Félövér dőlt"
+
+#: inc/functions.php:240 inc/functions.php:281
+msgid ", "
+msgstr ","
+
+#: inc/functions.php:241
+#, php-format
+msgid ""
+"<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
+msgstr ""
+"<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
+msgstr "<i class=\"fa fa-comment\"></i> nincs hozzászólás"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comment\"></i> 1 Comment"
+msgstr "<i class=\"fa fa-comment\"></i> 1 hozzászólás"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comments\"></i> % Comments"
+msgstr "<i class=\"fa fa-comments\"></i> % hozzászólás"
+
+#: inc/functions.php:288
+msgid "Edit"
+msgstr "Szerkeszt"
+
+#: inc/functions.php:366
+msgid "Post navigation"
+msgstr "Poszt navigáció"
+
+#: inc/functions.php:370 navigation.php:42
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/functions.php:371 navigation.php:43
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/functions.php:376
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Régebbi bejegyzések"
+
+#: inc/functions.php:380
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Újabb bejegyzések <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:406
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/functions.php:406
+msgid "(Edit)"
+msgstr "(Szerkeszt)"
+
+#: inc/functions.php:421
+msgid "Post author"
+msgstr "Szerző"
+
+#: inc/functions.php:424
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/functions.php:432
+msgid "Your comment is awaiting moderation."
+msgstr "A hozzászólás moderációra vár"
+
+#: inc/functions.php:437
+msgid "Reply"
+msgstr "Válasz"
+
+#: inc/functions.php:491
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/functions.php:500
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: inc/functions.php:511
+msgid "Copyright &copy; "
+msgstr "Copyright &copy; "
+
+#: inc/functions.php:511
+msgid "Theme by: "
+msgstr "Theme by: "
+
+#: inc/functions.php:511
+msgid "Powered by: "
+msgstr "Powered by: "
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Oldal %s"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "A widgeteket a jobb oldalra."
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "A widgeteket a bal oldalra."
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Header sidebar"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr "Tegyél widgeteket a headerbe a fő navigációs menü mellé."
+
+#: inc/widgets/widgets.php:51
+msgid "Business Sidebar"
+msgstr "Business Sidebar"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template."
+msgstr "Tegyél widgeteket a Business Page Templatebe."
+
+#: inc/widgets/widgets.php:62
+msgid "Contact Page Sidebar"
+msgstr "Contact Page Sidebar"
+
+#: inc/widgets/widgets.php:64
+msgid "Shows widgets on Contact Page Template."
+msgstr "Tegyél widgeteket a Contact Page Templatebe."
+
+#: inc/widgets/widgets.php:73
+msgid "Error 404 Page Sidebar"
+msgstr "404-es hibaoldal oldalsó hasáb."
+
+#: inc/widgets/widgets.php:75
+msgid "Shows widgets on Error 404 page."
+msgstr "Tegyél widgeteket a 404-es hibaoldalra."
+
+#: inc/widgets/widgets.php:84
+msgid "Footer Sidebar One"
+msgstr "Lábléc hasáb 1"
+
+#: inc/widgets/widgets.php:86
+msgid "Shows widgets at footer sidebar one."
+msgstr "Tegyél widgeteket az Lábléc hasáb 1-be."
+
+#: inc/widgets/widgets.php:95
+msgid "Footer Sidebar Two"
+msgstr "Lábléc hasáb 2"
+
+#: inc/widgets/widgets.php:97
+msgid "Shows widgets at footer sidebar two."
+msgstr "Tegyél widgeteket az Lábléc hasáb 2-be."
+
+#: inc/widgets/widgets.php:106
+msgid "Footer Sidebar Three"
+msgstr "Lábléc hasáb 3"
+
+#: inc/widgets/widgets.php:108
+msgid "Shows widgets at footer sidebar three."
+msgstr "Tegyél widgeteket az Lábléc hasáb 3-ba."
+
+#: inc/widgets/widgets.php:131
+msgid "Display Featured Single Page"
+msgstr "Kiemelt Single Page megjelenítése."
+
+#: inc/widgets/widgets.php:133
+msgid "TG: Featured Single Page"
+msgstr "TG: Kiemelt Single Page"
+
+#: inc/widgets/widgets.php:142
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr ""
+"Főoldal felső sidebar, főldal alsó bal sidebar és oldalsó sidebar esetén."
+
+#: inc/widgets/widgets.php:145 inc/widgets/widgets.php:353
+#: inc/widgets/widgets.php:578
+msgid "Title:"
+msgstr "Cím:"
+
+#: inc/widgets/widgets.php:148
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Ezt a címet jeleníti meg ha az oldal cím mezője üres."
+
+#: inc/widgets/widgets.php:151 inc/widgets/widgets.php:360
+#: inc/widgets/widgets.php:462
+msgid "Page"
+msgstr "Oldal"
+
+#: inc/widgets/widgets.php:155
+msgid "Remove Featured image"
+msgstr "Kiemelt kép eltávolítása"
+
+#: inc/widgets/widgets.php:160 inc/widgets/widgets.php:165
+msgid "Show Image Before Title"
+msgstr "Cím előtt jelenítse meg a képet"
+
+#: inc/widgets/widgets.php:161 inc/widgets/widgets.php:166
+msgid "Show Image After Title"
+msgstr "Cím után jelenítse meg a képet"
+
+#: inc/widgets/widgets.php:231
+msgid "Use this widget to show the call to action section."
+msgstr "Ez a  widget használható a Call to action megjelenítéshez."
+
+#: inc/widgets/widgets.php:233
+msgid "TG: Call To Action Widget"
+msgstr "TG: Call To Action Widget"
+
+#: inc/widgets/widgets.php:249
+msgid "Call to Action Main Text"
+msgstr "Call To Action főszöveg"
+
+#: inc/widgets/widgets.php:251
+msgid "Call to Action Additional Text"
+msgstr "Call To Action plusz szöveg"
+
+#: inc/widgets/widgets.php:254
+msgid "Button Text:"
+msgstr "Gomb szöveg:"
+
+#: inc/widgets/widgets.php:258
+msgid "Button Redirect Link:"
+msgstr "Gomb átirányítása link:"
+
+#: inc/widgets/widgets.php:330
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Oldalak bemutatása legújabb munkák címen. A Business felső és alsó "
+"sidebarral használva a legjobb."
+
+#: inc/widgets/widgets.php:332
+msgid "TG: Featured Widget"
+msgstr "TG: Featured widget"
+
+#: inc/widgets/widgets.php:356
+msgid "Description"
+msgstr "Leírás"
+
+#: inc/widgets/widgets.php:444
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Néhány oldal megjelenítése, mint néhány szolgáltatás. A Business felső és "
+"alsó sidebarral használva a legjobb."
+
+#: inc/widgets/widgets.php:446
+msgid "TG: Image Services"
+msgstr "TG: Image Services"
+
+#: inc/widgets/widgets.php:545
+msgid "Custom Tag Cloud"
+msgstr "Egyedi címkefelhő"
+
+#: inc/widgets/widgets.php:547
+msgid "TG: Custom Tag Cloud"
+msgstr "TG: Egyedi címkefelhő"
+
+#: navigation.php:22 navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; Előző"
+
+#: navigation.php:23 navigation.php:35
+msgid "Next &rarr;"
+msgstr "Következő &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Készen állsz az első bejegyzés közzétételére? <a href=\"%1$s\">Itt láss neki!"
+"</a>"
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Sajnáljuk, de nincs találat a keresésedre. Próbálj más kulcsszavakat!"
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Úgy tűnik nem találjuk, amit keresel. Talán egy új keresés segíthet..."
+
+#: options.php:31
+msgid "Header"
+msgstr "Header"
+
+#: options.php:37
+msgid "Header Logo"
+msgstr "Header Logo"
+
+#: options.php:38
+msgid ""
+"Upload logo for your header. Recommended size is 100 X 100 pixels but you "
+"can add any size you like."
+msgstr ""
+"Header logo feltöltése. Az ajánlott méret 100x100 oixel, de akkorát töltesz "
+"fel amekkorát szeretnél."
+
+#: options.php:45
+msgid "Header Logo Only"
+msgstr "Csak Header logo"
+
+#: options.php:46
+msgid "Header Text Only"
+msgstr "Csak Header szöveg"
+
+#: options.php:47
+msgid "Show Both"
+msgstr "Mindkettő"
+
+#: options.php:48
+msgid "Disable"
+msgstr "Kikapcsolás"
+
+#: options.php:51
+msgid "Show"
+msgstr "Mutatás"
+
+#: options.php:52
+msgid "Choose the option that you want."
+msgstr "Válaszd ki, amelyik beállítást szeretnéd!"
+
+#: options.php:61
+msgid "Need to add header widgets?"
+msgstr "Header widgetet szeretnél hozzáadni?"
+
+#: options.php:62
+#, php-format
+msgid ""
+"<a href=\"%1$s\">Click Here</a> &nbsp;&nbsp; Just add widgets that you like "
+"to the Header Sidebar."
+msgstr ""
+"<a href=\"%1$s\">Kattints ide</a> &nbsp;&nbsp; Add hozzá a Header "
+"sidebarhoz, amelyik widgetet szeretnéd."
+
+#: options.php:68
+msgid "Need to replace Header Image?"
+msgstr "Le kell cserélned a header képet?"
+
+#: options.php:69
+#, php-format
+msgid ""
+"<a href=\"%1$s\">Click Here</a> &nbsp;&nbsp; You can change the image "
+"position with the option below."
+msgstr ""
+"<a href=\"%1$s\">Kattins ide</a> &nbsp;&nbsp; Ezzel a beállítással tudod "
+"megváltoztatni a kép pozícióját."
+
+#: options.php:75
+msgid "Heder Image Position"
+msgstr "Header kép pozíciója"
+
+#: options.php:76
+msgid "Choose top header image display position."
+msgstr "Felső header kép pozíciójának kiválasztása."
+
+#: options.php:81
+msgid "Position One: Display the Header image just above the site title/text."
+msgstr ""
+"Egyes pozíció: A header kép megjelenítése az oldal címe címe/szövege felett."
+
+#: options.php:82
+msgid ""
+"Position Two (Default): Display the Header image between site title/text and "
+"the main/primary menu."
+msgstr ""
+"Kettes (alapértelmezett) pozíció: A header kép megjelenítése az oldal címe "
+"címe/szövege és a fő/elsődeleges menü között jelenik meg."
+
+#: options.php:83
+msgid "Position Three: Display the Header image below main/primary menu."
+msgstr "Hármas pozíció: A header kép megjelenítése a főmenű alatt."
+
+#: options.php:91
+msgid "Design"
+msgstr "Dizájn"
+
+#: options.php:96
+msgid "Site Layout"
+msgstr "Oldal layout"
+
+#: options.php:97
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Válaszd ki az oldal layoutját. Ez minden oldalon visszatükröződik."
+
+#: options.php:102
+msgid "Boxed layout"
+msgstr "Dobozos layout"
+
+#: options.php:103
+msgid "Wide layout"
+msgstr "Széles layout"
+
+#: options.php:108
+msgid "Default layout"
+msgstr "Alapértelmezett layout"
+
+#: options.php:109
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Alapértelmezett layout kiválasztása. Ez minden oldalon pl. keresés, archívum "
+"stb. tükröződni fog. Az oldalak és postok megjelenését lejjebb állíthatod be."
+
+#: options.php:122
+msgid "Default layout for pages only"
+msgstr "Oldala alapértelmezett megjelenése."
+
+#: options.php:123
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Válaszd ki az oldalak alapértlemezett layoutját. Ez minden egyes oldalra "
+"hatással van, kivéve ha az egyes oldalnak egyedi layoutot állítasz be."
+
+#: options.php:136
+msgid "Default layout for single posts only"
+msgstr "Alapértelmezett layout az egyes posztokhoz"
+
+#: options.php:137
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Az egyes posztok alapértelmezett megjelenítése. Ez minden egyes behjegyzésre "
+"hatással van, kivéve ha egyedi layoutot adsz meg egyes posztoknál."
+
+#: options.php:150
+msgid "Posts page listing display type"
+msgstr "Bejegyzések megjelenítése"
+
+#: options.php:151
+msgid ""
+"Choose the display type for the latests posts view or posts page view "
+"(static front page)."
+msgstr ""
+"Válaszd ki a megjelenítés módját a legfrissebb és oldal nézethez (statikus "
+"főoldal)."
+
+#: options.php:156
+msgid "Large featured image"
+msgstr "Nagy kiemelt kép"
+
+#: options.php:157
+msgid "Small featured image"
+msgstr "Kicsi kiemelt kép"
+
+#: options.php:158
+msgid "Small featured image with alternating sides"
+msgstr "Kicsi kiemelt kép, változó oldalakkal."
+
+#: options.php:164
+msgid "Primary color option"
+msgstr "Elsődeleges szín."
+
+#: options.php:165
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site and logo."
+msgstr ""
+"Ez linkek, gombok, és sok minden más megjelenését befolyásolja. Igazodjon az "
+"oldal és a logó színéhez."
+
+#: options.php:172
+msgid "Need to replace default background?"
+msgstr "Lecserélnéd a hátteret?"
+
+#: options.php:173
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Kattints ide</a>"
+
+#: options.php:173
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Megjegyzés: a háttér csak akkor fog látszódni, ha ki is választod a dobozos "
+"megjelenést a layoutoknál."
+
+#: options.php:178
+msgid "Custom CSS"
+msgstr "Egyedi CSS"
+
+#: options.php:179
+msgid "Write your custom css."
+msgstr "Írj saját CSS-t"
+
+#: options.php:188
+msgid "Additional"
+msgstr "További"
+
+#: options.php:194
+msgid "Activate favicon"
+msgstr "Favicon aktiválása."
+
+#: options.php:195
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr "Pipáld kia  favicon aktiválásához. Lejjebb fel is tudod tölteni."
+
+#: options.php:203
+msgid "Upload favicon"
+msgstr "Favicon feltöltése"
+
+#: options.php:204
+msgid "Upload favicon for your site."
+msgstr "Favicon feltöltése"
+
+#: options.php:212
+msgid "Slider"
+msgstr "Slider"
+
+#: options.php:218
+msgid "Activate slider"
+msgstr "Slider aktiválása."
+
+#: options.php:219
+msgid "Check to activate slider."
+msgstr "Pipáld ki a slider aktiváláshoz."
+
+#: options.php:230
+#, php-format
+msgid "Slider #%1$s"
+msgstr "Slider #%1$s"
+
+#: options.php:231
+msgid "Upload image"
+msgstr "Kép feltöltése"
+
+#: options.php:236
+msgid "Enter title for this slide"
+msgstr "Ennek a slide-nak a címe"
+
+#: options.php:242
+msgid "Enter description for this slide"
+msgstr "Ennek a slide-nak a leírása"
+
+#: options.php:248
+msgid "Slider text position."
+msgstr "Slider szöveg pozíció"
+
+#: options.php:253
+msgid "Right side"
+msgstr "Jobb oldal"
+
+#: options.php:254
+msgid "Left side"
+msgstr "Bal oldal"
+
+#: options.php:258
+msgid "Enter link to redirect for the slide title"
+msgstr "Link megadása, ahova a slide címe átiránytson."
+
+#: options.php:277
+msgid "Accelerate"
+msgstr "Accelerate"
+
+#: options.php:279
+msgid "Support Forum"
+msgstr "Támogatás"
+
+#: options.php:280
+msgid "Documentation"
+msgstr "Dokumentáció"
+
+#: options.php:281
+msgid "View Demo"
+msgstr "Demo megtekintése"
+
+#: searchform.php:11 searchform.php:12
+msgid "Search"
+msgstr "Keresés"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr "Meta"

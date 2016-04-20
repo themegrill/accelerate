@@ -1,0 +1,845 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: accelerate\n"
+"POT-Creation-Date: 2014-06-25 02:08+0545\n"
+"PO-Revision-Date: 2014-07-12 11:46+0100\n"
+"Last-Translator: Jędrzej Skrzynecki <j@unicornis.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"Language: PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Strona której szukasz nie istnieje lub nie masz do niej uprawnień. "
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr ""
+"Wygląda na to, że nie ma tego czego szukasz. Spróbuj opcji wyszukiwania."
+
+#: archive.php:34
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:42
+#, php-format
+msgid "Day: %s"
+msgstr "Dzień: %s"
+
+#: archive.php:45
+#, php-format
+msgid "Month: %s"
+msgstr "Miesiąc: %s"
+
+#: archive.php:48
+#, php-format
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: archive.php:51
+msgid "Asides"
+msgstr "Z boku"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Zdjęcia"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Wideo"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Komentarze"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Odnośniki"
+
+#: archive.php:66 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Archiwum"
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Komentarz do &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Komentarz nawigacji"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Starsze komentarze"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Nowsze komentarze &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Komentarze zablokowane."
+
+#: content-blog-large-image.php:37 content-blog-small-image.php:38
+#: content.php:42 inc/widgets/widgets.php:213
+msgid "Read more"
+msgstr "Czytaj dalej"
+
+#: content-page.php:24 content-single.php:27
+msgid "Pages:"
+msgstr "Strony:"
+
+#: functions.php:44
+msgid "Primary/Main Menu"
+msgstr "Menu główne"
+
+#: functions.php:45
+msgid "Footer Menu"
+msgstr "Menu w stopce"
+
+#: header.php:93
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Wybierz układ strony"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Domyślny układ strony"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Pasek narzędzi z prawej"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Pasek narzędzi z lewej"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Cała szerokość, bez paska narzędzi"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Bez paska narzędzi, zawartość wyśrodkowana"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr "Opcje motywu"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr "Zapisz opcje"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr "Przywróć domyślne"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Kliknij OK aby zresetować. Wszystkie ustawienia zostaną skasowane."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr "Ustawienia domyślne przywrócono."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr "Opcje zapisano."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "Nie wybrano pliku"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "Wgraj"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "Usuń"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Odśwież wersję WordPressa, aby skorzystać ze wsparcia dla multimediów."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "Zobacz plik"
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr "Nie powtarzaj"
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr "Powtarzaj w poziomie"
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr "Powtarzaj w pionie"
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr "Powtarzaj wszystko"
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr "Górny lewy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr "Górny środkowy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr "Górny prawy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr "Środkowy lewy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr "Środkowy cetrum"
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr "Środkowy prawy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr "Dolny lewy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr "Dolny środkowy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr "Dolny prawy"
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr "Przewijaj normalnie"
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr "Zablokuj połączenie"
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr "Normalny"
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr "Kursywa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr "Pogrubienie"
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr "Pogrubiona kursywa"
+
+#: inc/functions.php:240 inc/functions.php:281
+msgid ", "
+msgstr ","
+
+#: inc/functions.php:241
+#, php-format
+msgid ""
+"<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
+msgstr ""
+"<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
+msgstr "<i class=\"fa fa-comment\"></i> Brak komentarzy"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comment\"></i> 1 Comment"
+msgstr "<i class=\"fa fa-comment\"></i> 1 komentarz"
+
+#: inc/functions.php:285
+msgid "<i class=\"fa fa-comments\"></i> % Comments"
+msgstr "<i class=\"fa fa-comments\"></i> Komentarzy: %"
+
+#: inc/functions.php:288
+msgid "Edit"
+msgstr "Edytuj"
+
+#: inc/functions.php:366
+msgid "Post navigation"
+msgstr "Nawigacja wpisów"
+
+#: inc/functions.php:370 navigation.php:42
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/functions.php:371 navigation.php:43
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/functions.php:376
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starsze wpisy"
+
+#: inc/functions.php:380
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nowsze wpisy <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:406
+msgid "Pingback:"
+msgstr "Odbicie:"
+
+#: inc/functions.php:406
+msgid "(Edit)"
+msgstr "(Edycja)"
+
+#: inc/functions.php:421
+msgid "Post author"
+msgstr "Autor wpisu"
+
+#: inc/functions.php:424
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s o %2$s"
+
+#: inc/functions.php:432
+msgid "Your comment is awaiting moderation."
+msgstr "Twój wpis oczekuje na moderację."
+
+#: inc/functions.php:437
+msgid "Reply"
+msgstr "Odpowiedz"
+
+#: inc/functions.php:491
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/functions.php:500
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: inc/functions.php:511
+msgid "Copyright &copy; "
+msgstr "Prawa autorskie &copy;"
+
+#: inc/functions.php:511
+msgid "Theme by: "
+msgstr "Motyw autorstwa:"
+
+#: inc/functions.php:511
+msgid "Powered by: "
+msgstr "Platforma: "
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Strona %s"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "Pokaż widgety po prawej stronie. "
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "Pokaż widgety po lewej stronie."
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Panel narzędzi w nagłówku"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr ""
+"Wyświetla widgety w sekcji nagłówkowej, tuż ponad głównym menu nawigacji."
+
+#: inc/widgets/widgets.php:51
+msgid "Business Sidebar"
+msgstr "Panel biznes"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template."
+msgstr "Pokazuje widgety w szablonie Strony Biznes."
+
+#: inc/widgets/widgets.php:62
+msgid "Contact Page Sidebar"
+msgstr "Panel strony Kontakty"
+
+#: inc/widgets/widgets.php:64
+msgid "Shows widgets on Contact Page Template."
+msgstr "Pokazuje widgety w szablonie Strony Kontakty."
+
+#: inc/widgets/widgets.php:73
+msgid "Error 404 Page Sidebar"
+msgstr "Panel strony Strony 404."
+
+#: inc/widgets/widgets.php:75
+msgid "Shows widgets on Error 404 page."
+msgstr "Pokazuje widgety na stronie 404."
+
+#: inc/widgets/widgets.php:84
+msgid "Footer Sidebar One"
+msgstr "Pierwszy panel stopki"
+
+#: inc/widgets/widgets.php:86
+msgid "Shows widgets at footer sidebar one."
+msgstr "Pokazuje widgety w pierwszym panelu stopki."
+
+#: inc/widgets/widgets.php:95
+msgid "Footer Sidebar Two"
+msgstr "Drugi panel stopki"
+
+#: inc/widgets/widgets.php:97
+msgid "Shows widgets at footer sidebar two."
+msgstr "Pokazuje widgety w drugim panelu stopki."
+
+#: inc/widgets/widgets.php:106
+msgid "Footer Sidebar Three"
+msgstr "Trzeci panel stopki"
+
+#: inc/widgets/widgets.php:108
+msgid "Shows widgets at footer sidebar three."
+msgstr "Pokazuje widgety w trzecim panelu stopki."
+
+#: inc/widgets/widgets.php:131
+msgid "Display Featured Single Page"
+msgstr "Wyświetla specjalną, pojedynczą stronę"
+
+#: inc/widgets/widgets.php:133
+msgid "TG: Featured Single Page"
+msgstr "TG: Specjalna pojedyncza strona"
+
+#: inc/widgets/widgets.php:142
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr "Pasuje do Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+
+#: inc/widgets/widgets.php:145 inc/widgets/widgets.php:353
+#: inc/widgets/widgets.php:578
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: inc/widgets/widgets.php:148
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Wyświetla tytuł strony, jeśli wpisany tytuł jest pusty."
+
+#: inc/widgets/widgets.php:151 inc/widgets/widgets.php:360
+#: inc/widgets/widgets.php:462
+msgid "Page"
+msgstr "Strona"
+
+#: inc/widgets/widgets.php:155
+msgid "Remove Featured image"
+msgstr "Usuń obrazek specjalny"
+
+#: inc/widgets/widgets.php:160 inc/widgets/widgets.php:165
+msgid "Show Image Before Title"
+msgstr "Pokaż obrazek przed tytułem"
+
+#: inc/widgets/widgets.php:161 inc/widgets/widgets.php:166
+msgid "Show Image After Title"
+msgstr "Pokaż obrazek po tytule"
+
+#: inc/widgets/widgets.php:231
+msgid "Use this widget to show the call to action section."
+msgstr "Użyj tego widgetu w sekcji \"Wezwanie do działania\"."
+
+#: inc/widgets/widgets.php:233
+msgid "TG: Call To Action Widget"
+msgstr "TG: Widget \"Wezwanie do działania\""
+
+#: inc/widgets/widgets.php:249
+msgid "Call to Action Main Text"
+msgstr "Tekst \"Wezwania do działania\""
+
+#: inc/widgets/widgets.php:251
+msgid "Call to Action Additional Text"
+msgstr "Dodatkowy tekst \"Wezwania do działania\""
+
+#: inc/widgets/widgets.php:254
+msgid "Button Text:"
+msgstr "Tekst klawisza:"
+
+#: inc/widgets/widgets.php:258
+msgid "Button Redirect Link:"
+msgstr "Odnośnik klawisza:"
+
+#: inc/widgets/widgets.php:330
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Pokazuje wybrane strony, nad którymi ostatnio pracowałeś. Nadaje się do "
+"panelu nagłówka lub stopki."
+
+#: inc/widgets/widgets.php:332
+msgid "TG: Featured Widget"
+msgstr "TG: Widget specjalny"
+
+#: inc/widgets/widgets.php:356
+msgid "Description"
+msgstr "Opis"
+
+#: inc/widgets/widgets.php:444
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Wyświetla strony jako usługi. Nadaje się do panelu biznes w nagłówku lub na "
+"marginesie strony."
+
+#: inc/widgets/widgets.php:446
+msgid "TG: Image Services"
+msgstr "TG: Usługi obrazów"
+
+#: inc/widgets/widgets.php:545
+msgid "Custom Tag Cloud"
+msgstr "Własna chmura tagów"
+
+#: inc/widgets/widgets.php:547
+msgid "TG: Custom Tag Cloud"
+msgstr "TG: Własna chmura tagów"
+
+#: navigation.php:22 navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; Poprzedni"
+
+#: navigation.php:23 navigation.php:35
+msgid "Next &rarr;"
+msgstr "Następny &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Chcesz opublikować wpis? <a href=\"%1$s\">Zacznij tu</a>"
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Przepraszamy, ale nic nie pasuje do Twojego zapytania. Spróbuj ponownie z "
+"innymi słowami kluczowymi."
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Skorzystaj z "
+"wyszukiwarki."
+
+#: options.php:31
+msgid "Header"
+msgstr "Nagłowek"
+
+#: options.php:37
+msgid "Header Logo"
+msgstr "Logo w nagłówku"
+
+#: options.php:38
+msgid ""
+"Upload logo for your header. Recommended size is 100 X 100 pixels but you "
+"can add any size you like."
+msgstr ""
+"Wgraj logo do zamieszczenia w nagłówku. Rekomendowany rozmiar to 100 x 100 "
+"pikseli, ale możesz wgrać obrazek dowolnego rozmiaru."
+
+#: options.php:45
+msgid "Header Logo Only"
+msgstr "Nagłowek - tylko logo"
+
+#: options.php:46
+msgid "Header Text Only"
+msgstr "Nagłowek - tylko tekst"
+
+#: options.php:47
+msgid "Show Both"
+msgstr "Pokaż oba"
+
+#: options.php:48
+msgid "Disable"
+msgstr "Wyłącz"
+
+#: options.php:51
+msgid "Show"
+msgstr "Pokaż"
+
+#: options.php:52
+msgid "Choose the option that you want."
+msgstr "Pokaż opcję, którą wybrałeś."
+
+#: options.php:61
+msgid "Need to add header widgets?"
+msgstr "Chcesz dodać widgety do nagłówka?"
+
+#: options.php:62
+#, php-format
+msgid ""
+"<a href=\"%1$s\">Click Here</a> &nbsp;&nbsp; Just add widgets that you like "
+"to the Header Sidebar."
+msgstr ""
+"<a href=\"%1$s\">Kliknij tu</a> &nbsp;&nbsp; Dodaj wybrabne widgety do "
+"panelu nagłówka."
+
+#: options.php:68
+msgid "Need to replace Header Image?"
+msgstr "Chcesz zmienić obrazek nagłówka?"
+
+#: options.php:69
+#, php-format
+msgid ""
+"<a href=\"%1$s\">Click Here</a> &nbsp;&nbsp; You can change the image "
+"position with the option below."
+msgstr ""
+"<a href=\"%1$s\">Kliknij tu</a> &nbsp;&nbsp; Możesz zmienić pozycję obrazka "
+"za pomocą opcji poniżej."
+
+#: options.php:75
+msgid "Heder Image Position"
+msgstr "Pozycja obrazka nagłówka"
+
+#: options.php:76
+msgid "Choose top header image display position."
+msgstr "Wybierz pozycję, w której ma być wyświetlany obrazek nagłówka."
+
+#: options.php:81
+msgid "Position One: Display the Header image just above the site title/text."
+msgstr "Pozycja pierwsza: Wyświetl nagłówek tuż ponad tytułem strony."
+
+#: options.php:82
+msgid ""
+"Position Two (Default): Display the Header image between site title/text and "
+"the main/primary menu."
+msgstr ""
+"Pozycja druga (domyślna): Wyświetl obrazek nagłówka pomiędzy tytułem witryny "
+"a głównym menu."
+
+#: options.php:83
+msgid "Position Three: Display the Header image below main/primary menu."
+msgstr "Pozycja trzecia: Wyświetl obrazek nagłówka poniżej głównego menu."
+
+#: options.php:91
+msgid "Design"
+msgstr "Projekt"
+
+#: options.php:96
+msgid "Site Layout"
+msgstr "Układ witryny"
+
+#: options.php:97
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Wybierz układ witryny. Wpłynie na wygląd całości."
+
+#: options.php:102
+msgid "Boxed layout"
+msgstr "Układ ramkowy"
+
+#: options.php:103
+msgid "Wide layout"
+msgstr "Układ szeroki"
+
+#: options.php:108
+msgid "Default layout"
+msgstr "Układ domyślny"
+
+#: options.php:109
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Wybierz domyślny układ strony. Będzie on miał wpływ na wygląd archiwum, "
+"wyszukiwania, itd. Wygląd pojedynczych stron i wpisów może być zmieniony "
+"poniżej. "
+
+#: options.php:122
+msgid "Default layout for pages only"
+msgstr "Domyślny układ stron"
+
+#: options.php:123
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Wybierz domyśly układ stron. Będzie on miał wpływ na układ wszystkich stron, "
+"chyba że zostanie on indywidualnie zmieniony dla wybranej strony."
+
+#: options.php:136
+msgid "Default layout for single posts only"
+msgstr "Domyślny układ wpisów"
+
+#: options.php:137
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Wybierz domyślny układ wpisów. Ten układ ma wpływ na wyświetlanie wszystkich "
+"wpisów, hyba że zostanie on indywidualnie zmieniony dla wybranego wpisu."
+
+#: options.php:150
+msgid "Posts page listing display type"
+msgstr "Sposób wyświetlania listy wpisów"
+
+#: options.php:151
+msgid ""
+"Choose the display type for the latests posts view or posts page view "
+"(static front page)."
+msgstr ""
+"Wybierz sposób wyświetlania ostatnich wpisów lub strony wpisów (statyczna "
+"strona startowa)."
+
+#: options.php:156
+msgid "Large featured image"
+msgstr "Duży obrazek głowny"
+
+#: options.php:157
+msgid "Small featured image"
+msgstr "Mały obrazek główny"
+
+#: options.php:158
+msgid "Small featured image with alternating sides"
+msgstr "Mały obrazek głowny ze zmieniającymi się brzegami"
+
+#: options.php:164
+msgid "Primary color option"
+msgstr "Kolor podstawowy"
+
+#: options.php:165
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site and logo."
+msgstr ""
+"Ma wspływ na odnośniki, klawisze i inne. Wybierz kolor pasujący do Twojego "
+"logo."
+
+#: options.php:172
+msgid "Need to replace default background?"
+msgstr "Chcesz zmienić tło?"
+
+#: options.php:173
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Kliknij tu</a>"
+
+#: options.php:173
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Uwaga: Tło będzie widoczne jedynie w układzie ramkowym (patrz układ strony)."
+
+#: options.php:178
+msgid "Custom CSS"
+msgstr "Własny CSS"
+
+#: options.php:179
+msgid "Write your custom css."
+msgstr "Stwórz własny arkusz stylów."
+
+#: options.php:188
+msgid "Additional"
+msgstr "Dodatkowy"
+
+#: options.php:194
+msgid "Activate favicon"
+msgstr "Aktywuj favicon"
+
+#: options.php:195
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr "Zaznacz, aby włączyć favicon. Wgraj go za pomocą opcji poniżej"
+
+#: options.php:203
+msgid "Upload favicon"
+msgstr "Wgraj favicon"
+
+#: options.php:204
+msgid "Upload favicon for your site."
+msgstr "Wgraj favicon dla swojej witryny."
+
+#: options.php:212
+msgid "Slider"
+msgstr "Pokaz slajdów"
+
+#: options.php:218
+msgid "Activate slider"
+msgstr "Włącz pokaz slajdów"
+
+#: options.php:219
+msgid "Check to activate slider."
+msgstr "Zaznacz, aby włączyć pokaz slajdów."
+
+#: options.php:230
+#, php-format
+msgid "Slider #%1$s"
+msgstr "Slajd #%1$s"
+
+#: options.php:231
+msgid "Upload image"
+msgstr "Wgraj obraz"
+
+#: options.php:236
+msgid "Enter title for this slide"
+msgstr "Wpisz tytuł slajdu"
+
+#: options.php:242
+msgid "Enter description for this slide"
+msgstr "Wpisz opis tego slajdu"
+
+#: options.php:248
+msgid "Slider text position."
+msgstr "Pozycja tekstu na slajdzie"
+
+#: options.php:253
+msgid "Right side"
+msgstr "Po prawej"
+
+#: options.php:254
+msgid "Left side"
+msgstr "Po lewej"
+
+#: options.php:258
+msgid "Enter link to redirect for the slide title"
+msgstr "Wpisz odnośnik powiązany z tytułem slajdu"
+
+#: options.php:277
+msgid "Accelerate"
+msgstr "Accelerate"
+
+#: options.php:279
+msgid "Support Forum"
+msgstr "Forum serwisowe"
+
+#: options.php:280
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+#: options.php:281
+msgid "View Demo"
+msgstr "Zobacz demo"
+
+#: searchform.php:11 searchform.php:12
+msgid "Search"
+msgstr "Szukaj"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr "Na skróty"

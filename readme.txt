@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == CHANGE LOG ==
+= TBD =
+* Fontawesome icons updated to version 4.6.1
+
 = 1.2.4 =
 * Content width adjusted according to the layout choosed
 * Fontawesome icons updated to version 4.5.0

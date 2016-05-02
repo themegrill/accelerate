@@ -16,25 +16,25 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-   $content_width = 720;
+	 $content_width = 720;
 
 /**
  * $content_width global variable adjustment as per layout option.
  */
 function accelerate_content_width() {
-   global $post;
-   global $content_width;
+	 global $post;
+	 global $content_width;
 
-   if( $post ) { $layout_meta = get_post_meta( $post->ID, 'accelerate_page_layout', true ); }
-   if( empty( $layout_meta ) || is_archive() || is_search() ) { $layout_meta = 'default_layout'; }
-   $accelerate_default_layout = accelerate_options( 'accelerate_default_layout', 'right_sidebar' );
+	 if( $post ) { $layout_meta = get_post_meta( $post->ID, 'accelerate_page_layout', true ); }
+	 if( empty( $layout_meta ) || is_archive() || is_search() ) { $layout_meta = 'default_layout'; }
+	 $accelerate_default_layout = accelerate_options( 'accelerate_default_layout', 'right_sidebar' );
 
-   if( $layout_meta == 'default_layout' ) {
-      if ( $accelerate_default_layout == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
-      else { $content_width = 720; /* pixels */ }
-   }
-   elseif ( $layout_meta == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
-   else { $content_width = 720; /* pixels */ }
+	 if( $layout_meta == 'default_layout' ) {
+			if ( $accelerate_default_layout == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
+			else { $content_width = 720; /* pixels */ }
+	 }
+	 elseif ( $layout_meta == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
+	 else { $content_width = 720; /* pixels */ }
 }
 add_action( 'template_redirect', 'accelerate_content_width' );
 
@@ -59,8 +59,8 @@ function accelerate_setup() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
 	add_theme_support( 'post-thumbnails' );
 
-   // Supporting title tag via add_theme_support (since WordPress 4.1)
-   add_theme_support( 'title-tag' );
+	 // Supporting title tag via add_theme_support (since WordPress 4.1)
+	 add_theme_support( 'title-tag' );
 
 	// Registering navigation menus.
 	register_nav_menus( array(
@@ -85,13 +85,21 @@ function accelerate_setup() {
 	// Adding excerpt option box for pages as well
 	add_post_type_support( 'page', 'excerpt' );
 
-   /*
-    * Switch default core markup for search form, comment form, and comments
-    * to output valid HTML5.
-    */
-   add_theme_support('html5', array(
-       'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-   ));
+ 	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+ 	add_theme_support('html5', array(
+	 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+ 	));
+
+	// Adds the support for the Custom Logo introduced in WordPress 4.5
+	add_theme_support( 'custom-logo',
+	   array(
+	      'flex-width' => true,
+	      'flex-height' => true,
+	   )
+	);
 }
 endif;
 
@@ -150,18 +158,18 @@ require_once( ACCELERATE_WIDGETS_DIR . '/widgets.php' );
  */
 add_action( 'admin_menu', 'accelerate_theme_options_menu' );
 function accelerate_theme_options_menu() {
-   add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'accelerate-theme-options', 'accelerate_theme_options' );
+	 add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'accelerate-theme-options', 'accelerate_theme_options' );
 }
 
 function accelerate_theme_options() {
-   if ( !current_user_can( 'manage_options' ) )  {
-      wp_die( __( 'You do not have sufficient permissions to access this page.', 'accelerate' ) );
-   } ?>
-   <h1 class="accelerate-theme-options"><?php _e( 'Theme Options', 'accelerate' ); ?></h1>
-   <?php
-   printf( __('<p style="font-size: 16px; max-width: 800px";>As our themes are hosted on WordPress repository, we need to follow the WordPress theme guidelines and as per the new guiedlines we have migrated all our Theme Options to Customizer.</p><p style="font-size: 16px; max-width: 800px";>We too think this is a better move in the long run. All the options are unchanged, it is just that they are moved to customizer. So, please use this <a href="%1$s">link</a> to customize your site. If you have any issues then do let us know via our <a href="%2$s">Contact form</a></p>', 'accelerate'),
-      esc_url(admin_url( 'customize.php' ) ),
-      esc_url('http://themegrill.com/contact/')
-   );
+	 if ( !current_user_can( 'manage_options' ) )  {
+			wp_die( __( 'You do not have sufficient permissions to access this page.', 'accelerate' ) );
+	 } ?>
+	 <h1 class="accelerate-theme-options"><?php _e( 'Theme Options', 'accelerate' ); ?></h1>
+	 <?php
+	 printf( __('<p style="font-size: 16px; max-width: 800px";>As our themes are hosted on WordPress repository, we need to follow the WordPress theme guidelines and as per the new guiedlines we have migrated all our Theme Options to Customizer.</p><p style="font-size: 16px; max-width: 800px";>We too think this is a better move in the long run. All the options are unchanged, it is just that they are moved to customizer. So, please use this <a href="%1$s">link</a> to customize your site. If you have any issues then do let us know via our <a href="%2$s">Contact form</a></p>', 'accelerate'),
+			esc_url(admin_url( 'customize.php' ) ),
+			esc_url('http://themegrill.com/contact/')
+	 );
 }
 ?>

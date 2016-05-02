@@ -51,6 +51,7 @@ and we will include it within the theme from next version update.
 == CHANGE LOG ==
 = TBD =
 * Fontawesome icons updated to version 4.6.1
+* Added the Custom Site Logo feature introduced in WordPress 4.5
 
 = 1.2.4 =
 * Content width adjusted according to the layout choosed

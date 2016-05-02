@@ -81,4 +81,15 @@ endif;
 
 /****************************************************************************************/
 
+if ( ! function_exists( 'accelerate_the_custom_logo' ) ) {
+   /**
+    * Displays the optional custom logo.
+    */
+   function accelerate_the_custom_logo() {
+      if ( function_exists( 'the_custom_logo' )  && ( accelerate_options( 'accelerate_header_logo_image', '' ) == '') ) {
+         the_custom_logo();
+      }
+   }
+}
+
 ?>

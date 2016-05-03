@@ -20,8 +20,7 @@ module.exports = function( grunt ){
 				'<%= dirs.js %>/*.js',
 				'!<%= dirs.js %>/*.min.js',
             '!<%= dirs.js %>/html5shiv.js',
-            '!<%= dirs.js %>/jquery.cycle.all.js',
-            '!<%= dirs.js %>/navigation.js'
+            '!<%= dirs.js %>/jquery.cycle.all.js'
 			]
 		},
 

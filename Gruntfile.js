@@ -19,27 +19,22 @@ module.exports = function( grunt ){
 				'Gruntfile.js',
 				'<%= dirs.js %>/*.js',
 				'!<%= dirs.js %>/*.min.js',
-            '!<%= dirs.js %>/html5shiv.js',
-            '!<%= dirs.js %>/jquery.cycle.all.js'
+				'!<%= dirs.js %>/html5shiv.js',
+				'!<%= dirs.js %>/jquery.cycle.all.js'
 			]
 		},
 
 		// Generate POT files.
 		makepot: {
-			options: {
-				type: 'wp-theme',
-				domainPath: 'languages',
-				potHeaders: {
-					'report-msgid-bugs-to': 'themegrill@gmail.com',
-					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
-				}
-			},
 			dist: {
 				options: {
-					potFilename: 'accelerate.pot',
-					exclude: [
-						'deploy/.*' // Exclude deploy directory
-					]
+					type: 'wp-theme',
+					domainPath: 'languages',
+					potFilename: 'colormag.pot',
+					potHeaders: {
+						'report-msgid-bugs-to': 'themegrill@gmail.com',
+						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
+					}
 				}
 			}
 		},
@@ -47,7 +42,7 @@ module.exports = function( grunt ){
 		// Check textdomain errors.
 		checktextdomain: {
 			options: {
-				text_domain: 'accelerate',
+				text_domain: 'colormag',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -72,13 +67,34 @@ module.exports = function( grunt ){
 				],
 				expand: true
 			}
-		}
+		},
 
+		// Compress files and folders.
+		compress: {
+			options: {
+				archive: 'colormag.zip'
+			},
+			files: {
+				src: [
+					'**',
+					'!.*',
+					'!*.md',
+					'!*.zip',
+					'!.*/**',
+					'!Gruntfile.js',
+					'!package.json',
+					'!node_modules/**'
+				],
+				dest: 'colormag',
+				expand: true
+			}
+		}
 	});
 
 	// Load NPM tasks to be used here
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
+	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
 	// Register tasks
@@ -89,5 +105,10 @@ module.exports = function( grunt ){
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
+	]);
+
+	grunt.registerTask( 'zip', [
+		'dev',
+		'compress'
 	]);
 };

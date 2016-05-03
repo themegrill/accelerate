@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	jQuery("#scroll-up").hide();
+	jQuery('#scroll-up').hide();
 	jQuery(function () {
 		jQuery(window).scroll(function () {
 			if (jQuery(this).scrollTop() > 1000) {

@@ -30,7 +30,7 @@ module.exports = function( grunt ){
 				options: {
 					type: 'wp-theme',
 					domainPath: 'languages',
-					potFilename: 'colormag.pot',
+					potFilename: 'accelerate.pot',
 					potHeaders: {
 						'report-msgid-bugs-to': 'themegrill@gmail.com',
 						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
@@ -42,7 +42,7 @@ module.exports = function( grunt ){
 		// Check textdomain errors.
 		checktextdomain: {
 			options: {
-				text_domain: 'colormag',
+				text_domain: 'accelerate',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -72,7 +72,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'colormag.zip'
+				archive: 'accelerate.zip'
 			},
 			files: {
 				src: [
@@ -85,7 +85,7 @@ module.exports = function( grunt ){
 					'!package.json',
 					'!node_modules/**'
 				],
-				dest: 'colormag',
+				dest: 'accelerate',
 				expand: true
 			}
 		}

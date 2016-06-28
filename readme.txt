@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= 1.2.6 28/06/2016 =
+* Introduced welcome page for theme.
+
 = 1.2.5 02/05/2016 =
 * Fontawesome icons updated to version 4.6.1
 * Added the Custom Site Logo feature introduced in WordPress 4.5

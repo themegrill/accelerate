@@ -41,18 +41,18 @@ class Accelerate_admin {
 	 * Enqueue styles.
 	 */
 	public function enqueue_styles() {
-		global $spacious_version;
+		global $accelerate_version;
 
-		wp_enqueue_style( 'accelerate-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $spacious_version );
+		wp_enqueue_style( 'accelerate-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $accelerate_version );
 	}
 
 	/**
 	 * Add admin notice.
 	 */
 	public function admin_notice() {
-		global $spacious_version, $pagenow;
+		global $accelerate_version, $pagenow;
 
-		wp_enqueue_style( 'accelerate-message', get_template_directory_uri() . '/css/admin/message.css', array(), $spacious_version );
+		wp_enqueue_style( 'accelerate-message', get_template_directory_uri() . '/css/admin/message.css', array(), $accelerate_version );
 
 		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
@@ -104,12 +104,12 @@ class Accelerate_admin {
 	 * @access private
 	 */
 	private function intro() {
-		global $spacious_version;
+		global $accelerate_version;
 
 		$theme = wp_get_theme( get_template() );
 
 		// Drop minor version if 0
-		$major_version = substr( $spacious_version, 0, 3 );
+		$major_version = substr( $accelerate_version, 0, 3 );
 		?>
 		<div class="accelerate-theme-info">
 			<h1>

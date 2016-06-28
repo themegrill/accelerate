@@ -361,17 +361,17 @@ class Accelerate_admin {
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Font Size options', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Primary Color', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Multiple Color Options', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
                         <td><?php esc_html_e('35+ color options', 'accelerate'); ?></td>
                     <tr>
                         <td><h3><?php esc_html_e('Business Template', 'accelerate'); ?></h3></td>
@@ -385,8 +385,8 @@ class Accelerate_admin {
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Boxed & Wide layout option', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Social Icons', 'accelerate'); ?></h3></td>
@@ -395,23 +395,23 @@ class Accelerate_admin {
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Woocommerce Compatible', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Footer Widget Area', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Footer Copyright Editor', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Content Demo', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Support', 'accelerate'); ?></h3></td>
@@ -420,63 +420,58 @@ class Accelerate_admin {
                     </tr>                   
                     <tr>
                         <td><h3><?php esc_html_e('Translation Ready', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('WPML Compatible', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Polylang Compatible', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                    </tr>
-                    <tr>
-                        <td><h3><?php esc_html_e('Breadcrumb NavXT Compatible', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Call to Action widget', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Custom Tag Cloud', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured Single Page', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured Widget', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Image Services', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Our Clients', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured Posts', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Testimonial', 'accelerate'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                 </tbody>
             </table>

@@ -316,7 +316,9 @@ class Accelerate_admin {
 				</li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'accelerate' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'accelerate' ); ?></a></li>
-				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'accelerate' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'accelerate' ); ?></a>
+					<?php esc_html_e('Fully Compatible in Pro Version', 'accelerate'); ?>
+				</li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/polylang/' ); ?>" target="_blank"><?php esc_html_e( 'Polylang', 'accelerate' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'accelerate'); ?>
 				</li>
@@ -350,7 +352,7 @@ class Accelerate_admin {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><h3><?php esc_html_e('Slider', 'accelerate'); ?></h3><span class="table-desc">Number of sliders.</span></td>
+                        <td><h3><?php esc_html_e('Slider', 'accelerate'); ?></h3></td>
                         <td><?php esc_html_e('4', 'accelerate'); ?></td>
                         <td><?php esc_html_e('Unlimited Slides', 'accelerate'); ?></td>
                     </tr>

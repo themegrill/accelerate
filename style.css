@@ -1983,11 +1983,11 @@ a.read-more:hover {
         right: 10px;
         color: #333;
     }
-    
+
     .main-navigation ul.sub-menu li {
         padding-right: 0;
     }
-    
+
     .main-navigation ul.sub-menu,
     .main-navigation ul li:hover > ul.sub-menu {
         display: none;
@@ -2008,7 +2008,11 @@ a.read-more:hover {
     #site-navigation ul li .sub-menu {
         display: none;
     }
+        .main-small-navigation .current_page_item ul li a{
+    	color:#333;
+    }
     .main-small-navigation .current_page_item a,
+    .main-small-navigation .current_page_item ul li a:hover,
     .main-small-navigation a:hover{
         color: #fff;
     }
@@ -2016,7 +2020,7 @@ a.read-more:hover {
         position: relative;
     }
     .sub-toggle {
-        background-color: #32acd5;
+        background-color: #2d911f;
         cursor: pointer;
         display: block;
         padding: 3px 10px;

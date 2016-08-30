@@ -32,7 +32,7 @@ Accelerate is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://themegrill.com/theme-instruction/accelerate
+Get theme instruction at http://docs.themegrill.com/accelerate/
 
 = Free Support =
 Get free support at http://themegrill.com/support-forum
@@ -43,34 +43,35 @@ All available options can be used from Appearance->Theme Options
 /**********************************************************/
 
 == TRANSLATIONS ==
-If you've translated this theme into your language, feel free to send the translation over to themegrill@gmail.com
-and we will include it within the theme from next version update.
+If you want to translate this theme to your language, Please visit:- https://translate.wordpress.org/projects/wp-themes/accelerate
 
 /**********************************************************/
 
 == Changelog ==
-= 1.2.6 28/06/2016 =
-* Introduced welcome page for theme.
+= Version 1.2.6 - 2016-08-30 =
+* Tweaks - Introduced welcome page for theme.
+* Feature - Added RTL support.
+* Feature - Added new responsive menu design.
 
-= 1.2.5 02/05/2016 =
+= Version 1.2.5 - 2016-05-02 =
 * Fontawesome icons updated to version 4.6.1
 * Added the Custom Site Logo feature introduced in WordPress 4.5
 
-= 1.2.4 =
+= Version 1.2.4 =
 * Content width adjusted according to the layout choosed
 * Fontawesome icons updated to version 4.5.0
 * Removed backward compatability for WOrdPress title tag
 
-= 1.2.3 =
+= Version 1.2.3 =
 * Some fixes for better SEO.
 * Changed Screenshot.
 
-= 1.2.2 =
+= Version 1.2.2 =
 * Updated HTML5Shiv script to the latest version 3.7.3
 * Updated FontAwesome icons to the latest version 4.4.0
 * Header Image position bug fixed.
 
-= 1.2.1 =
+= Version 1.2.1 =
 * Theme Options migrated to customizer as per new WordPress theme review guidelines.
 
 = Version 1.2 =

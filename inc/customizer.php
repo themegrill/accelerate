@@ -26,7 +26,7 @@ function accelerate_customize_register($wp_customize) {
                'text' => __('Support Forum', 'accelerate'),
             ),
             'documentation' => array(
-               'link' => esc_url('http://themegrill.com/theme-instruction/accelerate/'),
+               'link' => esc_url('http://docs.themegrill.com/accelerate/'),
                'text' => __('Documentation', 'accelerate'),
             ),
             'demo' => array(

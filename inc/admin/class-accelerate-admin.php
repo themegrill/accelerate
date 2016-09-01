@@ -190,7 +190,7 @@ class Accelerate_admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'accelerate' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'accelerate' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/accelerate/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/accelerate/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a></p>
 					</div>
 
 					<div class="col">
@@ -419,7 +419,7 @@ class Accelerate_admin {
                         <td><h3><?php esc_html_e('Support', 'accelerate'); ?></h3></td>
                         <td><?php esc_html_e('Forum', 'accelerate'); ?></td>
                         <td><?php esc_html_e('Forum + Emails/Support Ticket', 'accelerate'); ?></td>
-                    </tr>                   
+                    </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Translation Ready', 'accelerate'); ?></h3></td>
                         <td><span class="dashicons dashicons-yes"></span></td>

@@ -150,6 +150,27 @@ function accelerate_customize_register($wp_customize) {
          'position_three' => __( 'Position Three: Display the Header image below main/primary menu.', 'accelerate' )
       )
    ));
+
+   // New Responsive Menu
+   $wp_customize->add_section('accelerate_new_menu', array(
+      'priority' => 4,
+      'title'    => __('Responsive Menu Style', 'accelerate'),
+      'panel'    => 'accelerate_header_options'
+   ));
+
+   $wp_customize->add_setting($accelerate_themename.'[accelerate_new_menu]', array(
+      'default'           => '1',
+      'type'              => 'option',
+      'capability'        => 'edit_theme_options',
+      'sanitize_callback' => 'accelerate_checkbox_sanitize'
+   ));
+
+   $wp_customize->add_control($accelerate_themename.'[accelerate_new_menu]', array(
+      'type'    => 'checkbox',
+      'label'   => __('Switch to new responsive menu.', 'accelerate'),
+      'section' => 'accelerate_new_menu'
+   ));
+
    // End of Header Options
 
    // Start of the Design Options

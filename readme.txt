@@ -48,10 +48,11 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version 1.2.6 - 2016-09-01 =
+= Version 1.2.6 - 2016-09-02 =
 * Tweaks - Introduced welcome page for theme.
 * Feature - Added RTL support.
 * Feature - Added new responsive menu design.
+* Feature - Theme is now compatible with WooCommerce.
 
 = Version 1.2.5 - 2016-05-02 =
 * Fontawesome icons updated to version 4.6.1

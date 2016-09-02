@@ -62,6 +62,9 @@ function accelerate_setup() {
 	 // Supporting title tag via add_theme_support (since WordPress 4.1)
 	 add_theme_support( 'title-tag' );
 
+	// Added WooCommerce support.
+   	add_theme_support( 'woocommerce' );
+
 	// Registering navigation menus.
 	register_nav_menus( array(
 		'primary' 	=> __( 'Primary/Main Menu', 'accelerate' ),
@@ -154,7 +157,7 @@ require_once( ACCELERATE_ADMIN_DIR . '/meta-boxes.php' );
 require_once( ACCELERATE_WIDGETS_DIR . '/widgets.php' );
 
 /**
- * Assign the Spacious version to a variable.
+ * Assign the Accelerate version to a variable.
  */
 $theme            = wp_get_theme( 'accelerate' );
 $accelerate_version = $theme['Version'];

@@ -17,9 +17,13 @@ function accelerate_customize_register($wp_customize) {
       public function render_content() {
          //Add Theme instruction, Support Forum, Demo Link, Rating Link
          $important_links = array(
-            'theme-info' => array(
+            'view-pro' => array(
                'link' => esc_url('http://themegrill.com/themes/accelerate-pro/'),
                'text' => __('View Pro', 'accelerate'),
+            ),
+            'theme-info' => array(
+               'link' => esc_url('http://themegrill.com/themes/accelerate/'),
+               'text' => __('Theme Info', 'accelerate'),
             ),
             'support' => array(
                'link' => esc_url('http://themegrill.com/support-forum/'),

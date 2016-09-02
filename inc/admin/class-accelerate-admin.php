@@ -480,6 +480,21 @@ class Accelerate_admin {
                         <td><span class="dashicons dashicons-no"></span></td>
                         <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Pricing Table', 'accelerate'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Team', 'accelerate'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Fun Facts', 'accelerate'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
                 </tbody>
             </table>
 

@@ -595,4 +595,5 @@ function accelerate_site_icon_migrate() {
 		delete_option( 'theme_mods_accelerate', 'accelerate_favicon' );
 	}
 }
+add_action( 'after_setup_theme', 'accelerate_site_icon_migrate' );
 ?>

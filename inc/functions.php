@@ -586,6 +586,7 @@ function accelerate_site_icon_migrate() {
 
 	$image_url = accelerate_options( 'accelerate_favicon', '' );
 	$themename = get_option( 'stylesheet' );
+	$themename = preg_replace("/\W/", "_", strtolower( $themename ) );
 
 	if ( ! has_site_icon() && ! empty( $image_url ) ) {
 		$customizer_site_icon_id = attachment_url_to_postid( $image_url );

@@ -585,6 +585,7 @@ function accelerate_site_icon_migrate() {
 	}
 
 	$image_url = accelerate_options( 'accelerate_favicon', '' );
+	$themename = get_option( 'stylesheet' );
 
 	if ( ! has_site_icon() && ! empty( $image_url ) ) {
 		$customizer_site_icon_id = attachment_url_to_postid( $image_url );
@@ -592,7 +593,7 @@ function accelerate_site_icon_migrate() {
 		// Set the transfer as complete.
 		update_option( 'accelerate_site_icon_transfer', 1 );
 		// Delete the old favicon theme_mod option.
-		delete_option( 'theme_mods_accelerate', 'accelerate_favicon' );
+		delete_option( $themename, 'accelerate_favicon' );
 	}
 }
 add_action( 'after_setup_theme', 'accelerate_site_icon_migrate' );

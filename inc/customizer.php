@@ -396,6 +396,7 @@ function accelerate_customize_register($wp_customize) {
    )));
 
    // Custom CSS setting
+if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
    class Accelerate_Custom_CSS_Control extends WP_Customize_Control {
 
       public $type = 'custom_css';
@@ -430,6 +431,7 @@ function accelerate_customize_register($wp_customize) {
       'section' => 'accelerate_custom_css_setting',
       'settings' => $accelerate_themename.'[accelerate_custom_css]'
    )));
+}
    // End of Design Options
 
    // Start of the Additional Options

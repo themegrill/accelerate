@@ -434,7 +434,7 @@ function accelerate_customize_register($wp_customize) {
 	}
 	// End of Design Options
 
-	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( accelerate_options( 'accelerate_favicon', '' ) == '' ) ) ) {
+	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( accelerate_options( 'accelerate_favicon', '' ) != '' ) ) ) {
 		// Start of the Additional Options
 		$wp_customize->add_panel('accelerate_additional_options', array(
 			'capabitity' => 'edit_theme_options',

@@ -314,6 +314,7 @@ endif;
 
 /****************************************************************************************/
 
+
 add_action( 'admin_head', 'accelerate_favicon' );
 add_action( 'wp_head', 'accelerate_favicon' );
 /**
@@ -323,7 +324,7 @@ function accelerate_favicon() {
 	if ( accelerate_options( 'accelerate_activate_favicon', '0' ) == '1' ) {
 		$accelerate_favicon = accelerate_options( 'accelerate_favicon', '' );
 		$accelerate_favicon_output = '';
-		if ( !empty( $accelerate_favicon ) ) {
+		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $accelerate_favicon ) && ! has_site_icon() ) ) {
 			$accelerate_favicon_output .= '<link rel="shortcut icon" href="'.esc_url( $accelerate_favicon ).'" type="image/x-icon" />';
 		}
 		echo $accelerate_favicon_output;
@@ -604,3 +605,25 @@ function accelerate_custom_css_migrate() {
 }
 
 add_action( 'after_setup_theme', 'accelerate_custom_css_migrate' );
+
+/**
+* Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
+*/
+function accelerate_site_icon_migrate() {
+	if ( get_option( 'accelerate_site_icon_transfer' ) ) {
+		return;
+	}
+
+	$image_url = accelerate_options( 'accelerate_favicon', '' );
+
+	if ( ! has_site_icon() && ! empty( $image_url ) ) {
+		$customizer_site_icon_id = attachment_url_to_postid( $image_url );
+		update_option( 'site_icon', $customizer_site_icon_id );
+		// Set the transfer as complete.
+		update_option( 'accelerate_site_icon_transfer', 1 );
+		// Delete the old favicon theme_mod option.
+		delete_option( 'accelerate', 'accelerate_favicon' );
+	}
+}
+
+add_action( 'after_setup_theme', 'accelerate_site_icon_migrate' );

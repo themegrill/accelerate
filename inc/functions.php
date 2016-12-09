@@ -627,3 +627,29 @@ function accelerate_site_icon_migrate() {
 }
 
 add_action( 'after_setup_theme', 'accelerate_site_icon_migrate' );
+
+/**
+ * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
+ */
+function accelerate_site_logo_migrate() {
+	if ( function_exists( 'the_custom_logo' ) && ! has_custom_logo( $blog_id = 0 ) ) {
+		$logo_url = accelerate_options( 'accelerate_header_logo_image' );
+
+		if ( $logo_url ) {
+			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
+			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
+
+			// Delete the old Site Logo theme_mod option.
+			$theme_options = get_option( 'accelerate' );
+
+			if ( isset( $theme_options[ 'accelerate_header_logo_image' ] ) ) {
+				unset( $theme_options[ 'accelerate_header_logo_image' ] );
+			}
+
+			// Finally, update accelerate theme options.
+			update_option( 'accelerate', $theme_options );
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'accelerate_site_logo_migrate' );

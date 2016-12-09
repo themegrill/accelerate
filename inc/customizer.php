@@ -89,7 +89,7 @@ function accelerate_customize_register($wp_customize) {
       'panel' => 'accelerate_header_options'
    ));
 
-   if ( !function_exists( 'the_custom_logo' ) || ( accelerate_options( 'accelerate_header_logo_image', '' ) != '') ) {
+   if ( ! function_exists('the_custom_logo') ) {
       $wp_customize->add_setting($accelerate_themename.'[accelerate_header_logo_image]', array(
          'default' => '',
          'type' => 'option',

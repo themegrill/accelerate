@@ -50,7 +50,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 
 = Version 1.2.7 TBD =
-*Migrated current theme custom css to customization option in wordpress 4.7 
+* Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7 
 
 = Version 1.2.6 - 2016-09-02 =
 * Tweaks - Introduced welcome page for theme.

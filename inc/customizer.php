@@ -395,42 +395,44 @@ function accelerate_customize_register($wp_customize) {
       'settings' => $accelerate_themename.'[accelerate_primary_color]'
    )));
 
-   // Custom CSS setting
-   class Accelerate_Custom_CSS_Control extends WP_Customize_Control {
+	// Custom CSS setting
+	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+		class Accelerate_Custom_CSS_Control extends WP_Customize_Control {
 
-      public $type = 'custom_css';
+			public $type = 'custom_css';
 
-      public function render_content() {
-      ?>
-         <label>
-            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-            <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-         </label>
-      <?php
-      }
+			public function render_content() {
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+			</label>
+			<?php
+			}
 
-   }
+		}
 
-   $wp_customize->add_section('accelerate_custom_css_setting', array(
-      'priority' => 7,
-      'title' => __('Custom CSS', 'accelerate'),
-      'panel' => 'accelerate_design_options'
-   ));
+		$wp_customize->add_section('accelerate_custom_css_setting', array(
+			'priority' => 7,
+			'title' => __('Custom CSS', 'accelerate'),
+			'panel' => 'accelerate_design_options'
+		));
 
-   $wp_customize->add_setting($accelerate_themename.'[accelerate_custom_css]', array(
-      'default' => '',
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'wp_filter_nohtml_kses',
-      'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-   ));
+		$wp_customize->add_setting($accelerate_themename.'[accelerate_custom_css]', array(
+			'default' => '',
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+			'sanitize_js_callback' => 'wp_filter_nohtml_kses'
+		));
 
-   $wp_customize->add_control(new Accelerate_Custom_CSS_Control($wp_customize, $accelerate_themename.'[accelerate_custom_css]', array(
-      'label' => __('Write your custom css.', 'accelerate'),
-      'section' => 'accelerate_custom_css_setting',
-      'settings' => $accelerate_themename.'[accelerate_custom_css]'
-   )));
-   // End of Design Options
+		$wp_customize->add_control(new Accelerate_Custom_CSS_Control($wp_customize, $accelerate_themename.'[accelerate_custom_css]', array(
+			'label' => __('Write your custom css.', 'accelerate'),
+			'section' => 'accelerate_custom_css_setting',
+			'settings' => $accelerate_themename.'[accelerate_custom_css]'
+		)));
+	}
+	// End of Design Options
 
 	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( accelerate_options( 'accelerate_favicon', '' ) == '' ) ) ) {
 		// Start of the Additional Options

@@ -53,6 +53,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7 
 * Feature - Added support for Site Icon introduced in WordPress 4.3
 * Feature - Migrate script for the theme Site Logo
+* Feature - Updated Font Awessome to `v.4.7.0` for new icon  support.
 
 = Version 1.2.6 - 2016-09-02 =
 * Tweaks - Introduced welcome page for theme.

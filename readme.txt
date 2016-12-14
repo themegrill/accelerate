@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
-= Version 1.2.7 - 2016-12-13 =
+= Version 1.2.7 TBD =
 * Tweaks - Updated Font Awessome to `v.4.7.0` for new icon  support.
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7 
 * Feature - Added support for Site Icon introduced in WordPress 4.3

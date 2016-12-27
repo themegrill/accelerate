@@ -605,23 +605,36 @@ function accelerate_custom_css_migrate() {
 add_action( 'after_setup_theme', 'accelerate_custom_css_migrate' );
 
 /**
-* Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
-*/
+ * Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
+ */
 function accelerate_site_icon_migrate() {
-	if ( get_option( 'accelerate_site_icon_transfer' ) ) {
-		return;
-	}
+    if ( get_option( 'accelerate_site_icon_transfer' ) ) {
+        return;
+    }
 
-	$image_url = accelerate_options( 'accelerate_favicon', '' );
+    $accelerate_favicon = accelerate_options( 'accelerate_favicon', 0 );
 
-	if ( ! has_site_icon() && ! empty( $image_url ) ) {
-		$customizer_site_icon_id = attachment_url_to_postid( $image_url );
-		update_option( 'site_icon', $customizer_site_icon_id );
-		// Set the transfer as complete.
-		update_option( 'accelerate_site_icon_transfer', 1 );
-		// Delete the old favicon theme_mod option.
-		delete_option( 'accelerate', 'accelerate_favicon' );
-	}
+    // Migrate accelerate site icon.
+    if ( function_exists( 'has_site_icon' ) && ( ! empty( $accelerate_favicon ) && ! has_site_icon() ) ) {
+        $theme_options = get_option( 'accelerate' );
+        $attachment_id = attachment_url_to_postid( $accelerate_favicon );
+
+        // Update site icon transfer options.
+        if ( $theme_options && $attachment_id ) {
+            update_option( 'site_icon', $attachment_id );
+            update_option( 'accelerate_site_icon_transfer', 1 );
+
+            // Remove old favicon options.
+            foreach ( $theme_options as $option_key => $option_value ) {
+                if ( in_array( $option_key, array( 'accelerate_favicon', 'accelerate_activate_favicon' ) ) ) {
+                    unset( $theme_options[ $option_key ] );
+                }
+            }
+        }
+
+        // Finally, update accelerate theme options.
+        update_option( 'accelerate', $theme_options );
+    }
 }
 
 add_action( 'after_setup_theme', 'accelerate_site_icon_migrate' );

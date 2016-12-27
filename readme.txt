@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
-= Version 1.2.8 - TBD =
+= Version 1.2.9 - 2016-12-27 =
 * Fixes - Site Icon migrate script issue fixes
 
 = Version 1.2.7 - 2016-12-23 =
@@ -57,7 +57,6 @@ If you want to translate this theme to your language, Please visit:- https://tra
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7 
 * Feature - Added support for Site Icon introduced in WordPress 4.3
 * Feature - Migrate script for the theme Site Logo
-
 
 = Version 1.2.6 - 2016-09-02 =
 * Tweaks - Introduced welcome page for theme.

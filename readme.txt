@@ -49,6 +49,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
+= Version =
+Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
+
 = Version 1.2.9 - 2016-12-27 =
 * Fixes - Site Icon migrate script issue fixes
 

@@ -49,15 +49,13 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
-= Version =
-Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
-
-= Version 1.2.9 - 2016-12-27 =
+= Version 1.2.9 - 2016-12-31 =
 * Fixes - Site Icon migrate script issue fixes
+* Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
 
 = Version 1.2.7 - 2016-12-23 =
 * Tweaks - Updated Font Awessome to `v.4.7.0` for new icon  support.
-* Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7 
+* Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 * Feature - Added support for Site Icon introduced in WordPress 4.3
 * Feature - Migrate script for the theme Site Logo
 

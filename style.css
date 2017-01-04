@@ -2157,3 +2157,9 @@ background-color: #32ACD5;
 	display: inline-block;
 	margin-right: 10px;
 }
+
+iframe#wp-custom-header-video,
+button#wp-custom-header-video-button {
+    display: block;
+    margin: 0 auto;
+}

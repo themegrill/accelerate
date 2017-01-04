@@ -14,7 +14,7 @@ function accelerate_header_image_markup( $html, $header, $attr ) {
 	$header_image = get_header_image();
 
 	if( ! empty( $header_image ) ) {
-		$output .= '<div class="header-image-wrap"><div class="inner-wrap"><img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' .  get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '""></div></div>';
+		$output .= '<div class="header-image-wrap"><div class="inner-wrap"><img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' .  get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"></div></div>';
 	}
 
 	return $output;

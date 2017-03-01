@@ -8,17 +8,41 @@
  */
 
 /****************************************************************************************/
+// Filter the get_header_image_tag() for option of displaying the header image in old way
+function accelerate_header_image_markup( $html, $header, $attr ) {
+	$output = '';
+	$header_image = get_header_image();
+
+	if( ! empty( $header_image ) ) {
+		$output .= '<div class="header-image-wrap"><div class="inner-wrap"><img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' .  get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"></div></div>';
+	}
+
+	return $output;
+}
+
+function accelerate_header_image_markup_filter() {
+	add_filter( 'get_header_image_tag', 'accelerate_header_image_markup', 10, 3 );
+}
+
+add_action( 'accelerate_header_image_markup_render','accelerate_header_image_markup_filter' );
+
+/****************************************************************************************/
 
 if ( ! function_exists( 'accelerate_render_header_image' ) ) :
 /**
  * Shows the small info text on top header part
  */
 function accelerate_render_header_image() {
-	$header_image = get_header_image();
-	if( !empty( $header_image ) ) {
-	?>
-		<div class="header-image-wrap"><div class="inner-wrap"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></div></div>
-	<?php
+	if ( function_exists( 'the_custom_header_markup' ) ) {
+		do_action( 'accelerate_header_image_markup_render' );
+		the_custom_header_markup();
+	} else {
+		$header_image = get_header_image();
+		if( ! empty( $header_image ) ) {
+		?>
+			<div class="header-image-wrap"><div class="inner-wrap"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></div></div>
+		<?php
+		}
 	}
 }
 endif;
@@ -91,5 +115,3 @@ if ( ! function_exists( 'accelerate_the_custom_logo' ) ) {
       }
    }
 }
-
-?>

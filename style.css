@@ -1854,6 +1854,51 @@ a.read-more:hover {
 .sub-toggle{
 	display: none;
 }
+
+/*--------------------------------------------------------------
+Header media css
+--------------------------------------------------------------*/
+.wp-custom-header {
+    position: relative;
+}
+
+iframe#wp-custom-header-video {
+    width: 100%;
+}
+.wp-custom-header-video-button {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+    width: 62px;
+    height: 50px;
+    font: 0px/0 a;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.wp-custom-header:hover .wp-custom-header-video-button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.wp-custom-header-video-button:before {
+    content: '\f04b';
+    display: block;
+    font-family: FontAwesome;
+    font-size: 20px;
+}
+
+.wp-custom-header-video-button.wp-custom-header-video-pause:before{
+    content: '\f04c';
+}
+
 /* =RESPONSIVE STRUCTURE
 ----------------------------------------------- */
 @media screen and (max-width: 1190px) {
@@ -2156,4 +2201,10 @@ background-color: #32ACD5;
 .woocommerce ul.products li.product .price del{
 	display: inline-block;
 	margin-right: 10px;
+}
+
+iframe#wp-custom-header-video,
+button#wp-custom-header-video-button {
+	display: block;
+	margin: 0 auto;
 }

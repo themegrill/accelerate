@@ -1,4 +1,4 @@
-== ACCELERATE ==
+﻿== ACCELERATE ==
 
 Accelerate is multipurpose WordPress theme made for simplicity and ease of use. This theme is a piece of art that has this premium look and feel which will make your site stand out. Supports all post formats. Accelerate can be used for portfolio, business, blog, personal, travel, corporate, business services or any other kinds of sites.
 
@@ -20,6 +20,7 @@ Resources packed within the theme.
 	http://pixabay.com/en/girl-firefly-fairy-tales-354579/
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * The script jquery.cycle.all.js is dual licensed under GPL & MIT
+* TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 * Other custom js files are our own creation and is licensed under the same license as this theme.
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
@@ -50,6 +51,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = Version TBD =
 * Added - Support for Video Headers introduced in WordPress 4.7.
+* Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 = Version 1.2.9 - 2016-12-31 =
 * Fixes - Site Icon migrate script issue fixes

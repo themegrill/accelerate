@@ -4,9 +4,7 @@
  *
  * @package accelerate
  */
-?>
 
-<?php
 if( is_archive() || is_home() || is_search() ) {
 	/**
 	 * Checking WP-PageNaviplugin exist

@@ -32,7 +32,7 @@ Accelerate is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://docs.themegrill.com/accelerate/
+Get theme instruction at https://docs.themegrill.com/accelerate/
 
 = Free Support =
 Get free support at http://themegrill.com/support-forum

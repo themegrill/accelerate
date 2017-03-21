@@ -18,23 +18,23 @@ function accelerate_customize_register($wp_customize) {
          //Add Theme instruction, Support Forum, Demo Link, Rating Link
          $important_links = array(
             'view-pro' => array(
-               'link' => esc_url('http://themegrill.com/themes/accelerate-pro/'),
+               'link' => esc_url('https://themegrill.com/themes/accelerate-pro/'),
                'text' => __('View Pro', 'accelerate'),
             ),
             'theme-info' => array(
-               'link' => esc_url('http://themegrill.com/themes/accelerate/'),
+               'link' => esc_url('https://themegrill.com/themes/accelerate/'),
                'text' => __('Theme Info', 'accelerate'),
             ),
             'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
+               'link' => esc_url('https://themegrill.com/support-forum/'),
                'text' => __('Support Forum', 'accelerate'),
             ),
             'documentation' => array(
-               'link' => esc_url('http://docs.themegrill.com/accelerate/'),
+               'link' => esc_url('https://docs.themegrill.com/accelerate/'),
                'text' => __('Documentation', 'accelerate'),
             ),
             'demo' => array(
-               'link' => esc_url('http://demo.themegrill.com/accelerate/'),
+               'link' => esc_url('https://demo.themegrill.com/accelerate/'),
                'text' => __('View Demo', 'accelerate'),
             ),
             'rating' => array(

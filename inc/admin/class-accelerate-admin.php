@@ -128,11 +128,11 @@ class Accelerate_admin {
 		</div>
 
 		<p class="accelerate-actions">
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/accelerate/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'accelerate' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'accelerate' ); ?></a>
 
-			<a href="<?php echo esc_url( 'http://demo.themegrill.com/accelerate/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'accelerate' ); ?></a>
+			<a href="<?php echo esc_url( 'https://demo.themegrill.com/accelerate/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'accelerate' ); ?></a>
 
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'accelerate' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'accelerate' ); ?></a>
 
 			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/accelerate?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'accelerate' ); ?></a>
 		</p>
@@ -190,25 +190,25 @@ class Accelerate_admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'accelerate' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'accelerate' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/accelerate/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://docs.themegrill.com/accelerate/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got theme support question?', 'accelerate' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'accelerate' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'accelerate' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'accelerate' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Need more features?', 'accelerate' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'accelerate' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'accelerate' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'accelerate' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got sales related question?', 'accelerate' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'accelerate' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'accelerate' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'accelerate' ); ?></a></p>
 					</div>
 
 					<div class="col">

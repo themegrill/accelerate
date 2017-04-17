@@ -63,7 +63,10 @@ function accelerate_setup() {
 	 add_theme_support( 'title-tag' );
 
 	// Added WooCommerce support.
-   	add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 
 	// Registering navigation menus.
 	register_nav_menus( array(

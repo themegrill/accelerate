@@ -623,6 +623,10 @@ li.default-menu {
 	background-color: #77CC6D;
 }
 
+.main-navigation ul li.focus >ul{
+	display: block;
+}
+
 /* =DROP DOWN
 ----------------------------------------------- */
 .main-navigation ul li ul,

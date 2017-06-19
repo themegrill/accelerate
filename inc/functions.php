@@ -52,13 +52,14 @@ function accelerate_scripts_styles_method() {
 	/**
 	 * Register JQuery cycle js file for slider.
 	 */
-	wp_register_script( 'jquery_cycle', ACCELERATE_JS_URL . '/jquery.cycle.all.min.js', array( 'jquery' ), '3.0.3', true );
+	wp_register_script( 'jquery_cycle', ACCELERATE_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
+	wp_register_script( 'jquery-cycle2-swipe', ACCELERATE_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
 
 	/**
 	 * Enqueue Slider setup js file.
 	 */
 	if ( is_front_page() && accelerate_options( 'accelerate_activate_slider', '0' ) == '1' ) {
-		wp_enqueue_script( 'accelerate_slider', ACCELERATE_JS_URL . '/accelerate-slider-setting.js', array( 'jquery_cycle' ), false, true );
+		wp_enqueue_script( 'accelerate_slider', ACCELERATE_JS_URL . '/accelerate-slider-setting.js', array( 'jquery_cycle', 'jquery-cycle2-swipe' ), false, true );
 	}
 	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL. '/accelerate-custom.js', array( 'jquery' ) );

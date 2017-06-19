@@ -51,6 +51,8 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = TBD =
 * Fix - Submenu issue fix
+* Feature - jQuery cycle plugin for slider upgraded to jQuery cycle2 v2.1.6.
+
 = Version 1.3.2 - 2017-05-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 

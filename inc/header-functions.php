@@ -91,12 +91,12 @@ function accelerate_featured_image_slider() {
 					}
 				}
 				?>
-   			</div>
-   			<a class="slide-next" href="#"><i class="fa fa-angle-right"></i></a>
-            <a class="slide-prev" href="#"><i class="fa fa-angle-left"></i></a>
-			</div>
+				<nav id="controllers" class="clearfix"></nav>
+				</div>
 
-			<nav id="controllers" class="clearfix"></nav>
+				<a class="slide-next" href="#"><i class="fa fa-angle-right"></i></a>
+				<a class="slide-prev" href="#"><i class="fa fa-angle-left"></i></a>
+			</div>
 		</section>
 
 		<?php

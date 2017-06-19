@@ -12,21 +12,27 @@ if(slides <= 1) {
 jQuery(window).load(function() {
 jQuery('.slider-rotate').cycle({
 	fx:					'fade',
-	pager:				'#controllers',
+	slides:				'> div',
+	pager:				'> #controllers',
 	prev:				'.slide-prev',
 	next:				'.slide-next',
-	activePagerClass: 	'active',
+	pagerActiveClass:	'active',
+	pagerTemplate:		'<a></a>',
 	timeout:			4000,
 	speed:				1000,
 	pause:				1,
 	pauseOnPagerHover: 	1,
 	width:				'100%',
 	containerResize: 	0,
+	autoHeight:			'container',
 	fit:				1,
 	after: 				function ()	{
 							jQuery(this).parent().css('height', jQuery(this).height());
 						},
-	cleartypeNoBg:		true
+	cleartypeNoBg:		true,
+	log:				false,
+	swipe:				true,
+	swipeFx:			'scrollHorz'
 
 });
 

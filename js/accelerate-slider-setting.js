@@ -31,8 +31,7 @@ jQuery('.slider-rotate').cycle({
 						},
 	cleartypeNoBg:		true,
 	log:				false,
-	swipe:				true,
-	swipeFx:			'scrollHorz'
+	swipe:				true
 
 });
 

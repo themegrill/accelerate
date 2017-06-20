@@ -864,7 +864,7 @@ a.slide-next {
    -ms-transform: translateY(-50%); /* IE 9 */
    -webkit-transform: translateY(-50%);
    transform: translateY(-50%);
-   z-index: 99;
+   z-index: 999;
 }
 .slide-prev i,
 .slide-next i {
@@ -900,7 +900,7 @@ a.slide-next:hover {
 	position: absolute;
 	width: 100%;
 	bottom: 15px;
-	z-index: 99;
+	z-index: 999;
 }
 #controllers a {
 	width: 16px;

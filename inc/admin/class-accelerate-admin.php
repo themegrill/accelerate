@@ -134,7 +134,7 @@ class Accelerate_admin {
 
 			<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'accelerate' ); ?></a>
 
-			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/accelerate?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'accelerate' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/accelerate/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'accelerate' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">

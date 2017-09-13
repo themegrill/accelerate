@@ -1,4 +1,4 @@
-﻿== ACCELERATE ==
+== ACCELERATE ==
 
 Accelerate is multipurpose WordPress theme made for simplicity and ease of use. This theme is a piece of art that has this premium look and feel which will make your site stand out. Supports all post formats. Accelerate can be used for portfolio, business, blog, personal, travel, corporate, business services or any other kinds of sites.
 
@@ -50,6 +50,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = TBD =
+* Tweak - Add theme support for Jetpack Responsive Videos.
 * Fix - Submenu issue fix
 * Feature - jQuery cycle plugin for slider upgraded to jQuery cycle2 v2.1.6.
 * Tweaks - Introduce selective refresh for site title and description

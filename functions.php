@@ -106,6 +106,9 @@ function accelerate_setup() {
 	      'flex-height' => true,
 	   )
 	);
+
+	// Support for selective refresh widgets in Customizer
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 

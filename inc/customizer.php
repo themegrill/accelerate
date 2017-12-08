@@ -8,6 +8,7 @@
  */
 
 function accelerate_customize_register($wp_customize) {
+
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -201,22 +202,23 @@ function accelerate_customize_register($wp_customize) {
    // site layout setting
    $wp_customize->add_section('accelerate_site_layout_setting', array(
       'priority' => 1,
-      'title' => __('Site Layout', 'accelerate'),
-      'panel' => 'accelerate_design_options'
+      'title'    => __('Site Layout', 'accelerate'),
+      'panel'    => 'accelerate_design_options'
    ));
 
    $wp_customize->add_setting($accelerate_themename.'[accelerate_site_layout]', array(
-      'default' => 'wide',
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
+      'default'           => 'wide',
+      'transport'         => 'postMessage',
+      'type'              => 'option',
+      'capability'        => 'edit_theme_options',
       'sanitize_callback' => 'accelerate_radio_select_sanitize'
    ));
 
    $wp_customize->add_control($accelerate_themename.'[accelerate_site_layout]', array(
-      'type' => 'radio',
-      'label' => __('Choose your site layout. The change is reflected in whole site.', 'accelerate'),
+      'type'    => 'radio',
+      'label'   => __('Choose your site layout. The change is reflected in whole site.', 'accelerate'),
       'choices' => array(
-         'box' => __( 'Boxed layout', 'accelerate' ),
+         'box'  => __( 'Boxed layout', 'accelerate' ),
          'wide' => __( 'Wide layout', 'accelerate' )
       ),
       'section' => 'accelerate_site_layout_setting'

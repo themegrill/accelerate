@@ -8,6 +8,8 @@
  */
 
 function accelerate_customize_register($wp_customize) {
+   // Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -223,6 +225,14 @@ function accelerate_customize_register($wp_customize) {
       ),
       'section' => 'accelerate_site_layout_setting'
    ));
+
+   // Selective refresh for slider
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'accelerate[accelerate_activate_slider]', array(
+         'selector'        => '#featured-slider',
+         'render_callback' => '',
+      ) );
+   }
 
    class Accelerate_Image_Radio_Control extends WP_Customize_Control {
 

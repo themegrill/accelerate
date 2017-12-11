@@ -8,6 +8,9 @@
  */
 
 function accelerate_customize_register($wp_customize) {
+   // Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -201,26 +204,35 @@ function accelerate_customize_register($wp_customize) {
    // site layout setting
    $wp_customize->add_section('accelerate_site_layout_setting', array(
       'priority' => 1,
-      'title' => __('Site Layout', 'accelerate'),
-      'panel' => 'accelerate_design_options'
+      'title'    => __('Site Layout', 'accelerate'),
+      'panel'    => 'accelerate_design_options'
    ));
 
    $wp_customize->add_setting($accelerate_themename.'[accelerate_site_layout]', array(
-      'default' => 'wide',
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
+      'default'           => 'wide',
+      'transport'         => 'postMessage',
+      'type'              => 'option',
+      'capability'        => 'edit_theme_options',
       'sanitize_callback' => 'accelerate_radio_select_sanitize'
    ));
 
    $wp_customize->add_control($accelerate_themename.'[accelerate_site_layout]', array(
-      'type' => 'radio',
-      'label' => __('Choose your site layout. The change is reflected in whole site.', 'accelerate'),
+      'type'    => 'radio',
+      'label'   => __('Choose your site layout. The change is reflected in whole site.', 'accelerate'),
       'choices' => array(
-         'box' => __( 'Boxed layout', 'accelerate' ),
+         'box'  => __( 'Boxed layout', 'accelerate' ),
          'wide' => __( 'Wide layout', 'accelerate' )
       ),
       'section' => 'accelerate_site_layout_setting'
    ));
+
+   // Selective refresh for slider
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'accelerate[accelerate_activate_slider]', array(
+         'selector'        => '#featured-slider',
+         'render_callback' => '',
+      ) );
+   }
 
    class Accelerate_Image_Radio_Control extends WP_Customize_Control {
 
@@ -672,6 +684,17 @@ function accelerate_customize_register($wp_customize) {
 
 }
 add_action('customize_register', 'accelerate_customize_register');
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since Accelerate 1.3.3
+ */
+function accelerate_customize_preview_js() {
+   wp_enqueue_script( 'accelerate-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+
+add_action( 'customize_preview_init', 'accelerate_customize_preview_js' );
 
 /**
  * Render the site title for the selective refresh partial.

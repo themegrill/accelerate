@@ -128,7 +128,11 @@ function accelerate_widgets_init() {
  */
  class accelerate_featured_single_page_widget extends WP_Widget {
  	function __construct() {
- 		$widget_ops = array( 'classname' => 'widget_featured_single_post clearfix', 'description' => __( 'Display Featured Single Page', 'accelerate' ) );
+ 		$widget_ops = array(
+ 			'classname'                   => 'widget_featured_single_post clearfix',
+ 			'description'                 => __( 'Display Featured Single Page', 'accelerate' ),
+ 			'customize_selective_refresh' => true,
+ 		);
 		$control_ops = array( 'width' => 200, 'height' =>250 );
 		parent::__construct( false, $name= __( 'TG: Featured Single Page', 'accelerate' ), $widget_ops, $control_ops);
  	}
@@ -228,7 +232,11 @@ function accelerate_widgets_init() {
  */
 class accelerate_call_to_action_widget extends WP_Widget {
  	function __construct() {
- 		$widget_ops = array( 'classname' => 'widget_call_to_action', 'description' => __( 'Use this widget to show the call to action section.', 'accelerate' ) );
+ 		$widget_ops = array(
+ 			'classname'                   => 'widget_call_to_action',
+ 			'description'                 => __( 'Use this widget to show the call to action section.', 'accelerate' ),
+ 			'customize_selective_refresh' => true,
+ 		);
 		$control_ops = array( 'width' => 200, 'height' =>250 );
 		parent::__construct( false, $name = __( 'TG: Call To Action Widget', 'accelerate' ), $widget_ops, $control_ops);
  	}
@@ -334,7 +342,11 @@ class accelerate_call_to_action_widget extends WP_Widget {
  */
  class accelerate_recent_work_widget extends WP_Widget {
  	function __construct() {
- 		$widget_ops = array( 'classname' => 'widget_recent_work', 'description' => __( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'accelerate' ) );
+ 		$widget_ops = array(
+ 			'classname'                    => 'widget_recent_work',
+ 			'description'                  => __( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'accelerate' ),
+ 			'customize_selective_refresh' => true,
+ 		);
 		$control_ops = array( 'width' => 200, 'height' =>250 );
 		parent::__construct( false, $name = __( 'TG: Featured Widget', 'accelerate' ), $widget_ops, $control_ops);
  	}
@@ -449,7 +461,11 @@ class accelerate_call_to_action_widget extends WP_Widget {
  */
 class accelerate_image_service_widget extends WP_Widget {
  	function __construct() {
- 		$widget_ops = array( 'classname' => 'widget_image_service_block', 'description' => __( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'accelerate' ) );
+ 		$widget_ops = array(
+ 			'classname'                   => 'widget_image_service_block',
+ 			'description'                 => __( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'accelerate' ),
+ 			'customize_selective_refresh' => true,
+ 		);
 		$control_ops = array( 'width' => 200, 'height' =>250 );
 		parent::__construct( false, $name = __( 'TG: Image Services', 'accelerate' ), $widget_ops, $control_ops);
  	}
@@ -562,7 +578,11 @@ class accelerate_image_service_widget extends WP_Widget {
  */
 class accelerate_custom_tag_widget extends WP_Widget {
 	function __construct() {
-		$widget_ops = array( 'classname' => 'accelerate_tagcloud_widget', 'description' => __( 'Custom Tag Cloud', 'accelerate' ) );
+		$widget_ops = array(
+			'classname'                   => 'accelerate_tagcloud_widget',
+			'description'                 => __( 'Custom Tag Cloud', 'accelerate' ),
+ 			'customize_selective_refresh' => true,
+		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Custom Tag Cloud', 'accelerate' ) , $widget_ops, $control_ops );
 	}

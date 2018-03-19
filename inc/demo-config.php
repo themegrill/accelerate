@@ -16,13 +16,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup demo importer packages.
  *
  * @param  array $packages
+ *
  * @return array
  */
 function accelerate_demo_importer_packages( $packages ) {
 	$new_packages = array(
 		'accelerate-free' => array(
 			'name'    => esc_html__( 'Accelerate', 'accelerate' ),
-			'preview' => 'http://demo.themegrill.com/accelerate/',
+			'preview' => 'https://demo.themegrill.com/accelerate/',
+		),
+		'accelerate-pro'  => array(
+			'name'     => esc_html__( 'Accelerate Pro', 'accelerate' ),
+			'preview'  => 'https://demo.themegrill.com/accelerate-pro/',
+			'pro_link' => 'https://themegrill.com/themes/accelerate/',
 		),
 	);
 

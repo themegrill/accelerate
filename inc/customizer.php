@@ -464,14 +464,14 @@ function accelerate_customize_register( $wp_customize ) {
 	}
 	// End of Design Options
 
-	if ( ! function_exists( 'has_site_icon' ) ) {
-		// Start of the Additional Options
-		$wp_customize->add_panel( 'accelerate_additional_options', array(
-			'capabitity' => 'edit_theme_options',
-			'priority'   => 510,
-			'title'      => __( 'Additional', 'accelerate' ),
-		) );
+	// Start of the Additional Options
+	$wp_customize->add_panel( 'accelerate_additional_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 510,
+		'title'      => __( 'Additional', 'accelerate' ),
+	) );
 
+	if ( ! function_exists( 'has_site_icon' ) ) {
 		// favicon activate option
 		$wp_customize->add_section( 'accelerate_additional_activate_section', array(
 			'priority' => 1,
@@ -512,8 +512,29 @@ function accelerate_customize_register( $wp_customize ) {
 			'section'  => 'accelerate_favicon_upload_section',
 			'settings' => $accelerate_themename . '[accelerate_favicon]',
 		) ) );
-		// End of Additional Options
 	}
+
+	// Author Bio Option.
+	$wp_customize->add_section( 'accelerate_author_bio_section', array(
+		'priority' => 7,
+		'title'    => esc_html__( 'Author Bio Option', 'accelerate' ),
+		'panel'    => 'accelerate_additional_options',
+	) );
+
+	$wp_customize->add_setting( $accelerate_themename . '[accelerate_author_bio_setting]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'accelerate_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $accelerate_themename . '[accelerate_author_bio_setting]', array(
+		'type'    => 'checkbox',
+		'label'   => esc_html__( 'Check to display the author bio.', 'accelerate' ),
+		'setting' => $accelerate_themename . '[accelerate_author_bio_setting]',
+		'section' => 'accelerate_author_bio_section',
+	) );
+	// End of Additional Options
 
 	// Adding Text Area Control For Use In Customizer
 	class Accelerate_Text_Area_Control extends WP_Customize_Control {

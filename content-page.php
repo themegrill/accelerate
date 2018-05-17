@@ -2,9 +2,9 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Accelerate
- * @since Accelerate 1.0
+ * @since      Accelerate 1.0
  */
 ?>
 
@@ -12,7 +12,7 @@
 	<?php do_action( 'accelerate_before_post_content' ); ?>
 
 	<header class="entry-header">
-		<?php if( is_front_page() ):
+		<?php if ( is_front_page() ):
 			the_title( '<h2 class="entry-title">', '</h2>' );
 		else:
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,12 +22,12 @@
 	<div class="entry-content clearfix">
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before'            => '<div style="clear: both;"></div><div class="pagination clearfix">'.__( 'Pages:', 'accelerate' ),
-				'after'             => '</div>',
-				'link_before'       => '<span>',
-				'link_after'        => '</span>'
-	      ) );
+		wp_link_pages( array(
+			'before'      => '<div style="clear: both;"></div><div class="pagination clearfix">' . __( 'Pages:', 'accelerate' ),
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+		) );
 		?>
 	</div>
 

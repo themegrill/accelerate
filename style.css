@@ -1055,6 +1055,29 @@ a.slide-next:hover {
 	text-decoration: none;
 }
 
+	/* author-boi */
+
+.author-box {
+	padding: 20px;
+	border-radius: 5px;
+	background: #F8F8F8;
+}
+
+.author-img {
+	width: 80px;
+}
+
+.author-description-wrapper {
+    margin-left: 100px;
+}
+
+.author-box .author-name {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+
+
 /* =WIDGET IMAGE SERVICE WIDGET
 ----------------------------------------------- */
 .widget_image_service_block {
@@ -2151,6 +2174,12 @@ iframe#wp-custom-header-video {
 	.gallery-columns-8 .gallery-item,
 	.gallery-columns-9 .gallery-item {
 		width:25%;
+	}
+	.author-box img {
+		float: none;
+	}
+	.author-description-wrapper {
+		margin-left: 0;
 	}
 }
 @media only screen and (max-width: 420px) {

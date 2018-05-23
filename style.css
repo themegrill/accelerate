@@ -1063,12 +1063,12 @@ a.slide-next:hover {
 	background: #F8F8F8;
 }
 
-.author-img {
-	width: 80px;
+.author-img .avatar {
+	margin-bottom: 0;
 }
 
 .author-description-wrapper {
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 .author-box .author-name {

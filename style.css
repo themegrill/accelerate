@@ -1055,7 +1055,7 @@ a.slide-next:hover {
 	text-decoration: none;
 }
 
-	/* author-boi */
+/* author-boi */
 
 .author-box {
 	padding: 20px;
@@ -1068,7 +1068,7 @@ a.slide-next:hover {
 }
 
 .author-description-wrapper {
-    margin-left: 120px;
+	margin-left: 120px;
 }
 
 .author-box .author-name {
@@ -1885,6 +1885,57 @@ a.read-more:hover {
 	display: none;
 }
 
+/* =RELATED POST
+----------------------------------------------- */
+
+.related-posts-wrapper {
+	border-top: 1px solid #f8f8f8;
+	padding-top: 15px;
+}
+
+.related-posts-wrapper .related-posts-main-title {
+	font-size: 22px;
+}
+
+.related-posts-wrapper .related-posts-thumbnail img {
+	margin-bottom: 10px;
+}
+
+.related-posts-wrapper .entry-title {
+	font-size: 18px;
+	line-height: 1.4;
+	padding-bottom: 10px;
+}
+
+.related-posts-wrapper .entry-title a {
+	color: #444444;
+}
+
+.related-posts-wrapper .entry-title a:hover {
+	color: #77cc6d;
+}
+
+.related-posts-wrapper .entry-meta .byline i,
+.related-posts-wrapper .entry-meta .posted-on i{
+	font-size: 12px;
+	color: #aaaaaa;
+}
+
+.related-posts-wrapper .entry-meta .byline,
+.related-posts-wrapper .entry-meta .posted-on {
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.related-posts-wrapper .entry-meta .byline a {
+	color: #aaaaaa;
+}
+
+.related-posts-wrapper .entry-meta .byline a:hover {
+	color: #77cc6d;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 Header media css
 --------------------------------------------------------------*/
@@ -2141,9 +2192,18 @@ iframe#wp-custom-header-video {
 	.widget_image_service_block .tg-one-third {
 		padding-bottom: 20px;
 	}
+	.related-posts-wrapper .tg-one-third{
+		width: 46.3636%;
+		margin: 0 3.6364% 0 0;
+		float: left;
+	}
+	.related-posts-wrapper .tg-one-third:nth-child(2n){
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 600px) {
+	
 	#header-right-sidebar .searchform {
 		width: 57%;
 	}
@@ -2180,6 +2240,11 @@ iframe#wp-custom-header-video {
 	}
 	.author-description-wrapper {
 		margin-left: 0;
+	}
+	.related-posts-wrapper .tg-one-third{
+		width: 100%;
+		float: none;
+		margin: 0;
 	}
 }
 @media only screen and (max-width: 420px) {

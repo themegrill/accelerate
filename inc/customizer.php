@@ -228,7 +228,7 @@ function accelerate_customize_register( $wp_customize ) {
 
 	// Selective refresh for slider
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'accelerate[accelerate_activate_slider]', array(
+		$wp_customize->selective_refresh->add_partial( $accelerate_themename . '[accelerate_activate_slider]', array(
 			'selector'        => '#featured-slider',
 			'render_callback' => '',
 		) );
@@ -542,31 +542,31 @@ function accelerate_customize_register( $wp_customize ) {
 		'panel'    => 'accelerate_additional_options',
 	) );
 
-	$wp_customize->add_setting( 'accelerate[accelerate_related_posts_activate]', array(
+	$wp_customize->add_setting( $accelerate_themename . '[accelerate_related_posts_activate]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'accelerate_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( 'accelerate[accelerate_related_posts_activate]', array(
+	$wp_customize->add_control( $accelerate_themename . '[accelerate_related_posts_activate]', array(
 		'type'     => 'checkbox',
 		'label'    => esc_html__( 'Check to activate the related posts', 'accelerate' ),
 		'section'  => 'accelerate_related_posts_section',
-		'settings' => 'accelerate[accelerate_related_posts_activate]',
+		'settings' => $accelerate_themename . '[accelerate_related_posts_activate]',
 	) );
 
-	$wp_customize->add_setting( 'accelerate[accelerate_related_posts]', array(
+	$wp_customize->add_setting( $accelerate_themename . '[accelerate_related_posts]', array(
 		'default'           => 'categories',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'accelerate_radio_select_sanitize',
 	) );
 
-	$wp_customize->add_control( 'accelerate[accelerate_related_posts]', array(
+	$wp_customize->add_control( $accelerate_themename . '[accelerate_related_posts]', array(
 		'type'     => 'radio',
 		'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'accelerate' ),
 		'section'  => 'accelerate_related_posts_section',
-		'settings' => 'accelerate[accelerate_related_posts]',
+		'settings' => $accelerate_themename . '[accelerate_related_posts]',
 		'choices'  => array(
 			'categories' => esc_html__( 'Related Posts By Categories', 'accelerate' ),
 			'tags'       => esc_html__( 'Related Posts By Tags', 'accelerate' ),

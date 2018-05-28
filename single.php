@@ -30,6 +30,10 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 
+				<?php if ( accelerate_options( 'accelerate_related_posts_activate', 0 ) == 1 ) {
+					get_template_part( 'inc/related-posts' );
+				} ?>
+
 				<?php
 				do_action( 'accelerate_before_comments_template' );
 				// If comments are open or we have at least one comment, load up the comment template

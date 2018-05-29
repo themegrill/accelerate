@@ -748,13 +748,13 @@ if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 		);
 
 		// Related by categories.
-		if ( get_theme_mod( 'accelerate[accelerate_related_posts]', 'categories' ) == 'categories' ) {
+		if ( accelerate_options( 'accelerate_related_posts', 'categories' ) == 'categories' ) {
 			$cats = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
 			$args['category__in'] = $cats;
 		}
 
 		// Related by tags.
-		if ( get_theme_mod( 'accelerate[accelerate_related_posts]', 'categories' ) == 'tags' ) {
+		if ( accelerate_options( 'accelerate_related_posts', 'categories' ) == 'tags' ) {
 			$tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
 			$args['tag__in'] = $tags;
 

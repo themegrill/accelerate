@@ -49,6 +49,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Menu out of viewport.
+
 = Version 1.3.5 - 2018-05-29 =
 * Feature - Added Author Bio display option
 * Feature - Added Related posts display option

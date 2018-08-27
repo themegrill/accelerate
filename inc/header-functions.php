@@ -70,6 +70,9 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 						$accelerate_slider_image        = accelerate_options( 'accelerate_slider_image' . $i, '' );
 						$accelerate_slide_text_position = accelerate_options( 'accelerate_slide_text_position' . $i, 'right' );
 						$accelerate_slider_link         = accelerate_options( 'accelerate_slider_link' . $i, '#' );
+						$attachment_post_id             = attachment_url_to_postid( $accelerate_slider_image );
+						$image_value                    = wp_get_attachment_image_src( $attachment_post_id, 'full' );
+
 						if ( ! empty( $accelerate_header_title ) || ! empty( $accelerate_slider_text ) || ! empty( $accelerate_slider_image ) ) {
 							if ( $i == 1 ) {
 								$classes = "slides displayblock";
@@ -85,7 +88,7 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 							?>
 							<div class="<?php echo $classes; ?>">
 								<figure>
-									<img alt="<?php echo esc_attr( $accelerate_slider_title ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
+									<img width="<?php echo esc_attr($image_value[1]); ?>" height="<?php echo esc_attr($image_value[2]); ?>" alt="<?php echo esc_attr( $accelerate_slider_title ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
 								</figure>
 								<div class="<?php echo $classes2; ?>">
 									<?php if ( ! empty( $accelerate_slider_title ) || ! empty( $accelerate_slider_text ) ) { ?>

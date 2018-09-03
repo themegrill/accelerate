@@ -135,7 +135,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 				<a href="<?php echo esc_url( 'https://demo.themegrill.com/accelerate/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'accelerate' ); ?></a>
 
-				<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'accelerate' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate/?utm_source=accelerate-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'accelerate' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/accelerate/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'accelerate' ); ?></a>
 			</p>
@@ -229,7 +229,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 							<h3><?php esc_html_e( 'Need more features?', 'accelerate' ); ?></h3>
 							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'accelerate' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'accelerate' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/themes/accelerate/?utm_source=accelerate-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Pro', 'accelerate' ); ?></a>
 							</p>
 						</div>
 
@@ -535,6 +535,13 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 						<td><h3><?php esc_html_e( 'TG: Fun Facts', 'accelerate' ); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td class="btn-wrapper">
+							<a href="<?php echo esc_url( apply_filters( 'colormag_pro_theme_url', 'https://themegrill.com/themes/accelerate/?utm_source=accelerate-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'colormag' ); ?></a>
+						</td>
 					</tr>
 					</tbody>
 				</table>

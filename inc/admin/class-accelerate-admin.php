@@ -540,7 +540,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'colormag_pro_theme_url', 'https://themegrill.com/themes/accelerate/?utm_source=accelerate-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'colormag' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'accelerate_pro_theme_url', 'https://themegrill.com/themes/accelerate/?utm_source=accelerate-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'accelerate' ); ?></a>
 						</td>
 					</tr>
 					</tbody>

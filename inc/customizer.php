@@ -26,65 +26,6 @@ function accelerate_customize_register( $wp_customize ) {
 		) );
 	}
 
-	// Theme important links started
-	class Accelerate_Important_Links extends WP_Customize_Control {
-
-		public $type = "accelerate-important-links";
-
-		public function render_content() {
-			//Add Theme instruction, Support Forum, Demo Link, Rating Link
-			$important_links = array(
-				'view-pro'      => array(
-					'link' => esc_url( 'https://themegrill.com/themes/accelerate-pro/' ),
-					'text' => __( 'View Pro', 'accelerate' ),
-				),
-				'theme-info'    => array(
-					'link' => esc_url( 'https://themegrill.com/themes/accelerate/' ),
-					'text' => __( 'Theme Info', 'accelerate' ),
-				),
-				'support'       => array(
-					'link' => esc_url( 'https://themegrill.com/support-forum/' ),
-					'text' => __( 'Support Forum', 'accelerate' ),
-				),
-				'documentation' => array(
-					'link' => esc_url( 'https://docs.themegrill.com/accelerate/' ),
-					'text' => __( 'Documentation', 'accelerate' ),
-				),
-				'demo'          => array(
-					'link' => esc_url( 'https://demo.themegrill.com/accelerate/' ),
-					'text' => __( 'View Demo', 'accelerate' ),
-				),
-				'rating'        => array(
-					'link' => esc_url( 'http://wordpress.org/support/view/theme-reviews/accelerate?filter=5' ),
-					'text' => __( 'Rate this theme', 'accelerate' ),
-				),
-			);
-			foreach ( $important_links as $important_link ) {
-				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
-			}
-		}
-
-	}
-
-	$wp_customize->add_section( 'accelerate_important_links', array(
-		'priority' => 1,
-		'title'    => __( 'Accelerate Important Links', 'accelerate' ),
-	) );
-
-	/**
-	 * This setting has the dummy Sanitization function as it contains no value to be sanitized
-	 */
-	$wp_customize->add_setting( 'accelerate_important_links', array(
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'accelerate_links_sanitize',
-	) );
-
-	$wp_customize->add_control( new Accelerate_Important_Links( $wp_customize, 'important_links', array(
-		'section'  => 'accelerate_important_links',
-		'settings' => 'accelerate_important_links',
-	) ) );
-	// Theme Important Links Ended
-
 	/*
 	 * Assigning the theme name
 	 */

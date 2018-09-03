@@ -221,7 +221,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 							<h3><?php esc_html_e( 'Got theme support question?', 'accelerate' ); ?></h3>
 							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'accelerate' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'accelerate' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/?utm_source=accelerate-about&utm_medium=support-forum-link&utm_campaign=support-forum' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Support Forum', 'accelerate' ); ?></a>
 							</p>
 						</div>
 
@@ -237,7 +237,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 							<h3><?php esc_html_e( 'Got sales related question?', 'accelerate' ); ?></h3>
 							<p><?php esc_html_e( 'Please send it via our sales contact page.', 'accelerate' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'accelerate' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/contact/?utm_source=accelerate-about&utm_medium=contact-page-link&utm_campaign=contact-page' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Contact Page', 'accelerate' ); ?></a>
 							</p>
 						</div>
 

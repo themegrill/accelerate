@@ -783,17 +783,42 @@ add_action( 'customize_controls_print_footer_scripts', 'accelerate_customizer_cu
 function accelerate_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
-		li#accordion-section-accelerate_important_links h3.accordion-section-title, li#accordion-section-accelerate_important_links h3.accordion-section-title:focus {
+		li#accordion-section-accelerate_upsell_section h3.accordion-section-title {
 			background-color: #77CC6D !important;
+			border-left-color: #55a54c !important;
+		}
+
+		#accordion-section-accelerate_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none!important;
+		}
+
+		li#accordion-section-accelerate_upsell_section h3.accordion-section-title a {
+			display: block;
+			color: #fff !important;
+			text-decoration: none;
+		}
+
+		li#accordion-section-accelerate_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
+		}
+
+		li#accordion-section-accelerate_upsell_section h3.accordion-section-title:hover {
+			background-color: #4fbb42 !important;
 			color: #fff !important;
 		}
 
-		li#accordion-section-accelerate_important_links h3.accordion-section-title:hover {
-			background-color: #77CC6D !important;
-			color: #fff !important;
-		}
-
-		li#accordion-section-accelerate_important_links h3.accordion-section-title:after {
+		li#accordion-section-accelerate_upsell_section h3.accordion-section-title:after {
 			color: #fff !important;
 		}
 

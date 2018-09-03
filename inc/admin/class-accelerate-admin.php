@@ -213,7 +213,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 							<h3><?php esc_html_e( 'Documentation', 'accelerate' ); ?></h3>
 							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'accelerate' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://docs.themegrill.com/accelerate/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a>
+								<a href="<?php echo esc_url( 'https://docs.themegrill.com/accelerate/?utm_source=accelerate-about&utm_medium=documentation-link&utm_campaign=documentation' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Documentation', 'accelerate' ); ?></a>
 							</p>
 						</div>
 

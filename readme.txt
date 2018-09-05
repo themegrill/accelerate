@@ -50,9 +50,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = TBD =
-* Fix - Menu out of viewport.
 * Tweak - Added width and height attribute for slider
 * Update - Screenshot updated as per new wordpress.org guideline
+* Update - Upsell link
 
 = Version 1.3.5 - 2018-05-29 =
 * Feature - Added Author Bio display option

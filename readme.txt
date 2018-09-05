@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.6 - 2018-09-05 =
 * Tweak - Added width and height attribute for slider
 * Update - Screenshot updated as per new wordpress.org guideline
 * Update - Upsell link

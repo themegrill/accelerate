@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Accelerate 1.3.5\n"
+"Project-Id-Version: Accelerate 1.3.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-05-29 05:01:56+00:00\n"
+"POT-Creation-Date: 2018-09-05 04:21:36+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,23 +13,23 @@ msgstr ""
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/admin/class-accelerate-admin.php:380
+#: inc/admin/class-accelerate-admin.php:421
 msgid "1"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:385
+#: inc/admin/class-accelerate-admin.php:426
 msgid "2"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:386
+#: inc/admin/class-accelerate-admin.php:427
 msgid "3"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:356
+#: inc/admin/class-accelerate-admin.php:397
 msgid "4"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:381
+#: inc/admin/class-accelerate-admin.php:422
 msgid "5"
 msgstr ""
 
@@ -104,7 +104,8 @@ msgid "Comments are closed."
 msgstr ""
 
 #: content-blog-large-image.php:40 content-blog-small-image.php:41
-#: content.php:45 inc/widgets/widgets.php:217 inc/widgets/widgets.php:560
+#: content.php:45 inc/widgets/accelerate-featured-single-page-widget.php:95
+#: inc/widgets/accelerate-image-service-widget.php:104
 msgid "Read more"
 msgstr ""
 
@@ -125,192 +126,193 @@ msgid "Menu"
 msgstr ""
 
 #: inc/admin/class-accelerate-admin.php:36
-#: inc/admin/class-accelerate-admin.php:116
+#: inc/admin/class-accelerate-admin.php:119
 msgid "About"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:74
+#: inc/admin/class-accelerate-admin.php:77
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:78
+#: inc/admin/class-accelerate-admin.php:81
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:92
+#: inc/admin/class-accelerate-admin.php:95
 msgid "Dismiss"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:93
+#: inc/admin/class-accelerate-admin.php:96
 msgid ""
 "Welcome! Thank you for choosing Accelerate! To fully take advantage of the "
 "best our theme can offer please make sure you visit our %swelcome page%s."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:95
+#: inc/admin/class-accelerate-admin.php:98
 msgid "Get started with Accelerate"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:131 inc/customizer.php:43
+#: inc/admin/class-accelerate-admin.php:134
 msgid "Theme Info"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:133 inc/customizer.php:55
+#: inc/admin/class-accelerate-admin.php:136
 msgid "View Demo"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:135
+#: inc/admin/class-accelerate-admin.php:138 inc/customizer.php:71
 msgid "View PRO version"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:137 inc/customizer.php:59
+#: inc/admin/class-accelerate-admin.php:140
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:145
+#: inc/admin/class-accelerate-admin.php:155
 msgid "Supported Plugins"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:148
+#: inc/admin/class-accelerate-admin.php:163
 msgid "Free Vs Pro"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:151
+#: inc/admin/class-accelerate-admin.php:171
 msgid "Changelog"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:185
+#: inc/admin/class-accelerate-admin.php:205
 msgid "Theme Customizer"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:186
+#: inc/admin/class-accelerate-admin.php:206
 msgid "All Theme Options are available via Customize screen."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:187
+#: inc/admin/class-accelerate-admin.php:208
 msgid "Customize"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:191
-#: inc/admin/class-accelerate-admin.php:193 inc/customizer.php:51
+#: inc/admin/class-accelerate-admin.php:213
+#: inc/admin/class-accelerate-admin.php:216
 msgid "Documentation"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:192
+#: inc/admin/class-accelerate-admin.php:214
 msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:197
+#: inc/admin/class-accelerate-admin.php:221
 msgid "Got theme support question?"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:198
+#: inc/admin/class-accelerate-admin.php:222
 msgid "Please put it in our dedicated support forum."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:199 inc/customizer.php:47
+#: inc/admin/class-accelerate-admin.php:224
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:203
+#: inc/admin/class-accelerate-admin.php:229
 msgid "Need more features?"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:204
-#: inc/admin/class-accelerate-admin.php:343
+#: inc/admin/class-accelerate-admin.php:230
+#: inc/admin/class-accelerate-admin.php:384
 msgid "Upgrade to PRO version for more exciting features."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:205 inc/customizer.php:39
+#: inc/admin/class-accelerate-admin.php:232
+#: inc/admin/class-accelerate-admin.php:543
 msgid "View Pro"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:209
+#: inc/admin/class-accelerate-admin.php:237
 msgid "Got sales related question?"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:210
+#: inc/admin/class-accelerate-admin.php:238
 msgid "Please send it via our sales contact page."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:211
+#: inc/admin/class-accelerate-admin.php:240
 msgid "Contact Page"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:217
-#: inc/admin/class-accelerate-admin.php:225
+#: inc/admin/class-accelerate-admin.php:247
+#: inc/admin/class-accelerate-admin.php:255
 msgid "Translate"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:221
+#: inc/admin/class-accelerate-admin.php:251
 msgid "Click below to translate this theme into your own language."
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:237
+#: inc/admin/class-accelerate-admin.php:267
 msgid "Return to Updates"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:237
+#: inc/admin/class-accelerate-admin.php:267
 msgid "Return to Dashboard &rarr; Updates"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:240
+#: inc/admin/class-accelerate-admin.php:270
 msgid "Go to Dashboard &rarr; Home"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:240
+#: inc/admin/class-accelerate-admin.php:270
 msgid "Go to Dashboard"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:257
+#: inc/admin/class-accelerate-admin.php:287
 msgid "View changelog below:"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:309
+#: inc/admin/class-accelerate-admin.php:341
 msgid "This theme recommends following plugins:"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:311
-#: inc/admin/class-accelerate-admin.php:394
+#: inc/admin/class-accelerate-admin.php:344
+#: inc/admin/class-accelerate-admin.php:435
 msgid "Social Icons"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:312
-#: inc/admin/class-accelerate-admin.php:315
+#: inc/admin/class-accelerate-admin.php:345
+#: inc/admin/class-accelerate-admin.php:349
 msgid " by ThemeGrill"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:314
+#: inc/admin/class-accelerate-admin.php:348
 msgid "Easy Social Sharing"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:317
+#: inc/admin/class-accelerate-admin.php:352
 msgid "Contact Form 7"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:318
+#: inc/admin/class-accelerate-admin.php:355
 msgid "WP-PageNavi"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:319
+#: inc/admin/class-accelerate-admin.php:358
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:320
-#: inc/admin/class-accelerate-admin.php:323
-#: inc/admin/class-accelerate-admin.php:326
+#: inc/admin/class-accelerate-admin.php:359
+#: inc/admin/class-accelerate-admin.php:363
+#: inc/admin/class-accelerate-admin.php:367
 msgid "Fully Compatible in Pro Version"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:322
+#: inc/admin/class-accelerate-admin.php:362
 msgid "Polylang"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:325
+#: inc/admin/class-accelerate-admin.php:366
 msgid "WPML"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:348
+#: inc/admin/class-accelerate-admin.php:389
 msgid "Features"
 msgstr ""
 
@@ -318,39 +320,39 @@ msgstr ""
 msgid "Accelerate"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:350 inc/demo-config.php:29
+#: inc/admin/class-accelerate-admin.php:391 inc/demo-config.php:26
 msgid "Accelerate Pro"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:355 inc/customizer.php:597
+#: inc/admin/class-accelerate-admin.php:396 inc/customizer.php:588
 msgid "Slider"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:357
+#: inc/admin/class-accelerate-admin.php:398
 msgid "Unlimited Slides"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:360
+#: inc/admin/class-accelerate-admin.php:401
 msgid "Google Fonts Option"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:362
+#: inc/admin/class-accelerate-admin.php:403
 msgid "600+"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:365
+#: inc/admin/class-accelerate-admin.php:406
 msgid "Font Size options"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:370
+#: inc/admin/class-accelerate-admin.php:411
 msgid "Primary Color"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:375
+#: inc/admin/class-accelerate-admin.php:416
 msgid "Multiple Color Options"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:377
+#: inc/admin/class-accelerate-admin.php:418
 msgid "35+ color options"
 msgstr ""
 
@@ -358,99 +360,103 @@ msgstr ""
 msgid "Business Template"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:384
+#: inc/admin/class-accelerate-admin.php:425
 msgid "Custom Menu"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:389
+#: inc/admin/class-accelerate-admin.php:430
 msgid "Boxed & Wide layout option"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:399
+#: inc/admin/class-accelerate-admin.php:440
 msgid "RTL Support"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:404
+#: inc/admin/class-accelerate-admin.php:445
 msgid "Woocommerce Compatible"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:409
+#: inc/admin/class-accelerate-admin.php:450
 msgid "Footer Widget Area"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:414
+#: inc/admin/class-accelerate-admin.php:455
 msgid "Footer Copyright Editor"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:419
+#: inc/admin/class-accelerate-admin.php:460
 msgid "Content Demo"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:424
+#: inc/admin/class-accelerate-admin.php:465
 msgid "Support"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:425
+#: inc/admin/class-accelerate-admin.php:466
 msgid "Forum"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:426
+#: inc/admin/class-accelerate-admin.php:467
 msgid "Forum + Emails/Support Ticket"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:429
+#: inc/admin/class-accelerate-admin.php:470
 msgid "Translation Ready"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:434
+#: inc/admin/class-accelerate-admin.php:475
 msgid "WPML Compatible"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:439
+#: inc/admin/class-accelerate-admin.php:480
 msgid "Polylang Compatible"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:444
+#: inc/admin/class-accelerate-admin.php:485
 msgid "TG: Call to Action widget"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:449 inc/widgets/widgets.php:587
+#: inc/admin/class-accelerate-admin.php:490
+#: inc/widgets/accelerate-custom-tag-widget.php:14
 msgid "TG: Custom Tag Cloud"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:454 inc/widgets/widgets.php:137
+#: inc/admin/class-accelerate-admin.php:495
+#: inc/widgets/accelerate-featured-single-page-widget.php:15
 msgid "TG: Featured Single Page"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:459 inc/widgets/widgets.php:351
+#: inc/admin/class-accelerate-admin.php:500
+#: inc/widgets/accelerate-recent-work-widget.php:14
 msgid "TG: Featured Widget"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:464 inc/widgets/widgets.php:470
+#: inc/admin/class-accelerate-admin.php:505
+#: inc/widgets/accelerate-image-service-widget.php:14
 msgid "TG: Image Services"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:469
+#: inc/admin/class-accelerate-admin.php:510
 msgid "TG: Our Clients"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:474
+#: inc/admin/class-accelerate-admin.php:515
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:479
+#: inc/admin/class-accelerate-admin.php:520
 msgid "TG: Testimonial"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:484
+#: inc/admin/class-accelerate-admin.php:525
 msgid "TG: Pricing Table"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:489
+#: inc/admin/class-accelerate-admin.php:530
 msgid "TG: Team"
 msgstr ""
 
-#: inc/admin/class-accelerate-admin.php:494
+#: inc/admin/class-accelerate-admin.php:535
 msgid "TG: Fun Facts"
 msgstr ""
 
@@ -478,254 +484,250 @@ msgstr ""
 msgid "No Sidebar Content Centered"
 msgstr ""
 
-#: inc/customizer.php:71
-msgid "Accelerate Important Links"
-msgstr ""
-
-#: inc/customizer.php:99
+#: inc/customizer.php:90
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:96
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:109
 msgid ""
 "Upload logo for your header. Recommended size is 100 X 100 pixels but you "
 "can add any size you like."
 msgstr ""
 
-#: inc/customizer.php:127
+#: inc/customizer.php:118
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:140
+#: inc/customizer.php:131
 msgid "Choose the option that you want."
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:134
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:144
+#: inc/customizer.php:135
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:145
+#: inc/customizer.php:136
 msgid "Show Both"
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:137
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:144
 msgid "Header Image Position"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:157
 msgid "Choose top header image display position."
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:160
 msgid "Position One: Display the Header image just above the site title/text."
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:161
 msgid ""
 "Position Two (Default): Display the Header image between site title/text "
 "and the main/primary menu."
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:162
 msgid "Position Three: Display the Header image below main/primary menu."
 msgstr ""
 
-#: inc/customizer.php:178
+#: inc/customizer.php:169
 msgid "Responsive Menu Style"
 msgstr ""
 
-#: inc/customizer.php:191
+#: inc/customizer.php:182
 msgid "Switch to new responsive menu."
 msgstr ""
 
-#: inc/customizer.php:201
+#: inc/customizer.php:192
 msgid "Design"
 msgstr ""
 
-#: inc/customizer.php:207
+#: inc/customizer.php:198
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer.php:212
 msgid "Choose your site layout. The change is reflected in whole site."
 msgstr ""
 
-#: inc/customizer.php:223
+#: inc/customizer.php:214
 msgid "Boxed layout"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:215
 msgid "Wide layout"
 msgstr ""
 
-#: inc/customizer.php:304
+#: inc/customizer.php:295
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:317
+#: inc/customizer.php:308
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, search etc. The layout for a single post and page can be "
 "controlled from below options."
 msgstr ""
 
-#: inc/customizer.php:331
+#: inc/customizer.php:322
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:344
+#: inc/customizer.php:335
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page."
 msgstr ""
 
-#: inc/customizer.php:358
+#: inc/customizer.php:349
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:371
+#: inc/customizer.php:362
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post."
 msgstr ""
 
-#: inc/customizer.php:385
+#: inc/customizer.php:376
 msgid "Posts page listing display type"
 msgstr ""
 
-#: inc/customizer.php:398
+#: inc/customizer.php:389
 msgid ""
 "Choose the display type for the latests posts view or posts page view "
 "(static front page)."
 msgstr ""
 
-#: inc/customizer.php:400
+#: inc/customizer.php:391
 msgid "Large featured image"
 msgstr ""
 
-#: inc/customizer.php:401
+#: inc/customizer.php:392
 msgid "Small featured image"
 msgstr ""
 
-#: inc/customizer.php:402
+#: inc/customizer.php:393
 msgid "Small featured image with alternating sides"
 msgstr ""
 
-#: inc/customizer.php:411
+#: inc/customizer.php:402
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:423
+#: inc/customizer.php:414
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site and logo."
 msgstr ""
 
-#: inc/customizer.php:447
+#: inc/customizer.php:438
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:460
+#: inc/customizer.php:451
 msgid "Write your custom css."
 msgstr ""
 
-#: inc/customizer.php:471
+#: inc/customizer.php:462
 msgid "Additional"
 msgstr ""
 
-#: inc/customizer.php:478
+#: inc/customizer.php:469
 msgid "Activate favicon"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:482
 msgid "Check to activate favicon. Upload fav icon from below option"
 msgstr ""
 
-#: inc/customizer.php:499
+#: inc/customizer.php:490
 msgid "Upload favicon"
 msgstr ""
 
-#: inc/customizer.php:511
+#: inc/customizer.php:502
 msgid "Upload favicon for your site."
 msgstr ""
 
-#: inc/customizer.php:520
+#: inc/customizer.php:511
 msgid "Author Bio Option"
 msgstr ""
 
-#: inc/customizer.php:533
+#: inc/customizer.php:524
 msgid "Check to display the author bio."
 msgstr ""
 
-#: inc/customizer.php:541
+#: inc/customizer.php:532
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:554
+#: inc/customizer.php:545
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:567
+#: inc/customizer.php:558
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:571
+#: inc/customizer.php:562
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:572
+#: inc/customizer.php:563
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:603
+#: inc/customizer.php:594
 msgid "Activate slider"
 msgstr ""
 
-#: inc/customizer.php:616
+#: inc/customizer.php:607
 msgid "Check to activate slider."
 msgstr ""
 
-#: inc/customizer.php:625
+#: inc/customizer.php:616
 msgid "Slider #%1$s"
 msgstr ""
 
-#: inc/customizer.php:638
+#: inc/customizer.php:629
 msgid "Upload image"
 msgstr ""
 
-#: inc/customizer.php:652
+#: inc/customizer.php:643
 msgid "Enter title for this slide"
 msgstr ""
 
-#: inc/customizer.php:666
+#: inc/customizer.php:657
 msgid "Enter description for this slide"
 msgstr ""
 
-#: inc/customizer.php:681
+#: inc/customizer.php:672
 msgid "Slider text position."
 msgstr ""
 
-#: inc/customizer.php:685
+#: inc/customizer.php:676
 msgid "Right side"
 msgstr ""
 
-#: inc/customizer.php:686
+#: inc/customizer.php:677
 msgid "Left side"
 msgstr ""
 
-#: inc/customizer.php:699
+#: inc/customizer.php:690
 msgid "Enter link to redirect for the slide title"
 msgstr ""
 
@@ -1186,6 +1188,94 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: inc/widgets/accelerate-call-to-action-widget.php:10
+msgid "Use this widget to show the call to action section."
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:14
+msgid "TG: Call To Action Widget"
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:32
+msgid "Call to Action Main Text"
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:34
+msgid "Call to Action Additional Text"
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:37
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:41
+msgid "Button Redirect Link:"
+msgstr ""
+
+#: inc/widgets/accelerate-call-to-action-widget.php:45
+msgid "Open in new tab"
+msgstr ""
+
+#: inc/widgets/accelerate-custom-tag-widget.php:10
+msgid "Custom Tag Cloud"
+msgstr ""
+
+#: inc/widgets/accelerate-custom-tag-widget.php:45
+#: inc/widgets/accelerate-featured-single-page-widget.php:27
+#: inc/widgets/accelerate-recent-work-widget.php:35
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:11
+msgid "Display Featured Single Page"
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:24
+msgid "Suitable for Business Sidebar and Left/Right Sidebar."
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:30
+msgid "Displays the title of the Page if title input is empty."
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:33
+#: inc/widgets/accelerate-image-service-widget.php:32
+#: inc/widgets/accelerate-recent-work-widget.php:42
+msgid "Page"
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:37
+msgid "Remove Featured image"
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:42
+#: inc/widgets/accelerate-featured-single-page-widget.php:47
+msgid "Show Image Before Title"
+msgstr ""
+
+#: inc/widgets/accelerate-featured-single-page-widget.php:43
+#: inc/widgets/accelerate-featured-single-page-widget.php:48
+msgid "Show Image After Title"
+msgstr ""
+
+#: inc/widgets/accelerate-image-service-widget.php:10
+msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+
+#: inc/widgets/accelerate-image-service-widget.php:39
+msgid "Display Read more"
+msgstr ""
+
+#: inc/widgets/accelerate-recent-work-widget.php:10
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom "
+"sidebar."
+msgstr ""
+
+#: inc/widgets/accelerate-recent-work-widget.php:38
+msgid "Description"
+msgstr ""
+
 #: inc/widgets/widgets.php:20
 msgid "Shows widgets at Right side."
 msgstr ""
@@ -1248,90 +1338,6 @@ msgstr ""
 
 #: inc/widgets/widgets.php:108
 msgid "Shows widgets at footer sidebar three."
-msgstr ""
-
-#: inc/widgets/widgets.php:133
-msgid "Display Featured Single Page"
-msgstr ""
-
-#: inc/widgets/widgets.php:146
-msgid "Suitable for Business Sidebar and Left/Right Sidebar."
-msgstr ""
-
-#: inc/widgets/widgets.php:149 inc/widgets/widgets.php:372
-#: inc/widgets/widgets.php:618
-msgid "Title:"
-msgstr ""
-
-#: inc/widgets/widgets.php:152
-msgid "Displays the title of the Page if title input is empty."
-msgstr ""
-
-#: inc/widgets/widgets.php:155 inc/widgets/widgets.php:379
-#: inc/widgets/widgets.php:488
-msgid "Page"
-msgstr ""
-
-#: inc/widgets/widgets.php:159
-msgid "Remove Featured image"
-msgstr ""
-
-#: inc/widgets/widgets.php:164 inc/widgets/widgets.php:169
-msgid "Show Image Before Title"
-msgstr ""
-
-#: inc/widgets/widgets.php:165 inc/widgets/widgets.php:170
-msgid "Show Image After Title"
-msgstr ""
-
-#: inc/widgets/widgets.php:237
-msgid "Use this widget to show the call to action section."
-msgstr ""
-
-#: inc/widgets/widgets.php:241
-msgid "TG: Call To Action Widget"
-msgstr ""
-
-#: inc/widgets/widgets.php:259
-msgid "Call to Action Main Text"
-msgstr ""
-
-#: inc/widgets/widgets.php:261
-msgid "Call to Action Additional Text"
-msgstr ""
-
-#: inc/widgets/widgets.php:264
-msgid "Button Text:"
-msgstr ""
-
-#: inc/widgets/widgets.php:268
-msgid "Button Redirect Link:"
-msgstr ""
-
-#: inc/widgets/widgets.php:272
-msgid "Open in new tab"
-msgstr ""
-
-#: inc/widgets/widgets.php:347
-msgid ""
-"Show your some pages as recent work. Best for Business Top or Bottom "
-"sidebar."
-msgstr ""
-
-#: inc/widgets/widgets.php:375
-msgid "Description"
-msgstr ""
-
-#: inc/widgets/widgets.php:466
-msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
-msgstr ""
-
-#: inc/widgets/widgets.php:495
-msgid "Display Read more"
-msgstr ""
-
-#: inc/widgets/widgets.php:583
-msgid "Custom Tag Cloud"
 msgstr ""
 
 #: navigation.php:20 navigation.php:32

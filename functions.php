@@ -62,6 +62,9 @@ function accelerate_setup() {
 	 // Supporting title tag via add_theme_support (since WordPress 4.1)
 	 add_theme_support( 'title-tag' );
 
+	// Gutenberg layout support.
+	add_theme_support( 'align-wide' );
+
 	// Added WooCommerce support.
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );

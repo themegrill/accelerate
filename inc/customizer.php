@@ -129,7 +129,7 @@ function accelerate_customize_register( $wp_customize ) {
 	$wp_customize->add_control( $accelerate_themename . '[accelerate_show_header_logo_text]', array(
 		'type'    => 'radio',
 		'label'   => __( 'Choose the option that you want.', 'accelerate' ),
-		'section' => 'accelerate_show_option',
+		'section' => 'title_tagline',
 		'choices' => array(
 			'logo_only' => __( 'Header Logo Only', 'accelerate' ),
 			'text_only' => __( 'Header Text Only', 'accelerate' ),

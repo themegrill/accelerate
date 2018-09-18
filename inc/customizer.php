@@ -97,21 +97,6 @@ function accelerate_customize_register( $wp_customize ) {
 		'panel'    => 'accelerate_header_options',
 	) );
 
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		$wp_customize->add_setting( $accelerate_themename . '[accelerate_header_logo_image]', array(
-			'default'           => '',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $accelerate_themename . '[accelerate_header_logo_image]', array(
-			'label'   => __( 'Upload logo for your header. Recommended size is 100 X 100 pixels but you can add any size you like.', 'accelerate' ),
-			'section' => 'accelerate_header_logo',
-			'setting' => $accelerate_themename . '[accelerate_header_logo_image]',
-		) ) );
-	}
-
 	// Header logo and text display type option
 	$wp_customize->add_section( 'accelerate_show_option', array(
 		'priority' => 2,

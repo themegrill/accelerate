@@ -462,49 +462,6 @@ function accelerate_customize_register( $wp_customize ) {
 		'title'      => __( 'Additional', 'accelerate' ),
 	) );
 
-	if ( ! function_exists( 'has_site_icon' ) ) {
-		// favicon activate option
-		$wp_customize->add_section( 'accelerate_additional_activate_section', array(
-			'priority' => 1,
-			'title'    => __( 'Activate favicon', 'accelerate' ),
-			'panel'    => 'accelerate_additional_options',
-		) );
-
-		$wp_customize->add_setting( $accelerate_themename . '[accelerate_activate_favicon]', array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'accelerate_checkbox_sanitize',
-		) );
-
-		$wp_customize->add_control( $accelerate_themename . '[accelerate_activate_favicon]', array(
-			'type'     => 'checkbox',
-			'label'    => __( 'Check to activate favicon. Upload fav icon from below option', 'accelerate' ),
-			'section'  => 'accelerate_additional_activate_section',
-			'settings' => $accelerate_themename . '[accelerate_activate_favicon]',
-		) );
-
-		// favicon upload option
-		$wp_customize->add_section( 'accelerate_favicon_upload_section', array(
-			'priority' => 2,
-			'title'    => __( 'Upload favicon', 'accelerate' ),
-			'panel'    => 'accelerate_additional_options',
-		) );
-
-		$wp_customize->add_setting( $accelerate_themename . '[accelerate_favicon]', array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $accelerate_themename . '[accelerate_favicon]', array(
-			'label'    => __( 'Upload favicon for your site.', 'accelerate' ),
-			'section'  => 'accelerate_favicon_upload_section',
-			'settings' => $accelerate_themename . '[accelerate_favicon]',
-		) ) );
-	}
-
 	// Author Bio Option.
 	$wp_customize->add_section( 'accelerate_author_bio_section', array(
 		'priority' => 7,

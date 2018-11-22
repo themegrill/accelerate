@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.7 - 2018-11-22 =
 * Added - Gutenberg compatibility
 * Tweak - Add alt attributes to missed img tags
 * Remove - Backward compatible for favicon

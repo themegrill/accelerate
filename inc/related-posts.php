@@ -21,9 +21,19 @@
 				<div class="<?php echo $class; ?>">
 
 					<?php if ( has_post_thumbnail() ): ?>
+						<?php
+						$title_attribute     = get_the_title( $post->ID );
+						$image_id            = get_post_thumbnail_id( get_the_ID() );
+						$image_alt           = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+						$image_alt_text      = ! empty( $image_alt ) ? $image_alt : $title_attribute;
+						$post_thumbnail_attr = array(
+							'alt'   => esc_attr( $image_alt_text ),
+							'title' => esc_attr( $title_attribute ),
+						);
+						?>
 						<div class="related-posts-thumbnail">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php the_post_thumbnail( 'featured-blog-small' ); ?>
+								<?php the_post_thumbnail( 'featured-blog-small', $post_thumbnail_attr ); ?>
 							</a>
 						</div>
 					<?php endif; ?>

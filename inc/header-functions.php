@@ -72,6 +72,9 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 						$accelerate_slider_link         = accelerate_options( 'accelerate_slider_link' . $i, '#' );
 						$attachment_post_id             = attachment_url_to_postid( $accelerate_slider_image );
 						$image_value                    = wp_get_attachment_image_src( $attachment_post_id, 'full' );
+						$image_alt                      = get_post_meta( $attachment_post_id, '_wp_attachment_image_alt', true );
+						$image_alt_text                 = ! empty( $image_alt ) ? $image_alt : $accelerate_slider_title;
+
 
 						if ( ! empty( $accelerate_header_title ) || ! empty( $accelerate_slider_text ) || ! empty( $accelerate_slider_image ) ) {
 							if ( $i == 1 ) {
@@ -88,7 +91,7 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 							?>
 							<div class="<?php echo $classes; ?>">
 								<figure>
-									<img width="<?php echo esc_attr( $image_value[1] ); ?>" height="<?php echo esc_attr( $image_value[2] ); ?>" alt="<?php echo esc_attr( $accelerate_slider_title ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
+									<img width="<?php echo esc_attr( $image_value[1] ); ?>" height="<?php echo esc_attr( $image_value[2] ); ?>" alt="<?php echo esc_attr( $image_alt_text ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
 								</figure>
 								<div class="<?php echo $classes2; ?>">
 									<?php if ( ! empty( $accelerate_slider_title ) || ! empty( $accelerate_slider_text ) ) { ?>

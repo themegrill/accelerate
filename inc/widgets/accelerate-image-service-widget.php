@@ -90,8 +90,15 @@ class accelerate_image_service_widget extends WP_Widget {
 			<div class="<?php echo $service_class; ?>">
 				<?php
 				if ( has_post_thumbnail() ) {
+					$title_attribute = get_the_title();
+					$thumb_id = get_post_thumbnail_id( get_the_ID() );
+					$img_altr = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+					$img_alt = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+					$post_thumbnail_attr = array(
+						'alt'   => esc_attr( $img_alt ),
+					);
 					?>
-					<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo'<div class="service-image">'.get_the_post_thumbnail( $post->ID, 'featured-service' ).'</div>';
+					<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo'<div class="service-image">'.get_the_post_thumbnail( $post->ID, 'featured-service', $post_thumbnail_attr ).'</div>';
 						?>
 					</a>
 					<?php

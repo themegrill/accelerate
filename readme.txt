@@ -50,6 +50,8 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = TBD =
+* Added - Gutenberg compatibility
+* Tweak - Add alt attributes to missed img tags
 * Remove - Backward compatible for favicon
 * Remove - Backward compatible for header logo
 

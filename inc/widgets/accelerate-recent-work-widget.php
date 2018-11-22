@@ -98,7 +98,10 @@ class accelerate_recent_work_widget extends WP_Widget {
 				<?php
 				if ( has_post_thumbnail() ) {
 					$title_attribute = get_the_title( $post->ID );
-					echo'<div class="service-image"><a title="'.get_the_title().'" href="'.get_permalink().'">'.get_the_post_thumbnail( $post->ID, 'featured-recent-work', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a></div>';
+					$image_id        = get_post_thumbnail_id( get_the_ID() );
+					$image_alt       = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+					$image_alt_text  = ! empty( $image_alt ) ? $image_alt : $title_attribute;
+					echo'<div class="service-image"><a title="'.get_the_title().'" href="'.get_permalink().'">'.get_the_post_thumbnail( $post->ID, 'featured-recent-work', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $image_alt_text ) ) ).'</a></div>';
 				}
 				?>
 				<a class="recent_work_title" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>">

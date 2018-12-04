@@ -1793,6 +1793,9 @@ a#scroll-up:hover {
 	float: right;
 	padding-left: 4%;
 }
+ul.wp-block-gallery {
+	padding: 0;
+}
 
 /* =POST META
 ----------------------------------------------- */

@@ -635,8 +635,8 @@ li.default-menu {
 .main-navigation ul ul li:hover ul ul,
 .main-navigation ul ul ul li:hover ul ul,
 .main-navigation ul ul ul ul li:hover ul ul {
-	display:none;
-	z-index: 100;
+	display: none;
+	z-index: 9999;
 	border-left: 1px solid #F8F8F8;
 	border-right: 1px solid #F8F8F8;
 	border-bottom: 1px solid #F8F8F8;

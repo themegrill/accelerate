@@ -49,6 +49,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Submenu display on slide change.
+
 = Version 1.3.7 - 2018-11-22 =
 * Added - Gutenberg compatibility
 * Tweak - Add alt attributes to missed img tags

@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.3.8 - 2018-12-04 =
 * Fix - Submenu display on slide change.
 * Fix - Gallery padding for Gutenberg
 

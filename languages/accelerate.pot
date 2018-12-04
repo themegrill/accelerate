@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Accelerate 1.3.7\n"
+"Project-Id-Version: Accelerate 1.3.8\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-11-22 09:13:26+00:00\n"
+"POT-Creation-Date: 2018-12-04 10:05:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -460,6 +460,22 @@ msgstr ""
 msgid "TG: Fun Facts"
 msgstr ""
 
+#: inc/admin/class-accelerate-new-theme-notice.php:66
+#. translators: %1$s Zakra theme link %2$s Zakra theme demo link
+msgid ""
+"Zakra - our new most flexible free WordPress theme. %1$s Zakra is fully "
+"compatible with Gutenberg, Elementor and other major page builders. Comes "
+"with %2$s to quickly setup your new website."
+msgstr ""
+
+#: inc/admin/class-accelerate-new-theme-notice.php:70
+msgid "Check it out!"
+msgstr ""
+
+#: inc/admin/class-accelerate-new-theme-notice.php:75
+msgid "10+ free starter sites"
+msgstr ""
+
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
 msgid "Select Layout"
 msgstr ""
@@ -800,34 +816,34 @@ msgid ""
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:327
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:40
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:55
 msgid "Install Required Plugins"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:328
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:41
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:56
 msgid "Install Plugins"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:330
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:43
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:58
 #. translators: %s: plugin name.
 msgid "Installing Plugin: %s"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:332
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:45
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:60
 #. translators: %s: plugin name.
 msgid "Updating Plugin: %s"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:46
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:61
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:370
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:83
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:98
 #. translators: 1: plugin name(s).
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
@@ -835,21 +851,21 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:375
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:88
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:103
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:380
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:93
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:108
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:385
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:98
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:113
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -862,24 +878,24 @@ msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:387
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3159
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:99
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:114
 msgid "Plugin activated successfully."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2952
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:100
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:115
 msgid "The following plugin was activated successfully:"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:390
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:102
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:117
 #. translators: 1: plugin name.
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:104
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:119
 #. translators: 1: plugin name.
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -887,25 +903,25 @@ msgid ""
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:106
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:121
 #. translators: 1: dashboard link.
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:107
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:122
 msgid "Dismiss this notice"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:396
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:108
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:123
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
-#: inc/tgm-plugin-activation/tgmpa-accelerate.php:109
+#: inc/tgm-plugin-activation/tgmpa-accelerate.php:124
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 

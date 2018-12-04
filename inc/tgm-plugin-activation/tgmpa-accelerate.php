@@ -17,26 +17,41 @@ function accelerate_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// Include ThemeGrill Demo Importer as recommended
+		// Include ThemeGrill Demo Importer as recommended.
 		array(
-			'name'      => 'ThemeGrill Demo Importer',
-			'slug'      => 'themegrill-demo-importer',
-			'required'  => false,
+			'name'     => 'ThemeGrill Demo Importer',
+			'slug'     => 'themegrill-demo-importer',
+			'required' => false,
+		),
+
+		// Include Everest Forms as recommended.
+		array(
+			'name'     => 'Everest Forms – Easy Contact Form and Form Builder',
+			'slug'     => 'everest-forms',
+			'required' => false,
 		),
 
 	);
 
 	$config = array(
-		'id'           => 'accelerate',              // Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
-		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-		'message'      => '',                      // Message to output right before the plugins table.
+		'id'           => 'accelerate',
+		// Unique ID for hashing notices for multiple instances of TGMPA.
+		'default_path' => '',
+		// Default absolute path to bundled plugins.
+		'menu'         => 'tgmpa-install-plugins',
+		// Menu slug.
+		'has_notices'  => true,
+		// Show admin notices or not.
+		'dismissable'  => true,
+		// If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => '',
+		// If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic' => false,
+		// Automatically activate plugins after installation or not.
+		'message'      => '',
+		// Message to output right before the plugins table.
 
-		'strings'      => array(
+		'strings' => array(
 			'page_title'                      => esc_html__( 'Install Required Plugins', 'accelerate' ),
 			'menu_title'                      => esc_html__( 'Install Plugins', 'accelerate' ),
 			/* translators: %s: plugin name. */
@@ -85,7 +100,7 @@ function accelerate_register_required_plugins() {
 				'Begin installing plugins',
 				'accelerate'
 			),
-			'update_link' 					  => _n_noop(
+			'update_link'                     => _n_noop(
 				'Begin updating plugin',
 				'Begin updating plugins',
 				'accelerate'
@@ -108,7 +123,8 @@ function accelerate_register_required_plugins() {
 			'notice_cannot_install_activate'  => esc_html__( 'There are one or more required or recommended plugins to install, update or activate.', 'accelerate' ),
 			'contact_admin'                   => esc_html__( 'Please contact the administrator of this site for help.', 'accelerate' ),
 
-			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
+			'nag_type' => '',
+			// Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),
 
 	);

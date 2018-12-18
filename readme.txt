@@ -49,6 +49,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Utilize single custom JS file for required theme JS settings.
+
 = Version 1.3.8 - 2018-12-04 =
 * Fix - Submenu display on slide change.
 * Fix - Gallery padding for Gutenberg

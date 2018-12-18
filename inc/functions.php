@@ -60,11 +60,10 @@ function accelerate_scripts_styles_method() {
 	 * Enqueue Slider setup js file.
 	 */
 	if ( is_front_page() && accelerate_options( 'accelerate_activate_slider', '0' ) == '1' ) {
-		wp_enqueue_script( 'accelerate_slider', ACCELERATE_JS_URL . '/accelerate-slider-setting.js', array(
-			'jquery_cycle',
-			'jquery-cycle2-swipe',
-		), false, true );
+		wp_enqueue_script( 'jquery_cycle');
+		wp_enqueue_script( 'jquery-cycle2-swipe');
 	}
+
 	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL . '/accelerate-custom.js', array( 'jquery' ) );
 

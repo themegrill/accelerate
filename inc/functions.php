@@ -60,8 +60,8 @@ function accelerate_scripts_styles_method() {
 	 * Enqueue Slider setup js file.
 	 */
 	if ( is_front_page() && accelerate_options( 'accelerate_activate_slider', '0' ) == '1' ) {
-		wp_enqueue_script( 'jquery_cycle');
-		wp_enqueue_script( 'jquery-cycle2-swipe');
+		wp_enqueue_script( 'jquery_cycle' );
+		wp_enqueue_script( 'jquery-cycle2-swipe' );
 	}
 
 	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
@@ -640,6 +640,17 @@ function accelerate_custom_css_migrate() {
 
 add_action( 'after_setup_theme', 'accelerate_custom_css_migrate' );
 
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ */
+function _s_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+	}
+}
+
+add_action( 'wp_head', '_s_pingback_header' );
+
 if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 
 	/**
@@ -662,17 +673,17 @@ if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 
 		// Related by categories.
 		if ( accelerate_options( 'accelerate_related_posts', 'categories' ) == 'categories' ) {
-			$cats = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+			$cats                 = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
 			$args['category__in'] = $cats;
 		}
 
 		// Related by tags.
 		if ( accelerate_options( 'accelerate_related_posts', 'categories' ) == 'tags' ) {
-			$tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
+			$tags            = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
 			$args['tag__in'] = $tags;
 
 			// If no tags added, return.
-			if (!$tags) {
+			if ( ! $tags ) {
 				$break = true;
 			}
 		}

@@ -640,16 +640,20 @@ function accelerate_custom_css_migrate() {
 
 add_action( 'after_setup_theme', 'accelerate_custom_css_migrate' );
 
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function _s_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-	}
-}
+if ( ! function_exists( 'accelerate_pingback_header' ) ) :
 
-add_action( 'wp_head', '_s_pingback_header' );
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
+	function accelerate_pingback_header() {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
+
+endif;
+
+add_action( 'wp_head', 'accelerate_pingback_header' );
 
 if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 

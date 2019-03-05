@@ -3,39 +3,51 @@
  * Accelerate functions related to defining constants, adding files and WordPress core functionality.
  *
  * Defining some constants, loading all the required files and Adding some core functionality.
- * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
- * @uses register_nav_menu() To add support for navigation menu.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @package ThemeGrill
+ * @uses       add_theme_support() To add support for post thumbnails and automatic feed links.
+ * @uses       register_nav_menu() To add support for navigation menu.
+ * @uses       set_post_thumbnail_size() To set a custom post thumbnail size.
+ *
+ * @package    ThemeGrill
  * @subpackage Accelerate
- * @since Accelerate 1.0
+ * @since      Accelerate 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
-	 $content_width = 720;
+if ( ! isset( $content_width ) ) {
+	$content_width = 720;
+}
 
 /**
  * $content_width global variable adjustment as per layout option.
  */
 function accelerate_content_width() {
-	 global $post;
-	 global $content_width;
+	global $post;
+	global $content_width;
 
-	 if( $post ) { $layout_meta = get_post_meta( $post->ID, 'accelerate_page_layout', true ); }
-	 if( empty( $layout_meta ) || is_archive() || is_search() ) { $layout_meta = 'default_layout'; }
-	 $accelerate_default_layout = accelerate_options( 'accelerate_default_layout', 'right_sidebar' );
+	if ( $post ) {
+		$layout_meta = get_post_meta( $post->ID, 'accelerate_page_layout', true );
+	}
+	if ( empty( $layout_meta ) || is_archive() || is_search() ) {
+		$layout_meta = 'default_layout';
+	}
+	$accelerate_default_layout = accelerate_options( 'accelerate_default_layout', 'right_sidebar' );
 
-	 if( $layout_meta == 'default_layout' ) {
-			if ( $accelerate_default_layout == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
-			else { $content_width = 720; /* pixels */ }
-	 }
-	 elseif ( $layout_meta == 'no_sidebar_full_width' ) { $content_width = 1100; /* pixels */ }
-	 else { $content_width = 720; /* pixels */ }
+	if ( $layout_meta == 'default_layout' ) {
+		if ( $accelerate_default_layout == 'no_sidebar_full_width' ) {
+			$content_width = 1100; /* pixels */
+		} else {
+			$content_width = 720; /* pixels */
+		}
+	} elseif ( $layout_meta == 'no_sidebar_full_width' ) {
+		$content_width = 1100; /* pixels */
+	} else {
+		$content_width = 720; /* pixels */
+	}
 }
+
 add_action( 'template_redirect', 'accelerate_content_width' );
 
 add_action( 'after_setup_theme', 'accelerate_setup' );
@@ -44,75 +56,89 @@ add_action( 'after_setup_theme', 'accelerate_setup' );
  *
  * @since 1.0
  */
-if( !function_exists( 'accelerate_setup' ) ) :
-function accelerate_setup() {
+if ( ! function_exists( 'accelerate_setup' ) ) :
+	function accelerate_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 */
-	load_theme_textdomain( 'accelerate', get_template_directory() . '/languages' );
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 */
+		load_theme_textdomain( 'accelerate', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head
+		add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
-	add_theme_support( 'post-thumbnails' );
+		// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
+		add_theme_support( 'post-thumbnails' );
 
-	 // Supporting title tag via add_theme_support (since WordPress 4.1)
-	 add_theme_support( 'title-tag' );
+		// Supporting title tag via add_theme_support (since WordPress 4.1)
+		add_theme_support( 'title-tag' );
 
-	// Gutenberg layout support.
-	add_theme_support( 'align-wide' );
+		// Gutenberg layout support.
+		add_theme_support( 'align-wide' );
 
-	// Added WooCommerce support.
-	add_theme_support( 'woocommerce' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
+		// Added WooCommerce support.
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
 
-	// Registering navigation menus.
-	register_nav_menus( array(
-		'primary' 	=> __( 'Primary/Main Menu', 'accelerate' ),
-		'footer' 	=> __( 'Footer Menu', 'accelerate' )
-	) );
+		// Registering navigation menus.
+		register_nav_menus( array(
+			'primary' => __( 'Primary/Main Menu', 'accelerate' ),
+			'footer'  => __( 'Footer Menu', 'accelerate' ),
+		) );
 
-	// Cropping the images to different sizes to be used in the theme
-	add_image_size( 'featured-blog-large', 720, 300, true );
-	add_image_size( 'featured-blog-small', 230, 230, true );
-	add_image_size( 'featured-service', 600, 330, true );
-	add_image_size( 'featured-recent-work', 365, 365, true );
+		// Cropping the images to different sizes to be used in the theme
+		add_image_size( 'featured-blog-large', 720, 300, true );
+		add_image_size( 'featured-blog-small', 230, 230, true );
+		add_image_size( 'featured-service', 600, 330, true );
+		add_image_size( 'featured-recent-work', 365, 365, true );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'accelerate_custom_background_args', array(
-		'default-color' => 'eaeaea'
-	) ) );
+		// Setup the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'accelerate_custom_background_args', array(
+			'default-color' => 'eaeaea',
+		) ) );
 
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'gallery', 'chat', 'audio', 'status' ) );
+		// Enable support for Post Formats.
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'chat',
+			'audio',
+			'status',
+		) );
 
-	// Adding excerpt option box for pages as well
-	add_post_type_support( 'page', 'excerpt' );
+		// Adding excerpt option box for pages as well
+		add_post_type_support( 'page', 'excerpt' );
 
- 	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
- 	add_theme_support('html5', array(
-	 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
- 	));
+		/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-	// Adds the support for the Custom Logo introduced in WordPress 4.5
-	add_theme_support( 'custom-logo',
-	   array(
-	      'flex-width' => true,
-	      'flex-height' => true,
-	   )
-	);
+		// Adds the support for the Custom Logo introduced in WordPress 4.5
+		add_theme_support( 'custom-logo',
+			array(
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
-	// Support for selective refresh widgets in Customizer
-	add_theme_support( 'customize-selective-refresh-widgets' );
-}
+		// Support for selective refresh widgets in Customizer
+		add_theme_support( 'customize-selective-refresh-widgets' );
+	}
 endif;
 
 /**
@@ -122,7 +148,7 @@ define( 'ACCELERATE_PARENT_DIR', get_template_directory() );
 define( 'ACCELERATE_CHILD_DIR', get_stylesheet_directory() );
 
 define( 'ACCELERATE_IMAGES_DIR', ACCELERATE_PARENT_DIR . '/images' );
-define( 'ACCELERATE_INCLUDES_DIR', ACCELERATE_PARENT_DIR. '/inc' );
+define( 'ACCELERATE_INCLUDES_DIR', ACCELERATE_PARENT_DIR . '/inc' );
 define( 'ACCELERATE_CSS_DIR', ACCELERATE_PARENT_DIR . '/css' );
 define( 'ACCELERATE_JS_DIR', ACCELERATE_PARENT_DIR . '/js' );
 define( 'ACCELERATE_LANGUAGES_DIR', ACCELERATE_PARENT_DIR . '/languages' );
@@ -141,7 +167,7 @@ define( 'ACCELERATE_PARENT_URL', get_template_directory_uri() );
 define( 'ACCELERATE_CHILD_URL', get_stylesheet_directory_uri() );
 
 define( 'ACCELERATE_IMAGES_URL', ACCELERATE_PARENT_URL . '/images' );
-define( 'ACCELERATE_INCLUDES_URL', ACCELERATE_PARENT_URL. '/inc' );
+define( 'ACCELERATE_INCLUDES_URL', ACCELERATE_PARENT_URL . '/inc' );
 define( 'ACCELERATE_CSS_URL', ACCELERATE_PARENT_URL . '/css' );
 define( 'ACCELERATE_JS_URL', ACCELERATE_PARENT_URL . '/js' );
 define( 'ACCELERATE_LANGUAGES_URL', ACCELERATE_PARENT_URL . '/languages' );
@@ -174,7 +200,7 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Accelerate version to a variable.
  */
-$theme            = wp_get_theme( 'accelerate' );
+$theme              = wp_get_theme( 'accelerate' );
 $accelerate_version = $theme['Version'];
 
 /**
@@ -183,6 +209,7 @@ $accelerate_version = $theme['Version'];
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-admin.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-new-theme-notice.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-site-library.php';
 }
 
 /**

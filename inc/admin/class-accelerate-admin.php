@@ -24,7 +24,102 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 			add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
-			add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
+			add_action( 'wp_loaded', array( $this, 'admin_notice' ) );
+			add_action( 'wp_ajax_import_button', array( $this, 'accelerate_ajax_import_button_handler' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'accelerate_ajax_enqueue_scripts' ) );
+		}
+
+		/**
+		 * Localize array for import button AJAX request.
+		 */
+		public function accelerate_ajax_enqueue_scripts() {
+
+			wp_enqueue_script( 'plugin-install' );
+			wp_enqueue_script( 'updates' );
+			wp_enqueue_script( 'accelrate-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), 1, true );
+			wp_localize_script(
+				'accelerate-plugin-install-helper', 'accelerate_plugin_helper',
+				array(
+					'activating' => esc_html__( 'Activating ', 'accelerate' ),
+				)
+			);
+
+			$translation_array = array(
+				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&accelerate-hide-notice=welcome' ) ),
+				'btn_text' => esc_html__( 'Processing...', 'accelerate' ),
+				'nonce'    => wp_create_nonce( 'accelerate_demo_import_nonce' ),
+			);
+
+			wp_localize_script( 'accelerate-plugin-install-helper', 'accelerate_redirect_demo_page', $translation_array );
+
+		}
+
+		/**
+		 * Handle the AJAX process while import or get started button clicked.
+		 */
+		public function accelerate_ajax_import_button_handler() {
+
+			check_ajax_referer( 'accelerate_demo_import_nonce', 'security' );
+
+			$state = '';
+			if ( is_plugin_active( 'themegrill-demo-importer/themegrill-demo-importer.php' ) ) {
+				$state = 'activated';
+			} elseif ( file_exists( WP_PLUGIN_DIR . '/themegrill-demo-importer/themegrill-demo-importer.php' ) ) {
+				$state = 'installed';
+			}
+
+			if ( 'activated' === $state ) {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&accelerate-hide-notice=welcome' );
+			} elseif ( 'installed' === $state ) {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&accelerate-hide-notice=welcome' );
+				if ( current_user_can( 'activate_plugin' ) ) {
+					$result = activate_plugin( 'themegrill-demo-importer/themegrill-demo-importer.php' );
+
+					if ( is_wp_error( $result ) ) {
+						$response['errorCode']    = $result->get_error_code();
+						$response['errorMessage'] = $result->get_error_message();
+					}
+				}
+			} else {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&accelerate-hide-notice=welcome' );
+
+				/**
+				 * Install Plugin.
+				 */
+				include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+				include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+
+				$api = plugins_api( 'plugin_information', array(
+					'slug'   => sanitize_key( wp_unslash( 'themegrill-demo-importer' ) ),
+					'fields' => array(
+						'sections' => false,
+					),
+				) );
+
+				$skin     = new WP_Ajax_Upgrader_Skin();
+				$upgrader = new Plugin_Upgrader( $skin );
+				$result   = $upgrader->install( $api->download_link );
+				if ( $result ) {
+					$response['installed'] = 'succeed';
+				} else {
+					$response['installed'] = 'failed';
+				}
+
+				// Activate plugin.
+				if ( current_user_can( 'activate_plugin' ) ) {
+					$result = activate_plugin( 'themegrill-demo-importer/themegrill-demo-importer.php' );
+
+					if ( is_wp_error( $result ) ) {
+						$response['errorCode']    = $result->get_error_code();
+						$response['errorMessage'] = $result->get_error_message();
+					}
+				}
+			}
+
+			wp_send_json( $response );
+
+			exit();
+
 		}
 
 		/**
@@ -33,9 +128,9 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 		public function admin_menu() {
 			$theme = wp_get_theme( get_template() );
 
-			$page = add_theme_page( esc_html__( 'About', 'accelerate' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'accelerate' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'accelerate-welcome', array(
+			$page = add_theme_page( esc_html__( 'About', 'accelerate' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'accelerate' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'accelerate-sitelibrary', array(
 				$this,
-				'welcome_screen',
+				'sitelibrary_screen',
 			) );
 			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 		}
@@ -58,12 +153,8 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			wp_enqueue_style( 'accelerate-message', get_template_directory_uri() . '/css/admin/message.css', array(), $accelerate_version );
 
 			// Let's bail on theme activation.
-			if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-				update_option( 'accelerate_admin_notice_welcome', 1 );
-
-				// No option? Let run the notice wizard again..
-			} elseif ( ! get_option( 'accelerate_admin_notice_welcome' ) ) {
+			$notice_nag = get_option( 'accelerate_admin_notice_welcome' );
+			if ( ! $notice_nag ) {
 				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 			}
 		}
@@ -83,6 +174,13 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 				$hide_notice = sanitize_text_field( $_GET['accelerate-hide-notice'] );
 				update_option( 'accelerate_admin_notice_' . $hide_notice, 1 );
+
+				// Hide.
+				if ( 'welcome' === $_GET['accelerate-hide-notice'] ) {
+					update_option( 'accelerate_admin_notice_' . $hide_notice, 1 );
+				} else { // Show.
+					delete_option( 'accelerate_admin_notice_' . $hide_notice );
+				}
 			}
 		}
 
@@ -92,11 +190,19 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 		public function welcome_notice() {
 			?>
 			<div id="message" class="updated accelerate-message">
-				<a class="accelerate-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'accelerate-hide-notice', 'welcome' ) ), 'accelerate_hide_notices_nonce', '_accelerate_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'accelerate' ); ?></a>
-				<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Accelerate! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'accelerate' ), '<a href="' . esc_url( admin_url( 'themes.php?page=accelerate-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p class="submit">
-					<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=accelerate-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?></a>
-				</p>
+				<a class="accelerate-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'accelerate-hide-notice', 'welcome' ) ), 'accelerate_hide_notices_nonce', '_accelerate_notice_nonce' ) ); ?>">
+					<?php esc_html_e( 'Dismiss', 'accelerate' ); ?>
+				</a>
+
+				<div class="accelerate-message-wrapper">
+					<p>
+						<?php printf( esc_html__( 'Welcome! Thank you for choosing accelerate! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'accelerate' ), '<a href="' . esc_url( admin_url( 'themes.php?page=accelerate-welcome' ) ) . '">', '</a>' ); ?>
+					</p>
+
+					<div class="submit">
+						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?>"><?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?></a>
+					</div>
+				</div>
 			</div>
 			<?php
 		}
@@ -110,23 +216,20 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			global $accelerate_version;
 
 			$theme = wp_get_theme( get_template() );
-
-			// Drop minor version if 0
-			$major_version = substr( $accelerate_version, 0, 3 );
 			?>
-			<div class="accelerate-theme-info">
-				<h1>
-					<?php esc_html_e( 'About', 'accelerate' ); ?>
-					<?php echo $theme->display( 'Name' ); ?>
-					<?php printf( '%s', $major_version ); ?>
-				</h1>
+			<div class="header">
+				<div class="info">
+					<h1>
+						<?php esc_html_e( 'About', 'accelerate' ); ?>
+						<?php echo $theme->display( 'Name' ); ?>
+						<span class="version-container"><?php echo esc_html( $accelerate_version ); ?></span>
+					</h1>
 
-				<div class="welcome-description-wrap">
-					<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
-
-					<div class="accelerate-screenshot">
-						<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.jpg'; ?>" />
+					<div class="tg-about-text about-text">
+						<?php echo $theme->display( 'Description' ); ?>
 					</div>
+
+					<a href="https://themegrill.com/" target="_blank" class="wp-badge tg-welcome-logo"></a>
 				</div>
 			</div>
 
@@ -141,23 +244,32 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'accelerate-welcome' ) {
+				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'accelerate-sitelibrary' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'accelerate-welcome' ), 'themes.php' ) ) ); ?>">
-					<?php echo $theme->display( 'Name' ); ?>
+				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'accelerate-sitelibrary' ), 'themes.php' ) ) );
+				?>">
+					<?php esc_html_e( 'Site Library', 'accelerate' ); ?>
+				</a>
+				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'welcome' ) {
+					echo 'nav-tab-active';
+				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
+					'page' => 'accelerate-sitelibrary',
+					'tab'  => 'welcome',
+				), 'themes.php' ) ) ); ?>">
+					<?php esc_html_e( 'Getting Started', 'accelerate' ); ?>
 				</a>
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'accelerate-welcome',
+					'page' => 'accelerate-sitelibrary',
 					'tab'  => 'supported_plugins',
 				), 'themes.php' ) ) ); ?>">
-					<?php esc_html_e( 'Supported Plugins', 'accelerate' ); ?>
+					<?php esc_html_e( 'Recommended Plugins', 'accelerate' ); ?>
 				</a>
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'accelerate-welcome',
+					'page' => 'accelerate-sitelibrary',
 					'tab'  => 'free_vs_pro',
 				), 'themes.php' ) ) ); ?>">
 					<?php esc_html_e( 'Free Vs Pro', 'accelerate' ); ?>
@@ -165,7 +277,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'accelerate-welcome',
+					'page' => 'accelerate-sitelibrary',
 					'tab'  => 'changelog',
 				), 'themes.php' ) ) ); ?>">
 					<?php esc_html_e( 'Changelog', 'accelerate' ); ?>
@@ -175,10 +287,10 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 		}
 
 		/**
-		 * Welcome screen page.
+		 * Sitelibrary screen page.
 		 */
-		public function welcome_screen() {
-			$current_tab = empty( $_GET['tab'] ) ? 'about' : sanitize_title( $_GET['tab'] );
+		public function sitelibrary_screen() {
+			$current_tab = empty( $_GET['tab'] ) ? 'library' : sanitize_title( $_GET['tab'] );
 
 			// Look for a {$current_tab}_screen method.
 			if ( is_callable( array( $this, $current_tab . '_screen' ) ) ) {
@@ -186,7 +298,30 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			}
 
 			// Fallback to about screen.
-			return $this->about_screen();
+			return $this->sitelibrary_display_screen();
+		}
+
+		/**
+		 * Render site library.
+		 */
+		public function sitelibrary_display_screen() {
+			?>
+			<div class="wrap about-wrap">
+				<?php
+				$this->intro();
+
+				// Display site library.
+				echo Accelerate_Site_Library::accelerate_site_library_page_content();
+				?>
+			</div>
+			<?php
+		}
+
+		/**
+		 * Welcome screen page.
+		 */
+		public function welcome_screen() {
+			$this->about_screen();
 		}
 
 		/**
@@ -201,6 +336,15 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 				<div class="changelog point-releases">
 					<div class="under-the-hood two-col">
+						<div class="col">
+							<h3><?php esc_html_e( 'Import Demo', 'accelerate' ); ?></h3>
+							<p><?php esc_html_e( 'Needs ThemeGrill Demo Importer plugin.', 'accelerate' ) ?></p>
+
+							<div class="submit">
+								<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Import', 'accelerate' ); ?>"><?php esc_html_e( 'Import', 'accelerate' ); ?></a>
+							</div>
+						</div>
+
 						<div class="col">
 							<h3><?php esc_html_e( 'Theme Customizer', 'accelerate' ); ?></h3>
 							<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'accelerate' ) ?></p>

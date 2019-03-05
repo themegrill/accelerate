@@ -1,7 +1,7 @@
 /**
  * Remove activate button and replace with activation in progress button.
  *
- * @package ColorMag
+ * @package Accelerate
  */
 
 /**

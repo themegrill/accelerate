@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.1 - 2019-03-26 =
 * Fix - Upload Theme button not working
 
 = Version 1.4.0 - 2019-03-06 =

@@ -202,6 +202,8 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 					<p>
 						<?php printf( esc_html__( 'Welcome! Thank you for choosing Accelerate! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'accelerate' ), '<a href="' . esc_url( admin_url( 'themes.php?page=accelerate-welcome' ) ) . '">', '</a>' ); ?>
+
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button below will install and activate the ThemeGrill demo importer plugin.', 'accelerate' ); ?></span>
 					</p>
 
 					<div class="submit">
@@ -314,7 +316,13 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			<div class="wrap about-wrap">
 				<?php
 				$this->intro();
+				?>
 
+				<div class="plugin-install-notice">
+					<?php esc_html_e( 'Clicking the "Import" button in any of the demos below will install and activate the ThemeGrill demo importer plugin.', 'accelerate' ); ?>
+				</div>
+
+				<?php
 				// Display site library.
 				echo Accelerate_Site_Library::accelerate_site_library_page_content();
 				?>

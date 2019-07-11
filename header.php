@@ -25,6 +25,13 @@ wp_head();
 <body <?php body_class(); ?>>
 
 <?php
+/**
+ * WordPress function to load custom scripts after body.
+ *
+ * Introduced in WordPress 5.2.0
+ *
+ * @since Accelerate 1.4.2
+ */
 if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 }

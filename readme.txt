@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.3 - 2019-07-11 =
 * Remove - Removed dashboard message to align with the theme review guidelines
 
 = Version 1.4.2 - 2019-07-11 =

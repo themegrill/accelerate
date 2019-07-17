@@ -1,4 +1,4 @@
-/* jshint node:true */
+grunt /* jshint node:true */
 module.exports = function( grunt ){
 	'use strict';
 
@@ -72,7 +72,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'accelerate.zip'
+				archive: 'dist/accelerate.zip'
 			},
 			files: {
 				src: [

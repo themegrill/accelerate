@@ -49,6 +49,10 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Update `screen-reader-text` CSS.
+* Tweak - Added `skip-link` to content area.
+
 = Version 1.4.3 - 2019-07-12 =
 * Remove - Removed dashboard message to align with the theme review guidelines
 

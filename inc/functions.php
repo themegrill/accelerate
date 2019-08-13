@@ -65,6 +65,10 @@ function accelerate_scripts_styles_method() {
 	}
 
 	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
 	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL . '/accelerate-custom.js', array( 'jquery' ) );
 
 	wp_enqueue_style( 'accelerate-fontawesome', get_template_directory_uri() . '/fontawesome/css/font-awesome.css', array(), '4.7.0' );

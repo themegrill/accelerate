@@ -1378,6 +1378,10 @@ a.slide-next:hover {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+/* Do not show the outline on the skip link target. */
+#main[tabindex="-1"]:focus {
+	outline: 0;
+}
 .nav-previous,
 .nav-next {
 	margin-bottom: 15px;

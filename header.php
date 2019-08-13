@@ -39,6 +39,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <?php	do_action( 'accelerate_before' ); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'accelerate' ); ?></a>
+
 	<?php do_action( 'accelerate_before_header' ); ?>
 	<header id="masthead" class="site-header clearfix">
 

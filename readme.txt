@@ -53,6 +53,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
 * Tweak - Modify menu CSS for keyboard accessibility.
+* Fix - Input type CSS for comments
 
 = Version 1.4.3 - 2019-07-12 =
 * Remove - Removed dashboard message to align with the theme review guidelines

@@ -701,3 +701,33 @@ if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 
 	}
 }
+
+/**
+ * Update image attributes for retina logo.
+ *
+ * @see accelerate_change_logo_attr()
+ */
+if ( ! function_exists( 'accelerate_change_logo_attr' ) ) :
+
+	function accelerate_change_logo_attr( $attr, $attachment, $size ) {
+		$custom_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+		$custom_logo = $custom_logo[0];
+
+		if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
+
+			if ( 1 == accelerate_options( 'accelerate_different_retina_logo', 0 ) ) {
+				$retina_logo = accelerate_options( 'accelerate_retina_logo_upload' );
+
+				if ( $retina_logo ) {
+					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
+				}
+			}
+
+		}
+
+		return $attr;
+	}
+
+endif;
+
+add_filter( 'wp_get_attachment_image_attributes', 'accelerate_change_logo_attr', 10, 3 );

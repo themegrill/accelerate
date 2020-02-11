@@ -61,6 +61,38 @@ function accelerate_customize_register( $wp_customize ) {
 		'title'      => __( 'Header', 'accelerate' ),
 	) );
 
+	// Retina Logo Option.
+	$wp_customize->add_setting( $accelerate_themename . '[accelerate_different_retina_logo]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'accelerate_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $accelerate_themename . '[accelerate_different_retina_logo]', array(
+		'type'     => 'checkbox',
+		'priority' => 8,
+		'label'    => esc_html__( 'Different Logo for Retina Devices?', 'accelerate' ),
+		'section'  => 'title_tagline',
+	) );
+
+	// Retina Logo Upload.
+	$wp_customize->add_setting( $accelerate_themename . '[accelerate_retina_logo_upload]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $accelerate_themename . '[accelerate_retina_logo_upload]', array(
+		'label'           => esc_html__( 'Retina Logo', 'accelerate' ),
+		'description'     => esc_html__( 'Please upload the retina logo double the size of logo. For eg: If you upload 100 * 100 pixels for logo then use 200 * 200 pixels for retina logo.', 'accelerate' ),
+		'priority'        => 8,
+		'setting'         => 'accelerate[accelerate_retina_logo_upload]',
+		'section'         => 'title_tagline',
+		'active_callback' => 'accelerate_retina_logo_option',
+	) ) );
+
 	// Header Logo upload option
 	$wp_customize->add_section( 'accelerate_header_logo', array(
 		'priority' => 1,
@@ -555,6 +587,15 @@ function accelerate_customize_register( $wp_customize ) {
 
 	// sanitization of links
 	function accelerate_links_sanitize() {
+		return false;
+	}
+
+	// Active Callback for Retina Logo.
+	function accelerate_retina_logo_option() {
+		if ( accelerate_options( 'accelerate_different_retina_logo', 0 ) == 1 ) {
+			return true;
+		}
+
 		return false;
 	}
 

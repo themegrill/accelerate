@@ -49,7 +49,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.4 - 2020-02-18 =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
 * Tweak - Modify menu CSS for keyboard accessibility.

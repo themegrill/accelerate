@@ -1,14 +1,14 @@
-# Copyright (C) 2019 ThemeGrill
+# Copyright (C) 2020 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Accelerate 1.4.2\n"
+"Project-Id-Version: Accelerate 1.4.4\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-07-12 14:56:45+00:00\n"
+"POT-Creation-Date: 2020-02-18 11:04:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -121,7 +121,11 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: header.php:109
+#: header.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:111
 msgid "Menu"
 msgstr ""
 
@@ -767,67 +771,67 @@ msgstr ""
 msgid "Enter link to redirect for the slide title"
 msgstr ""
 
-#: inc/functions.php:290 inc/functions.php:340
+#: inc/functions.php:294 inc/functions.php:344
 msgid ", "
 msgstr ""
 
-#: inc/functions.php:292
+#: inc/functions.php:296
 msgid "<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
 msgstr ""
 
-#: inc/functions.php:346
+#: inc/functions.php:350
 msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
 msgstr ""
 
-#: inc/functions.php:346
+#: inc/functions.php:350
 msgid "<i class=\"fa fa-comment\"></i> 1 Comment"
 msgstr ""
 
-#: inc/functions.php:346
+#: inc/functions.php:350
 msgid "<i class=\"fa fa-comments\"></i> % Comments"
 msgstr ""
 
-#: inc/functions.php:349
+#: inc/functions.php:353
 msgid "Edit"
 msgstr ""
 
-#: inc/functions.php:461
+#: inc/functions.php:465
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:471
+#: inc/functions.php:475
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:475
+#: inc/functions.php:479
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:501
+#: inc/functions.php:505
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:501
+#: inc/functions.php:505
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:516
+#: inc/functions.php:520
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:519
+#: inc/functions.php:523
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:527
+#: inc/functions.php:531
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:533
+#: inc/functions.php:537
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:557
+#: inc/functions.php:561
 msgid "WordPress"
 msgstr ""
 
@@ -835,15 +839,15 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:561
+#: inc/functions.php:565
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:561
+#: inc/functions.php:565
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:561
+#: inc/functions.php:565
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -1435,12 +1439,12 @@ msgstr ""
 msgid "Contact Page Template"
 msgstr ""
 
-#: inc/functions.php:465 navigation.php:40
+#: inc/functions.php:469 navigation.php:40
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:466 navigation.php:41
+#: inc/functions.php:470 navigation.php:41
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""

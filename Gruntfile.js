@@ -1,4 +1,4 @@
-grunt /* jshint node:true */
+/* jshint node:true */
 module.exports = function( grunt ){
 	'use strict';
 

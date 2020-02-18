@@ -1,7 +1,7 @@
 {
   "name": "accelerate",
   "title": "Accelerate",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "homepage": "https://themegrill.com/themes/accelerate",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-checktextdomain": "~1.0.0",
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-jshint": "~1.0.0",
@@ -24,5 +24,8 @@
     "makepot": "grunt makepot",
     "compress": "grunt compress",
     "build": "npm run makepot && npm run compress"
-   }
+  },
+  "dependencies": {
+    "grunt-cli": "^1.3.2"
+  }
 }

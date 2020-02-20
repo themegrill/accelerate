@@ -209,7 +209,10 @@ $accelerate_version = $theme['Version'];
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-admin.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-site-library.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-tdi-notice.php';
 }
+
+include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
  * Load TGMPA Configs.

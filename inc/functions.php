@@ -701,3 +701,21 @@ if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
 
 	}
 }
+
+/**
+ * Compare user's current version of plugin.
+ */
+if ( ! function_exists( 'accelerate_plugin_version_compare' ) ) {
+	function accelerate_plugin_version_compare( $plugin_slug, $version_to_compare ) {
+		$installed_plugins = get_plugins();
+
+		// Plugin not installed.
+		if ( ! isset( $installed_plugins[ $plugin_slug ] ) ) {
+			return false;
+		}
+
+		$tdi_user_version = $installed_plugins[ $plugin_slug ]['Version'];
+
+		return version_compare( $tdi_user_version, $version_to_compare, '<' );
+	}
+}

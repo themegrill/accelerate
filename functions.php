@@ -190,6 +190,14 @@ require_once( ACCELERATE_ADMIN_DIR . '/meta-boxes.php' );
 /** Load Widgets and Widgetized Area */
 require_once( ACCELERATE_WIDGETS_DIR . '/widgets.php' );
 
+
+/**
+ * Add the Elementor compatibility file
+ */
+if ( defined( 'ELEMENTOR_VERSION' ) ) {
+	require_once( ACCELERATE_INCLUDES_DIR . '/elementor/elementor.php' );
+}
+
 /**
  * Load Demo Importer Configs.
  */

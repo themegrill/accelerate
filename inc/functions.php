@@ -707,6 +707,11 @@ if ( ! function_exists( 'accelerate_related_posts_function' ) ) {
  */
 if ( ! function_exists( 'accelerate_plugin_version_compare' ) ) {
 	function accelerate_plugin_version_compare( $plugin_slug, $version_to_compare ) {
+
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
 		$installed_plugins = get_plugins();
 
 		// Plugin not installed.

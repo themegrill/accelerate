@@ -212,8 +212,6 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-tdi-notice.php';
 }
 
-include_once ABSPATH . 'wp-admin/includes/plugin.php';
-
 /**
  * Load TGMPA Configs.
  */

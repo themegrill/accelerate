@@ -85,7 +85,7 @@ class Accelerate_Dashboard {
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'accelerate' ) . '</a>', esc_url( 'https://docs.themegrill.com/accelerate' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'accelerate' ) . '</a>', esc_url( 'https://demo.themegrill.com/accelerate-demos' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon welcome-add-page">' . esc_html__( 'Premium Version', 'accelerate' ) . '</a>', esc_url( 'http://themegrill.com/themes/accelerate' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'accelerate' ) . '</a>', esc_url( 'http://themegrill.com/themes/accelerate' ) ); ?></li>
 						</ul>
 					</div>
 

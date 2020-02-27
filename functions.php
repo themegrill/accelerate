@@ -179,6 +179,11 @@ define( 'ACCELERATE_ADMIN_IMAGES_URL', ACCELERATE_ADMIN_URL . '/images' );
 define( 'ACCELERATE_ADMIN_JS_URL', ACCELERATE_ADMIN_URL . '/js' );
 define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 
+// Theme version.
+$accelerate_theme = wp_get_theme();
+define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
+
+
 /** Load functions */
 require_once( ACCELERATE_INCLUDES_DIR . '/custom-header.php' );
 require_once( ACCELERATE_INCLUDES_DIR . '/functions.php' );
@@ -208,8 +213,8 @@ $accelerate_version = $theme['Version'];
  */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-admin.php';
-	require get_template_directory() . '/inc/admin/class-accelerate-site-library.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-dashboard.php';
 }
 
 include_once ABSPATH . 'wp-admin/includes/plugin.php';

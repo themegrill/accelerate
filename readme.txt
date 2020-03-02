@@ -49,6 +49,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version 1.4.5 - 2020-02-27 =
+* Tweak - Refactor theme page according to WordPress theme guidelines
+
 = Version 1.4.4 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.

@@ -30,7 +30,7 @@ class Accelerate_Dashboard {
 	}
 
 	public function create_menu() {
-		$theme = wp_get_theme();
+		$theme = wp_get_theme()->parent();
 
 		/* translators: %s: Theme Name. */
 		$theme_page_name = sprintf( esc_html__( '%s Options', 'accelerate' ), $theme->Name );

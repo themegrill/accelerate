@@ -179,8 +179,13 @@ define( 'ACCELERATE_ADMIN_IMAGES_URL', ACCELERATE_ADMIN_URL . '/images' );
 define( 'ACCELERATE_ADMIN_JS_URL', ACCELERATE_ADMIN_URL . '/js' );
 define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 
-// Theme version.
-$accelerate_theme = wp_get_theme()->parent();
+
+if ( is_child_theme() ) {
+	$accelerate_theme = wp_get_theme()->parent();
+} else {
+	$accelerate_theme = wp_get_theme();
+}
+
 define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 

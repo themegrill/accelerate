@@ -204,13 +204,6 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
 }
 
 /**
- * Load Demo Importer Configs.
- */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
-}
-
-/**
  * Assign the Accelerate version to a variable.
  */
 $theme              = wp_get_theme( 'accelerate' );

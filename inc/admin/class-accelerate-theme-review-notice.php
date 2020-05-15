@@ -26,7 +26,7 @@ class Accelerate_Theme_Review_Notice {
 
 		add_action( 'after_setup_theme', array( $this, 'accelerate_theme_rating_notice' ) );
 		add_action( 'switch_theme', array( $this, 'accelerate_theme_rating_notice_data_remove' ) );
-
+		add_action( 'admin_enqueue_scripts', array( $this, 'accelerate_theme_rating_notice_enqueue' ) );
 	}
 
 	/**
@@ -65,7 +65,7 @@ class Accelerate_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'accelerate_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'accelerate_theme_installed_time' ) > strtotime( '-15 sec' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -170,6 +170,15 @@ class Accelerate_Theme_Review_Notice {
 				delete_user_meta( $user->ID, 'nag_accelerate_ignore_theme_review_notice_partially' );
 			}
 		}
+	}
+
+	/**
+	 * Enqueue the required CSS file for theme review notice on admin page.
+	 */
+	public function accelerate_theme_rating_notice_enqueue() {
+
+		wp_enqueue_style( 'accelerate-theme-review-notice', get_template_directory_uri() . '/css/admin/theme-review-notice.css' );
+
 	}
 
 }

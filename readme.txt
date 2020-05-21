@@ -51,7 +51,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = Version TBD =
 * Feature - Support for Elementor.
-* Tweak   - Add review notice message.
+* Tweak   - Add and improve theme-related notices.
 
 = Version 1.4.5 - 2020-02-27 =
 * Tweak - Refactor theme page according to WordPress theme guidelines

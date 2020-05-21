@@ -206,8 +206,9 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
 /**
  * Assign the Accelerate version to a variable.
  */
-$theme              = wp_get_theme( 'accelerate' );
-$accelerate_version = $theme['Version'];
+$accelerate_theme = wp_get_theme( 'accelerate' );
+
+define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.

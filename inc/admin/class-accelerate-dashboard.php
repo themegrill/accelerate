@@ -26,7 +26,7 @@ class Accelerate_Dashboard {
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'accelerate-admin-dashboard', ACCELERATE_ADMIN_CSS_URL . '/admin/admin.css' );
+		wp_enqueue_style( 'accelerate-admin-dashboard', ACCELERATE_ADMIN_CSS_URL . '/admin.css' );
 	}
 
 	public function create_menu() {
@@ -44,7 +44,7 @@ class Accelerate_Dashboard {
 	}
 
 	public function enqueue_styles() {
-		wp_enqueue_style( 'accelerate-dashboard', ACCELERATE_ADMIN_CSS_URL . '/admin/admin.css', array(), ACCELERATE_THEME_VERSION );
+		wp_enqueue_style( 'accelerate-dashboard', ACCELERATE_ADMIN_CSS_URL . '/admin.css', array(), ACCELERATE_THEME_VERSION );
 	}
 
 	public function option_page() {

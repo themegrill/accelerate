@@ -215,6 +215,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-theme-review-notice.php';
 }
 

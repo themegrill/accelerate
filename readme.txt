@@ -50,6 +50,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = Version TBD =
+* Add     - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Feature - Support for Elementor.
 * Tweak   - Add review notice message.
 

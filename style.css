@@ -1825,7 +1825,7 @@ a.slide-next:hover {
 #wp-calendar th,
 #wp-calendar td,
 #wp-calendar caption {
-	text-align: left;
+	text-align: right;
 	padding-bottom: 10px;
 }
 
@@ -1834,7 +1834,7 @@ a.slide-next:hover {
 }
 
 #wp-calendar caption {
-	text-align: center;
+	text-align: left;
 }
 
 #wp-calendar #next {

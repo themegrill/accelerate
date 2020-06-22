@@ -74,8 +74,14 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		// Supporting title tag via add_theme_support (since WordPress 4.1)
 		add_theme_support( 'title-tag' );
 
-		// Gutenberg layout support.
+		// Gutenberg align wide layout support.
 		add_theme_support( 'align-wide' );
+
+		// Gutenberg block layout support.
+		add_theme_support( 'wp-block-styles' );
+
+		// Gutenberg editor support.
+		add_theme_support( 'responsive-embeds' );
 
 		// Added WooCommerce support.
 		add_theme_support( 'woocommerce' );

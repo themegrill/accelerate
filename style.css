@@ -79,7 +79,9 @@ th {
 	font-weight: bold;
 }
 
-th, td {
+th, td,
+.wp-block-table th,
+.wp-block-table td {
 	border: 1px solid #EAEAEA;
 	padding: 6px 10px;
 }
@@ -176,7 +178,8 @@ h6 {
 	line-height: 25px;
 }
 
-hr {
+hr,
+.wp-block-separator {
 	border-color: #EAEAEA;
 	border-style: solid none none;
 	border-width: 1px 0 0;
@@ -213,6 +216,10 @@ pre {
 	overflow: auto;
 	padding: 20px;
 	border: 1px solid #EAEAEA;
+	font-family: "Courier 10 Pitch",Courier,monospace;
+	font-size: 14px;
+	line-height: 1.4;
+	white-space: pre-wrap;
 }
 
 pre, code, kbd, var, samp, tt {
@@ -290,22 +297,32 @@ li > ol {
 
 /* =BLOCKQUOTE
 ----------------------------------------------- */
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
 	padding: 30px 30px 20px 50px;
 	margin-bottom: 20px;
 	background-color: #77CC6D;
 	color: #FFFFFF;
 	border-radius: 5px;
+	border-left: 0;
 }
 
-blockquote p {
+blockquote p,
+.wp-block-quote p,
+.wp-block-quote.is-style-large p,
+.wp-block-quote.has-text-align-right p {
 	font-size: 22px;
 	font-family: 'Roboto Slab';
 	line-height: 1.4;
 	position: relative;
 }
 
-blockquote p:before {
+blockquote p::before,
+.wp-block-quote p::before,
+.wp-block-quote.is-style-large p::before,
+.wp-block-quote.has-text-align-right p::before {
 	content: "\f10d";
 	font-family: FontAwesome;
 	font-style: normal;
@@ -318,20 +335,41 @@ blockquote p:before {
 	left: -30px;
 }
 
-blockquote em, blockquote i, blockquote cite {
+blockquote em,
+blockquote i,
+blockquote cite,
+.wp-block-quote em,
+.wp-block-quote i,
+.wp-block-quote cite,
+.wp-block-quote.is-style-large em,
+.wp-block-quote.is-style-large i,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right em,
+.wp-block-quote.has-text-align-right i,
+.wp-block-quote.has-text-align-right cite {
 	font-style: normal;
 }
 
-blockquote cite {
+blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right cite {
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	float: right;
 }
 
-blockquote a {
+blockquote a,
+.wp-block-quote a,
+.wp-block-quote.is-style-large a,
+.wp-block-quote.has-text-align-right a {
 	color: #ffffff;
 	text-decoration: underline;
+}
+
+blockquote.wp-block-quote.has-text-align-right {
+	border-right: 0;
 }
 
 blockquote a:hover {
@@ -561,6 +599,7 @@ img#wpstats {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 /*****************************************************************/
@@ -2215,8 +2254,24 @@ a#scroll-up:hover {
 	padding-left: 4%;
 }
 
+ul.blocks-gallery-grid,
 ul.wp-block-gallery {
 	padding: 0;
+}
+
+ul.blocks-gallery-grid img,
+ul.wp-block-gallery img {
+	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
 }
 
 /* =POST META

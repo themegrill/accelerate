@@ -2180,9 +2180,9 @@ a#scroll-up:hover {
 
 .no-sidebar-full-width #primary .entry-content > .alignwide,
 .no-sidebar #primary .entry-content > .alignwide {
-	margin-left: -100px;
-	margin-right: -100px;
-	max-width: unset;
+	margin-left: 0px;
+	margin-right: px;
+	width: unset;
 }
 
 .no-sidebar-full-width.boxed #main,

@@ -254,6 +254,11 @@
 	border-right: 0;
 }
 
+.wp-block-code .block-editor-plain-text {
+	background: #ffffff;
+	border: none;
+}
+
 /* Forms */
 .editor-styles-wrapper input[type="text"],
 .editor-styles-wrapper input[type="email"],
@@ -393,6 +398,11 @@
 	max-width: 100%;
 }
 
+.wp-block-image figcaption {
+	margin-top: 1.6em;
+	margin-bottom: 1em;
+}
+
 .editor-styles-wrapper .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 1.2% auto 0;
@@ -480,7 +490,7 @@
 	padding-top: 5px;
 }
 
-.wp-block-html .block-editor-plain-text {
+.wp-block .wp-block-html textarea.block-editor-plain-text {
 	background: #ffffff;
 	border: none;
 }

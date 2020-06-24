@@ -2182,6 +2182,15 @@ a#scroll-up:hover {
 .no-sidebar #primary .entry-content > .alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
+	max-width: unset;
+	width: unset;
+}
+
+.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
+.no-sidebar.boxed #primary .entry-content > .alignwide {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: unset;
 	width: unset;
 }
 
@@ -2860,11 +2869,6 @@ iframe#wp-custom-header-video {
 		width: 57%;
 	}
 
-	.no-sidebar-full-width #primary .entry-content > .alignwide,
-	.no-sidebar #primary .entry-content > .alignwide {
-		margin-left: 100px;
-		margin-right: 100px;
-	}
 	.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
 	.no-sidebar.boxed #primary .entry-content > .alignwide {
 		margin-left: 0;

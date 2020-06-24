@@ -209,7 +209,7 @@ function accelerate_body_class( $classes ) {
 	if ( accelerate_options( 'accelerate_site_layout', 'wide' ) == 'wide' ) {
 		$classes[] = 'wide';
 	} elseif ( accelerate_options( 'accelerate_site_layout', 'wide' ) == 'box' ) {
-		$classes[] = 'box';
+		$classes[] = 'boxed';
 	}
 
 	return $classes;

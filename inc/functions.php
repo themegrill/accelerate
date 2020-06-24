@@ -78,7 +78,7 @@ function accelerate_scripts_styles_method() {
 }
 
 function accelerate_block_editor_styles() {
-	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto' );
+	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400' );
 	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
 }
 

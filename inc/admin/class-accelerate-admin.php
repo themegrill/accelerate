@@ -183,7 +183,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 				<div class="accelerate-message-wrapper">
 					<div class="accelerate-logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/accelerate-logo.png" alt="<?php esc_html_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+						<img src="<?php echo esc_url ( get_template_directory_uri() ); ?>/img/accelerate-logo.png" alt="<?php esc_html_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 					</div>
 
 					<p>

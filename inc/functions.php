@@ -77,6 +77,13 @@ function accelerate_scripts_styles_method() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );
 }
 
+function accelerate_block_editor_styles() {
+	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400' );
+	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'accelerate_block_editor_styles', 1, 1 );
+
 /****************************************************************************************/
 
 add_filter( 'excerpt_length', 'accelerate_excerpt_length' );
@@ -202,7 +209,7 @@ function accelerate_body_class( $classes ) {
 	if ( accelerate_options( 'accelerate_site_layout', 'wide' ) == 'wide' ) {
 		$classes[] = 'wide';
 	} elseif ( accelerate_options( 'accelerate_site_layout', 'wide' ) == 'box' ) {
-		$classes[] = '';
+		$classes[] = 'boxed';
 	}
 
 	return $classes;
@@ -364,7 +371,7 @@ if ( ! function_exists( 'accelerate_darkcolor' ) ) :
 	 */
 	function accelerate_darkcolor( $hex, $steps ) {
 		// Steps should be between -255 and 255. Negative = darker, positive = lighter
-		$steps = max( - 255, min( 255, $steps ) );
+		$steps = max( -255, min( 255, $steps ) );
 
 		// Normalize into a six character long hex string
 		$hex = str_replace( '#', '', $hex );
@@ -396,7 +403,7 @@ function accelerate_custom_css() {
 	$accelerate_internal_css = '';
 
 	$primary_color = accelerate_options( 'accelerate_primary_color', '#77CC6D' );
-	$primary_dark  = accelerate_darkcolor( $primary_color, - 50 );
+	$primary_dark  = accelerate_darkcolor( $primary_color, -50 );
 	if ( $primary_color != '#77CC6D' ) {
 		$accelerate_internal_css .= ' .accelerate-button,blockquote,button,input[type=button],input[type=reset],input[type=submit]{background-color:' . $primary_color . '}a{color:' . $primary_color . '}#page{border-top:3px solid ' . $primary_color . '}#site-title a:hover{color:' . $primary_color . '}#search-form span,.main-navigation a:hover,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor a,.main-navigation ul li.current-menu-item a,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current_page_ancestor a,.main-navigation ul li.current_page_item a,.main-navigation ul li:hover>a,.main-small-navigation li:hover > a{background-color:' . $primary_color . '}.site-header .menu-toggle:before{color:' . $primary_color . '}.main-small-navigation li:hover{background-color:' . $primary_color . '}.main-small-navigation ul>.current-menu-item,.main-small-navigation ul>.current_page_item{background:' . $primary_color . '}.footer-menu a:hover,.footer-menu ul li.current-menu-ancestor a,.footer-menu ul li.current-menu-item a,.footer-menu ul li.current_page_ancestor a,.footer-menu ul li.current_page_item a,.footer-menu ul li:hover>a{color:' . $primary_color . '}#featured-slider .slider-read-more-button,.slider-title-head .entry-title a{background-color:' . $primary_color . '}a.slide-prev,a.slide-next,.slider-title-head .entry-title a{background-color:' . $primary_color . '}#controllers a.active,#controllers a:hover{background-color:' . $primary_color . ';color:' . $primary_color . '}.format-link .entry-content a{background-color:' . $primary_color . '}#secondary .widget_featured_single_post h3.widget-title a:hover,.widget_image_service_block .entry-title a:hover{color:' . $primary_color . '}.pagination span{background-color:' . $primary_color . '}.pagination a span:hover{color:' . $primary_color . ';border-color:' . $primary_color . '}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover{color:' . $primary_color . '}.comments-area .comment-author-link span{background-color:' . $primary_color . '}#wp-calendar #today,.comment .comment-reply-link:hover,.nav-next a,.nav-previous a{color:' . $primary_color . '}.widget-title span{border-bottom:2px solid ' . $primary_color . '}#secondary h3 span:before,.footer-widgets-area h3 span:before{color:' . $primary_color . '}#secondary .accelerate_tagcloud_widget a:hover,.footer-widgets-area .accelerate_tagcloud_widget a:hover{background-color:' . $primary_color . '}.footer-widgets-area a:hover{color:' . $primary_color . '}.footer-socket-wrapper{border-top:3px solid ' . $primary_color . '}.footer-socket-wrapper .copyright a:hover{color:' . $primary_color . '}a#scroll-up{background-color:' . $primary_color . '}.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,.post .entry-title a:hover{color:' . $primary_color . '}.entry-meta .post-format i{background-color:' . $primary_color . '}.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,.main-navigation li.menu-item-has-children:hover,.entry-meta .tag-links a:hover{color:' . $primary_color . '}.more-link span,.read-more{background-color:' . $primary_color . '}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce span.onsale {background-color: ' . $primary_color . ';}.woocommerce ul.products li.product .price .amount,.entry-summary .price .amount,.woocommerce .woocommerce-message::before{color: ' . $primary_color . ';},.woocommerce .woocommerce-message { border-top-color: ' . $primary_color . ';}';
 	}

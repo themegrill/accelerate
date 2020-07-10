@@ -4,8 +4,8 @@ Theme URI: https://themegrill.com/themes/accelerate/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Accelerate is multipurpose WordPress theme made for simplicity and ease of use. This theme is a piece of art that has this premium look and feel which will make your site stand out. Supports all post formats. Accelerate can be used for portfolio, business, blog, personal, travel, corporate, business services or any other kinds of sites. Get free support in https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/accelerate/
-Version: 1.4.5
-Tested up to: 5.4.1
+Version: 1.4.6
+Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -79,7 +79,9 @@ th {
 	font-weight: bold;
 }
 
-th, td {
+th, td,
+.wp-block-table th,
+.wp-block-table td {
 	border: 1px solid #EAEAEA;
 	padding: 6px 10px;
 }
@@ -176,7 +178,8 @@ h6 {
 	line-height: 25px;
 }
 
-hr {
+hr,
+.wp-block-separator {
 	border-color: #EAEAEA;
 	border-style: solid none none;
 	border-width: 1px 0 0;
@@ -213,6 +216,10 @@ pre {
 	overflow: auto;
 	padding: 20px;
 	border: 1px solid #EAEAEA;
+	font-family: "Courier 10 Pitch",Courier,monospace;
+	font-size: 14px;
+	line-height: 1.4;
+	white-space: pre-wrap;
 }
 
 pre, code, kbd, var, samp, tt {
@@ -290,22 +297,32 @@ li > ol {
 
 /* =BLOCKQUOTE
 ----------------------------------------------- */
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
 	padding: 30px 30px 20px 50px;
 	margin-bottom: 20px;
 	background-color: #77CC6D;
 	color: #FFFFFF;
 	border-radius: 5px;
+	border-left: 0;
 }
 
-blockquote p {
+blockquote p,
+.wp-block-quote p,
+.wp-block-quote.is-style-large p,
+.wp-block-quote.has-text-align-right p {
 	font-size: 22px;
 	font-family: 'Roboto Slab';
 	line-height: 1.4;
 	position: relative;
 }
 
-blockquote p:before {
+blockquote p::before,
+.wp-block-quote p::before,
+.wp-block-quote.is-style-large p::before,
+.wp-block-quote.has-text-align-right p::before {
 	content: "\f10d";
 	font-family: FontAwesome;
 	font-style: normal;
@@ -318,20 +335,41 @@ blockquote p:before {
 	left: -30px;
 }
 
-blockquote em, blockquote i, blockquote cite {
+blockquote em,
+blockquote i,
+blockquote cite,
+.wp-block-quote em,
+.wp-block-quote i,
+.wp-block-quote cite,
+.wp-block-quote.is-style-large em,
+.wp-block-quote.is-style-large i,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right em,
+.wp-block-quote.has-text-align-right i,
+.wp-block-quote.has-text-align-right cite {
 	font-style: normal;
 }
 
-blockquote cite {
+blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right cite {
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	float: right;
 }
 
-blockquote a {
+blockquote a,
+.wp-block-quote a,
+.wp-block-quote.is-style-large a,
+.wp-block-quote.has-text-align-right a {
 	color: #ffffff;
 	text-decoration: underline;
+}
+
+blockquote.wp-block-quote.has-text-align-right {
+	border-right: 0;
 }
 
 blockquote a:hover {
@@ -561,6 +599,7 @@ img#wpstats {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 /*****************************************************************/
@@ -1833,10 +1872,6 @@ a.slide-next:hover {
 	color: #77CC6D;
 }
 
-#wp-calendar caption {
-	text-align: center;
-}
-
 #wp-calendar #next {
 	padding-right: 35px;
 	text-align: right;
@@ -2129,22 +2164,51 @@ a#scroll-up:hover {
 	overflow: hidden;
 }
 
-.no-sidebar-full-width .alignfull,
-.no-sidebar .alignfull {
+/* Gutenberg Alignment */
+.no-sidebar-full-width #primary .entry-content > .alignfull,
+.no-sidebar #primary .entry-content > .alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-width: unset;
 }
 
-.no-sidebar-full-width .alignwide,
-.no-sidebar .alignwide {
+.no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover-image,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {
+	width: unset;
+}
+
+.no-sidebar-full-width #primary .entry-content > .alignwide,
+.no-sidebar #primary .entry-content > .alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
 	max-width: unset;
+	width: unset;
 }
 
-.no-sidebar-full-width .alignfull img,
-.no-sidebar .alignfull img {
+.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
+.no-sidebar.boxed #primary .entry-content > .alignwide {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: unset;
+	width: unset;
+}
+
+.no-sidebar-full-width.boxed #main,
+.no-sidebar.boxed #main {
+	overflow: hidden;
+}
+
+.no-sidebar-full-width.boxed #primary .entry-content > .alignfull,
+.no-sidebar.boxed #primary .entry-content > .alignfull {
+	margin-left: -40px;
+	margin-right: -40px;
+}
+
+.no-sidebar-full-width.boxed #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width.boxed #primary .entry-content > .alignfull.wp-block-cover-image,
+.no-sidebar.box #primary .entry-content > .alignfull.wp-block-cover,
+.no-sidebar.box #primary .entry-content > .alignfull.wp-block-cover-image {
+	width: unset;
 	max-width: unset;
 }
 
@@ -2219,8 +2283,24 @@ a#scroll-up:hover {
 	padding-left: 4%;
 }
 
+ul.blocks-gallery-grid,
 ul.wp-block-gallery {
 	padding: 0;
+}
+
+ul.blocks-gallery-grid img,
+ul.wp-block-gallery img {
+	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
 }
 
 /* =POST META
@@ -2468,6 +2548,21 @@ iframe#wp-custom-header-video {
 	}
 }
 
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+	.no-sidebar #primary .entry-content > .alignfull {
+		margin-left: -100px;
+		margin-right: -100px;
+	}
+}
+
 @media screen and (max-width: 1190px) {
 	#page {
 		width: 97%;
@@ -2528,6 +2623,26 @@ iframe#wp-custom-header-video {
 		padding: 0 0 10px 0;
 		float: none;
 		text-align: center;
+	}
+
+	.no-sidebar-full-width #primary .entry-content > .alignwide,
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
+	.no-sidebar.boxed #primary .entry-content > .alignwide {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.no-sidebar-full-width.boxed #primary .entry-content > .alignfull,
+	.no-sidebar.boxed #primary .entry-content > .alignfull {
+		margin-left: -40px;
+		margin-right: -40px;
+	}
+	.no-sidebar #primary .entry-content > .alignfull {
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 
 	.widget_recent_work .tg-one-fourth {
@@ -2752,6 +2867,13 @@ iframe#wp-custom-header-video {
 
 	#header-right-sidebar .searchform {
 		width: 57%;
+	}
+
+	.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
+	.no-sidebar.boxed #primary .entry-content > .alignwide {
+		margin-left: 0;
+		margin-right: 0;
+		width: unset;
 	}
 
 	#featured-slider .slider-title-head .entry-title a {

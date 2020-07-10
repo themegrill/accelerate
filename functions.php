@@ -74,8 +74,14 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		// Supporting title tag via add_theme_support (since WordPress 4.1)
 		add_theme_support( 'title-tag' );
 
-		// Gutenberg layout support.
+		// Gutenberg align wide layout support.
 		add_theme_support( 'align-wide' );
+
+		// Gutenberg block layout support.
+		add_theme_support( 'wp-block-styles' );
+
+		// Gutenberg editor support.
+		add_theme_support( 'responsive-embeds' );
 
 		// Added WooCommerce support.
 		add_theme_support( 'woocommerce' );
@@ -180,7 +186,7 @@ define( 'ACCELERATE_ADMIN_JS_URL', ACCELERATE_ADMIN_URL . '/js' );
 define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 
 // Theme version.
-$accelerate_theme = wp_get_theme();
+$accelerate_theme = wp_get_theme('accelerate');
 define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 

@@ -565,7 +565,7 @@ if ( ! function_exists( 'accelerate_footer_copyright' ) ) :
 	function accelerate_footer_copyright() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
 
-		$wp_link = '<a href="' . esc_url( 'http://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'accelerate' ) . '"><span>' . __( 'WordPress', 'accelerate' ) . '</span></a>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'accelerate' ) . '"><span>' . __( 'WordPress', 'accelerate' ) . '</span></a>';
 
 		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/accelerate' ) . '" target="_blank" title="' . esc_attr__( 'ThemeGrill', 'accelerate' ) . '" rel="author"><span>' . __( 'ThemeGrill', 'accelerate' ) . '</span></a>';
 

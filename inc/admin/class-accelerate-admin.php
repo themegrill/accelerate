@@ -42,6 +42,34 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 			wp_localize_script( 'accelerate-plugin-install-helper', 'accelerateRedirectDemoPage', $welcome_data );
 		}
 
+		/**
+		 * Show welcome notice.
+		 */
+		public function welcome_notice() {
+			?>
+			<div id="message" class="updated accelerate-message">
+				<a class="accelerate-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'accelerate-hide-notice', 'welcome' ) ), 'accelerate_hide_notices_nonce', '_accelerate_notice_nonce' ) ); ?>">
+					<?php esc_html_e( 'Dismiss', 'accelerate' ); ?>
+				</a>
+
+				<div class="accelerate-message-wrapper">
+					<div class="accelerate-logo">
+						<img src="<?php echo esc_url ( get_template_directory_uri() ); ?>/img/accelerate-logo.png" alt="<?php esc_html_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					</div>
+
+					<p>
+						<?php printf( esc_html__( 'Welcome! Thank you for choosing Accelerate! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'accelerate' ), '<a href="' . esc_url( admin_url( 'themes.php?page=accelerate-options' ) ) . '">', '</a>' ); ?>
+
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button below will install and activate the ThemeGrill demo importer plugin.', 'accelerate' ); ?></span>
+					</p>
+
+					<div class="submit">
+						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?>"><?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?></a>
+					</div>
+				</div>
+			</div>
+			<?php
+		}
 	}
 
 endif;

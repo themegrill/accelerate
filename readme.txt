@@ -13,11 +13,6 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
-* Images in the screenshot is from http://pixabay.com/ link:
-	http://pixabay.com/en/orange-fruit-office-287179/
-	http://pixabay.com/en/pretty-girls-happy-young-smiling-351884/
-	http://pixabay.com/en/girl-pose-sitting-smile-cute-344322/
-	http://pixabay.com/en/girl-firefly-fairy-tales-354579/
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * The script jquery.cycle.all.js is dual licensed under GPL & MIT
 * TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
@@ -49,9 +44,16 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
-* Feature - Support for Elementor.
+= TBD =
+* Enhancement - Update http protocol to https to prevent not secure issue.
 * Tweak   - Add and improve theme-related notices.
+
+= Version 1.4.6 - 2020-07-01 =
+* Feature - Support for Elementor.
+* Add     - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Enhancement - Gutenberg compatibility.
+* Tweak   - Add review notice message.
+* Remove - Unrequired deprecated demo config for theme demo lists
 
 = Version 1.4.5 - 2020-02-27 =
 * Tweak - Refactor theme page according to WordPress theme guidelines

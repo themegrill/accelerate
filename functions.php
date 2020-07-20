@@ -74,8 +74,14 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		// Supporting title tag via add_theme_support (since WordPress 4.1)
 		add_theme_support( 'title-tag' );
 
-		// Gutenberg layout support.
+		// Gutenberg align wide layout support.
 		add_theme_support( 'align-wide' );
+
+		// Gutenberg block layout support.
+		add_theme_support( 'wp-block-styles' );
+
+		// Gutenberg editor support.
+		add_theme_support( 'responsive-embeds' );
 
 		// Added WooCommerce support.
 		add_theme_support( 'woocommerce' );
@@ -179,6 +185,9 @@ define( 'ACCELERATE_ADMIN_IMAGES_URL', ACCELERATE_ADMIN_URL . '/images' );
 define( 'ACCELERATE_ADMIN_JS_URL', ACCELERATE_ADMIN_URL . '/js' );
 define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 
+// Theme version.
+$accelerate_theme = wp_get_theme('accelerate');
+define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 /** Load functions */
 require_once( ACCELERATE_INCLUDES_DIR . '/custom-header.php' );
@@ -198,13 +207,6 @@ require_once( ACCELERATE_WIDGETS_DIR . '/widgets.php' );
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
 	require_once( ACCELERATE_INCLUDES_DIR . '/elementor/elementor.php' );
 }
-
-/**
- * Assign the Accelerate version to a variable.
- */
-$accelerate_theme = wp_get_theme( 'accelerate' );
-
-define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.

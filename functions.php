@@ -189,7 +189,6 @@ define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 $accelerate_theme = wp_get_theme('accelerate');
 define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
-
 /** Load functions */
 require_once( ACCELERATE_INCLUDES_DIR . '/custom-header.php' );
 require_once( ACCELERATE_INCLUDES_DIR . '/functions.php' );
@@ -210,18 +209,15 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
 }
 
 /**
- * Assign the Accelerate version to a variable.
- */
-$theme              = wp_get_theme( 'accelerate' );
-$accelerate_version = $theme['Version'];
-
-/**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-admin.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-dashboard.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-notice.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-accelerate-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-theme-review-notice.php';
 }
 

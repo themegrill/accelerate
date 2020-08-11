@@ -46,6 +46,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = TBD =
 * Enhancement - Update http protocol to https to prevent not secure issue.
+* Tweak   - Add and improve theme-related notices.
 
 = Version 1.4.6 - 2020-07-01 =
 * Feature - Support for Elementor.

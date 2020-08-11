@@ -1,0 +1,135 @@
+.appearance_page_accelerate-options .wrap {
+	margin-top: 0;
+}
+
+.appearance_page_accelerate-options .wrap .accelerate-header {
+	background-color: #fff;
+	padding: 12px 20px;
+	border-bottom: 1px solid #ccd0d4;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+/**
+ * Notices.
+ */
+.accelerate-notice {
+	position: relative;
+	padding: 6px 40px 6px 12px;
+}
+
+.accelerate-notice .links {
+	margin: 0.5em 0;
+}
+
+.accelerate-notice .links a {
+	margin: 2px;
+}
+
+.accelerate-notice .links a > span {
+	vertical-align: middle;
+}
+
+.accelerate-notice .notice-text .coupon-code {
+	display: inline-block;
+}
+
+.accelerate-notice .notice-dismiss {
+	text-decoration: none;
+}
+
+/**
+ * Welcome notice.
+ */
+.accelerate-message__content {
+	display: flex;
+	align-items: center;
+}
+
+.accelerate-message__content .accelerate-message__image {
+	flex: 0 0 160px;
+	min-height: 100px;
+	margin-right: 12px;
+	padding-right: 12px;
+	border-right: 1px solid #FCFCFD;
+}
+
+.accelerate-message__content .accelerate-message__image .accelerate-screenshot {
+	width: 100%;
+	box-shadow: 0 0 1px 0 #ccd0d4;
+	margin: 0;
+	float: none;
+}
+
+.accelerate-message__content .accelerate-message__heading {
+	margin-top: 0;
+	margin-bottom: 12px;
+	line-height: 1.4;
+}
+
+.accelerate-message__content .accelerate-message__cta {
+	display: flex;
+	align-items: center;
+}
+
+.accelerate-message__content .accelerate-message__cta .plugin-install-notice {
+	margin-left: 15px;
+	line-height: 1.4;
+}
+
+.accelerate-message__content .accelerate-message__cta a:before {
+	margin: 5px;
+	vertical-align: middle;
+}
+
+a.accelerate-message-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px 15px 10px 21px;
+	font-size: 13px;
+	line-height: 1.23076923;
+	text-decoration: none;
+}
+
+a.accelerate-message-close:before {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+@media screen and (max-width: 782px) {
+	.accelerate-message__image {
+		display: none;
+	}
+}
+
+/**
+ * Dashboard page.
+ */
+.wrap .accelerate-header {
+	background-color: #fff;
+	padding: 12px 20px;
+	border-bottom: 1px solid #ccd0d4;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.appearance_page_accelerate-options .wrap {
+	margin-top: 0;
+}
+
+/**
+ * Responsive.
+ */
+@media (max-width: 600px) {
+	.accelerate-message__content .accelerate-screenshot {
+		display: none;
+	}
+	.accelerate-message__content .accelerate-message__text {
+		padding: 0;
+		width: 100%;
+	}
+}

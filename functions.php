@@ -213,7 +213,6 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
  */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-admin.php';
-	require get_template_directory() . '/inc/admin/class-accelerate-tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-notice.php';
 	require get_template_directory() . '/inc/admin/class-accelerate-welcome-notice.php';
@@ -222,12 +221,6 @@ if ( is_admin() ) {
 }
 
 include_once ABSPATH . 'wp-admin/includes/plugin.php';
-
-/**
- * Load TGMPA Configs.
- */
-require_once( ACCELERATE_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( ACCELERATE_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-accelerate.php' );
 
 /**
  * Load Jetpack compatibility file.

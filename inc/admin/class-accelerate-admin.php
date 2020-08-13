@@ -54,7 +54,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 
 				<div class="accelerate-message-wrapper">
 					<div class="accelerate-logo">
-						<img src="<?php echo esc_url ( get_template_directory_uri() ); ?>/img/accelerate-logo.png" alt="<?php esc_html_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+						<img src="<?php echo esc_url ( get_template_directory_uri() ); ?>/img/accelerate-logo.png" alt="<?php esc_attr_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 					</div>
 
 					<p>
@@ -64,7 +64,7 @@ if ( ! class_exists( 'Accelerate_admin' ) ) :
 					</p>
 
 					<div class="submit">
-						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?>"><?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?></a>
+						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_attr_e( 'Get started with Accelerate', 'accelerate' ); ?>"><?php esc_html_e( 'Get started with Accelerate', 'accelerate' ); ?></a>
 					</div>
 				</div>
 			</div>

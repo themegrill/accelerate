@@ -413,7 +413,7 @@ function accelerate_custom_css() {
 		<style type="text/css"><?php echo $accelerate_internal_css; ?></style>
 		<?php
 	}
-	
+
 }
 
 /**************************************************************************************/

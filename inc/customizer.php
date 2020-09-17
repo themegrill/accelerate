@@ -12,7 +12,6 @@ function accelerate_customize_register( $wp_customize ) {
 	require ACCELERATE_INCLUDES_DIR . '/customize-controls/class-accelerate-upsell-section.php';
 	require ACCELERATE_INCLUDES_DIR . '/customize-controls/class-accelerate-image-radio-control.php';
 	require ACCELERATE_INCLUDES_DIR . '/customize-controls/class-accelerate-text-area-control.php';
-	require ACCELERATE_INCLUDES_DIR . '/customize-controls/class-accelerate-custom-css-control.php';
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -308,29 +307,6 @@ function accelerate_customize_register( $wp_customize ) {
 		'settings' => $accelerate_themename . '[accelerate_primary_color]',
 	) ) );
 
-	// Custom CSS setting
-	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-
-		$wp_customize->add_section( 'accelerate_custom_css_setting', array(
-			'priority' => 7,
-			'title'    => __( 'Custom CSS', 'accelerate' ),
-			'panel'    => 'accelerate_design_options',
-		) );
-
-		$wp_customize->add_setting( $accelerate_themename . '[accelerate_custom_css]', array(
-			'default'              => '',
-			'type'                 => 'option',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'wp_filter_nohtml_kses',
-			'sanitize_js_callback' => 'wp_filter_nohtml_kses',
-		) );
-
-		$wp_customize->add_control( new Accelerate_Custom_CSS_Control( $wp_customize, $accelerate_themename . '[accelerate_custom_css]', array(
-			'label'    => __( 'Write your custom css.', 'accelerate' ),
-			'section'  => 'accelerate_custom_css_setting',
-			'settings' => $accelerate_themename . '[accelerate_custom_css]',
-		) ) );
-	}
 	// End of Design Options
 
 	// Start of the Additional Options

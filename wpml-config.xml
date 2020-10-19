@@ -7,9 +7,5 @@
 			<key name="external_header_video" />
 			<key name="background_image" />
 		</key>
-		<key name="accelerate">
-			<key name="accelerate_read_more_text" />
-			<key name="accelerate_footer_editor" />
-		</key>
 	</admin-texts>
 </wpml-config>

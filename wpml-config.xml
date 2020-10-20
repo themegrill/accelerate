@@ -7,10 +7,5 @@
 			<key name="external_header_video" />
 			<key name="background_image" />
 		</key>
-		<key name="accelerate">
-			<key name="accelerate_categories" />
-			<key name="accelerate_location" />
-			<key name="accelerate_contact_page_sidebar" />
-		</key>
 	</admin-texts>
 </wpml-config>

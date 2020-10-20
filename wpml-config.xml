@@ -7,11 +7,5 @@
 			<key name="external_header_video" />
 			<key name="background_image" />
 		</key>
-		<key name="accelerate">
-			<key name="accelerate_slider_image1" />
-			<key name="accelerate_slider_image2" />
-			<key name="accelerate_slider_image3" />
-			<key name="accelerate_slider_image4" />
-		</key>
 	</admin-texts>
 </wpml-config>

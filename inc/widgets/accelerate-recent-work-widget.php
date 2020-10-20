@@ -70,6 +70,12 @@ class accelerate_recent_work_widget extends WP_Widget {
 		global $post;
 		$title = isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '';
 		$text = isset( $instance[ 'text' ] ) ? $instance[ 'text' ] : '';
+
+		// For WPML plugin compatibility
+		if ( function_exists( 'icl_register_string' ) ) {
+			icl_register_string( 'Accelerate', 'TG: Featured Widget text' . $this->id, $text );
+		}
+
 		$page_array = array();
 		for( $i=0; $i<4; $i++ ) {
 			$var = 'page_id'.$i;
@@ -86,7 +92,14 @@ class accelerate_recent_work_widget extends WP_Widget {
 		) );
 		echo $before_widget;
 		if ( !empty( $title ) ) { echo $before_title . esc_html( $title ) . $after_title; }
-		if ( !empty( $text ) ) { echo '<p>'.esc_textarea( $text ).'</p>'; }
+		if ( !empty( $text ) ) { ?>
+			<p><?php
+			// For WPML plugin compatibility
+				if ( function_exists( 'icl_t' ) ) {
+					$text = icl_t( 'Accelerate', 'TG: Featured Widget text' . $this->id, $text );
+				}
+			echo '<p>'.esc_textarea( $text ).'</p>'; ?> </p>
+		<?php }
 		$i = 1;
 		while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
 			$page_title = get_the_title();

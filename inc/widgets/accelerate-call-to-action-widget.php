@@ -78,6 +78,14 @@ class accelerate_call_to_action_widget extends WP_Widget {
 		$button_text = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
 		$button_url = isset( $instance[ 'button_url' ] ) ? $instance[ 'button_url' ] : '#';
 
+		// For WPML plugin compatibility
+		if ( function_exists( 'icl_register_string' ) ) {
+			icl_register_string( 'Accelerate', 'TG: Call to Action widget main text' . $this->id, $text_main );
+			icl_register_string( 'Accelerate', 'TG: Call to Action widget additional text' . $this->id, $text_additional );
+			icl_register_string( 'Accelerate', 'TG: Call to Action widget button text' . $this->id, $button_text );
+			icl_register_string( 'Accelerate', 'TG: Call to Action widget button redirect link' . $this->id, $button_url );
+		}
+
 		echo $before_widget;
 		?>
 		<div class="call-to-action-content-wrapper clearfix">
@@ -85,7 +93,12 @@ class accelerate_call_to_action_widget extends WP_Widget {
 				<?php
 				if( !empty( $text_main ) ) {
 					?>
-					<h3><?php echo esc_html( $text_main ); ?></h3>
+					<h3><?php
+						// For WPML plugin compatibility
+						if ( function_exists( 'icl_t' ) ) {
+							$text_main = icl_t( 'Accelerate', 'TG: Call to Action widget main text' . $this->id, $text_main );
+						}
+						echo esc_html( $text_main ); ?></h3>
 					<?php
 				}
 				if( !empty( $text_additional ) ) {

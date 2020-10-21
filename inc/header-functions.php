@@ -75,21 +75,37 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 						$image_alt                      = get_post_meta( $attachment_post_id, '_wp_attachment_image_alt', true );
 						$image_alt_text                 = ! empty( $image_alt ) ? $image_alt : $accelerate_slider_title;
 
+						// For WPML plugin compatibility
+						if ( function_exists( 'icl_register_string' ) ) {
+							icl_register_string( 'Accelerate', 'Slider Title ' . $i, $accelerate_slider_title );
+							icl_register_string( 'Accelerate', 'Slider Description ' . $i, $accelerate_slider_text );
+							icl_register_string( 'Accelerate', 'Slider Button Link ' . $i, $accelerate_slider_link );
+							icl_register_string( 'Accelerate', 'Slider Image Link ' . $i, $accelerate_slider_image );
+						}
 
 						if ( ! empty( $accelerate_header_title ) || ! empty( $accelerate_slider_text ) || ! empty( $accelerate_slider_image ) ) {
 							if ( $i == 1 ) {
-								$classes = "slides displayblock";
+								$classes = 'slides displayblock';
 							} else {
-								$classes = "slides displaynone";
+								$classes = 'slides displaynone';
 							}
 
 							if ( $accelerate_slide_text_position == 'left' ) {
-								$classes2 = "entry-container entry-container-left";
+								$classes2 = 'entry-container entry-container-left';
 							} else {
-								$classes2 = "entry-container";
+								$classes2 = 'entry-container';
 							}
 							?>
 							<div class="<?php echo $classes; ?>">
+								<?php
+								// For WPML plugin compatibility
+								if ( function_exists( 'icl_t' ) ) {
+									$accelerate_slider_title = icl_t( 'Accelerate', 'Slider Title ' . $i, $accelerate_slider_title );
+									$accelerate_slider_text  = icl_t( 'Accelerate', 'Slider Description ' . $i, $accelerate_slider_text );
+									$accelerate_slider_link  = icl_t( 'Accelerate', 'Slider Button Link ' . $i, $accelerate_slider_link );
+									$accelerate_slider_image = icl_t( 'Accelerate', 'Slider Image Link ' . $i, $accelerate_slider_image );
+								}
+								?>
 								<figure>
 									<img width="<?php echo esc_attr( $image_value[1] ); ?>" height="<?php echo esc_attr( $image_value[2] ); ?>" alt="<?php echo esc_attr( $image_alt_text ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
 								</figure>

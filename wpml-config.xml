@@ -1,0 +1,11 @@
+<wpml-config>
+	<admin-texts>
+		<key name="theme_mods_accelerate">
+			<key name="custom_logo" />
+			<key name="header_image" />
+			<key name="header_video" />
+			<key name="external_header_video" />
+			<key name="background_image" />
+		</key>
+	</admin-texts>
+</wpml-config>

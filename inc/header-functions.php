@@ -85,15 +85,15 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 
 						if ( ! empty( $accelerate_header_title ) || ! empty( $accelerate_slider_text ) || ! empty( $accelerate_slider_image ) ) {
 							if ( $i == 1 ) {
-								$classes = "slides displayblock";
+								$classes = 'slides displayblock';
 							} else {
-								$classes = "slides displaynone";
+								$classes = 'slides displaynone';
 							}
 
 							if ( $accelerate_slide_text_position == 'left' ) {
-								$classes2 = "entry-container entry-container-left";
+								$classes2 = 'entry-container entry-container-left';
 							} else {
-								$classes2 = "entry-container";
+								$classes2 = 'entry-container';
 							}
 							?>
 							<div class="<?php echo $classes; ?>">

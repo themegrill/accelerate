@@ -46,6 +46,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = Version TBD =
+* Fix   - jQuery deprecated message in some of the theme custom JS files
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
 

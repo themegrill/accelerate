@@ -28,7 +28,7 @@ if ( slides <= 1 ) {
 	jQuery( '.slide-next, .slide-prev' ).css( 'display', 'none' );
 }
 
-jQuery( window ).load( function () {
+jQuery( window ).on( 'load', function () {
 
 	if ( typeof jQuery.fn.cycle !== 'undefined' ) {
 		jQuery( '.slider-rotate' ).cycle( {

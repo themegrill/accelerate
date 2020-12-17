@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Accelerate 1.4.7\n"
+"Project-Id-Version: Accelerate 1.4.8\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-08-13 11:20:12+00:00\n"
+"POT-Creation-Date: 2020-12-17 05:34:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -279,236 +279,228 @@ msgstr ""
 msgid "No Sidebar Content Centered"
 msgstr ""
 
-#: inc/customizer.php:42
+#: inc/customizer.php:41
 msgid "View PRO version"
 msgstr ""
 
-#: inc/customizer.php:61
+#: inc/customizer.php:60
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:67
+#: inc/customizer.php:66
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:74
+#: inc/customizer.php:73
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:86
 msgid "Choose the option that you want."
 msgstr ""
 
-#: inc/customizer.php:90
+#: inc/customizer.php:89
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:90
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:91
 msgid "Show Both"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:92
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:100
+#: inc/customizer.php:99
 msgid "Header Image Position"
 msgstr ""
 
-#: inc/customizer.php:113
+#: inc/customizer.php:112
 msgid "Choose top header image display position."
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:115
 msgid "Position One: Display the Header image just above the site title/text."
 msgstr ""
 
-#: inc/customizer.php:117
+#: inc/customizer.php:116
 msgid ""
 "Position Two (Default): Display the Header image between site title/text "
 "and the main/primary menu."
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:117
 msgid "Position Three: Display the Header image below main/primary menu."
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:124
 msgid "Responsive Menu Style"
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:137
 msgid "Switch to new responsive menu."
 msgstr ""
 
-#: inc/customizer.php:148
+#: inc/customizer.php:147
 msgid "Design"
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:168
+#: inc/customizer.php:167
 msgid "Choose your site layout. The change is reflected in whole site."
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:169
 msgid "Boxed layout"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:170
 msgid "Wide layout"
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:186
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer.php:199
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, search etc. The layout for a single post and page can be "
 "controlled from below options."
 msgstr ""
 
-#: inc/customizer.php:214
+#: inc/customizer.php:213
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:227
+#: inc/customizer.php:226
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page."
 msgstr ""
 
-#: inc/customizer.php:241
+#: inc/customizer.php:240
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:254
+#: inc/customizer.php:253
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post."
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:267
 msgid "Posts page listing display type"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:280
 msgid ""
 "Choose the display type for the latests posts view or posts page view "
 "(static front page)."
 msgstr ""
 
-#: inc/customizer.php:283
+#: inc/customizer.php:282
 msgid "Large featured image"
 msgstr ""
 
-#: inc/customizer.php:284
+#: inc/customizer.php:283
 msgid "Small featured image"
 msgstr ""
 
-#: inc/customizer.php:285
+#: inc/customizer.php:284
 msgid "Small featured image with alternating sides"
 msgstr ""
 
-#: inc/customizer.php:294
+#: inc/customizer.php:293
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:306
+#: inc/customizer.php:305
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site and logo."
 msgstr ""
 
 #: inc/customizer.php:316
-msgid "Custom CSS"
-msgstr ""
-
-#: inc/customizer.php:329
-msgid "Write your custom css."
-msgstr ""
-
-#: inc/customizer.php:340
 msgid "Additional"
 msgstr ""
 
-#: inc/customizer.php:346
+#: inc/customizer.php:322
 msgid "Author Bio Option"
 msgstr ""
 
-#: inc/customizer.php:359
+#: inc/customizer.php:335
 msgid "Check to display the author bio."
 msgstr ""
 
-#: inc/customizer.php:367
+#: inc/customizer.php:343
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:380
+#: inc/customizer.php:356
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:393
+#: inc/customizer.php:369
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:397
+#: inc/customizer.php:373
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:398
+#: inc/customizer.php:374
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:407
+#: inc/customizer.php:383
 msgid "Slider"
 msgstr ""
 
-#: inc/customizer.php:413
+#: inc/customizer.php:389
 msgid "Activate slider"
 msgstr ""
 
-#: inc/customizer.php:426
+#: inc/customizer.php:402
 msgid "Check to activate slider."
 msgstr ""
 
-#: inc/customizer.php:435
+#: inc/customizer.php:411
 msgid "Slider #%1$s"
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:424
 msgid "Upload image"
 msgstr ""
 
-#: inc/customizer.php:462
+#: inc/customizer.php:438
 msgid "Enter title for this slide"
 msgstr ""
 
-#: inc/customizer.php:476
+#: inc/customizer.php:452
 msgid "Enter description for this slide"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:467
 msgid "Slider text position."
 msgstr ""
 
-#: inc/customizer.php:495
+#: inc/customizer.php:471
 msgid "Right side"
 msgstr ""
 
-#: inc/customizer.php:496
+#: inc/customizer.php:472
 msgid "Left side"
 msgstr ""
 
-#: inc/customizer.php:509
+#: inc/customizer.php:485
 msgid "Enter link to redirect for the slide title"
 msgstr ""
 
@@ -536,60 +528,56 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/functions.php:472
+#: inc/functions.php:466
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:482
+#: inc/functions.php:476
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:486
+#: inc/functions.php:480
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:512
+#: inc/functions.php:506
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:512
+#: inc/functions.php:506
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:527
+#: inc/functions.php:521
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:530
+#: inc/functions.php:524
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:538
+#: inc/functions.php:532
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:544
+#: inc/functions.php:538
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:568
+#: inc/functions.php:564
 msgid "WordPress"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "ThemeGrill"
+#: inc/functions.php:568
+msgid "Copyright &copy; %1$s %2$s. All rights reserved."
 msgstr ""
 
-#: inc/functions.php:572
-msgid "Copyright &copy; %1$s %2$s."
-msgstr ""
-
-#: inc/functions.php:572
-msgid "Powered by %s."
-msgstr ""
-
-#: inc/functions.php:572
+#: inc/functions.php:568
 msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: inc/functions.php:568
+msgid "Powered by %s."
 msgstr ""
 
 #: inc/related-posts.php:7
@@ -821,6 +809,10 @@ msgid ""
 "https://demo.themegrill.com/accelerate/"
 msgstr ""
 
+#. Author of the plugin/theme
+msgid "ThemeGrill"
+msgstr ""
+
 #. Author URI of the plugin/theme
 msgid "https://themegrill.com"
 msgstr ""
@@ -833,12 +825,12 @@ msgstr ""
 msgid "Contact Page Template"
 msgstr ""
 
-#: inc/functions.php:476 navigation.php:40
+#: inc/functions.php:470 navigation.php:40
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:477 navigation.php:41
+#: inc/functions.php:471 navigation.php:41
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""

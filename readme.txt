@@ -45,6 +45,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Update Screenshot Image.
+
 = Version 1.4.8 - 2020-12-17 =
 * Fix   - jQuery deprecated message in some of the theme custom JS files.
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.

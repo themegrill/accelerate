@@ -11,7 +11,13 @@ External resources linked to the theme.
   Apache License, version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html
 
 Resources packed within the theme.
-* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
+* Images used in the screenshot are licensed under Creative Commons Zero (CC0):
+
+  https://pxhere.com/en/photo/1458685
+  https://stocksnap.io/photo/code-coding-MRF1628S9A
+  https://pxhere.com/en/photo/915145
+  https://pxhere.com/en/photo/1451093
+  
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
@@ -47,6 +53,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = TBD =
 * Tweak - Update Screenshot Image.
+* Tweak - Update screenshot image source link.
 
 = Version 1.4.8 - 2020-12-17 =
 * Fix   - jQuery deprecated message in some of the theme custom JS files.

@@ -83,7 +83,7 @@ class Accelerate_Theme_Review_Notice {
 								/* translators: %s: Smile icon */
 								esc_html__( 'The above word is just to draw your attention. %s', 'accelerate' ),
 								'<span class="dashicons dashicons-smiley smile-icon"></span>'
-						);
+							);
 						?>
 					)</p>
 					<p>

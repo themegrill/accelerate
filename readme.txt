@@ -51,6 +51,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Search button alignment issue caused by WP 5.8.
+
 = Version 1.4.9 - 2021-05-14 =
 * Tweak - Update Screenshot Image.
 * Tweak - Update screenshot image source link.

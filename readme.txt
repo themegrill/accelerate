@@ -38,7 +38,7 @@ Accelerate is distributed under the terms of the GNU GPL
 Get theme instruction at https://docs.themegrill.com/accelerate/
 
 = Free Support =
-Get free support at https://themegrill.com/support-forum
+Get free support at https://themegrill.com/contact/
 
 = Theme Features Usage =
 All available options can be used from Appearance->Theme Options

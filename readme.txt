@@ -51,6 +51,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version 1.5.2 - 2024-04-02 =
+* Enhancement - General security measures.
+
 = Version 1.5.1 - 2023-09-18 =
 * Tweak - Updated WordPress tested upto version to 6.3.
 

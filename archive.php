@@ -31,7 +31,7 @@
 								 * what author we're dealing with (if that is the case).
 								*/
 								the_post();
-								printf( __( 'Author: %s', 'accelerate' ), '<span class="vcard">' . get_the_author() . '</span>' );
+								printf( __( 'Author: %s', 'accelerate' ), '<span class="vcard">' . esc_html( get_the_author() ) . '</span>' );
 								/* Since we called the_post() above, we need to
 								 * rewind the loop back to the beginning that way
 								 * we can run the loop properly, in full.

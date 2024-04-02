@@ -295,7 +295,7 @@ if ( ! function_exists( 'accelerate_entry_meta' ) ) :
 	function accelerate_entry_meta() {
 		echo '<div class="entry-meta">';
 		?>
-		<span class="byline"><span class="author vcard"><i class="fa fa-user"></i><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>"><?php echo esc_html( get_the_author() ); ?></a></span></span>
+		<span class="byline"><span class="author vcard"><i class="fa fa-user"></i><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a></span></span>
 		<?php
 
 		$categories_list = get_the_category_list( __( ', ', 'accelerate' ) );

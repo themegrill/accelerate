@@ -34,6 +34,8 @@ add_action( 'wp_enqueue_scripts', 'accelerate_scripts_styles_method' );
  * Register jquery scripts
  */
 function accelerate_scripts_styles_method() {
+
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	/**
 	 * Loads our main stylesheet.
 	 */
@@ -71,7 +73,46 @@ function accelerate_scripts_styles_method() {
 
 	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL . '/accelerate-custom.js', array( 'jquery' ) );
 
-	wp_enqueue_style( 'accelerate-fontawesome', get_template_directory_uri() . '/fontawesome/css/font-awesome.css', array(), '4.7.0' );
+	// Font Awesome 6.7.2.
+	$font_awesome_styles = array(
+		array(
+			'handle'  => 'font-awesome-4',
+			'file'    => '/v4-shims',
+			'version' => '4.7.0',
+		),
+		array(
+			'handle'  => 'font-awesome-all',
+			'file'    => '/all',
+			'version' => '6.7.2',
+		),
+		array(
+			'handle'  => 'font-awesome-solid',
+			'file'    => '/solid',
+			'version' => '6.7.2',
+		),
+		array(
+			'handle'  => 'font-awesome-regular',
+			'file'    => '/regular',
+			'version' => '6.7.2',
+		),
+		array(
+			'handle'  => 'font-awesome-brands',
+			'file'    => '/brands',
+			'version' => '6.7.2',
+		),
+	);
+
+	foreach ( $font_awesome_styles as $style ) {
+		wp_register_style(
+			$style['handle'],
+			get_template_directory_uri() . '/fontawesome/css' . $style['file'] . $suffix . '.css',
+			false,
+			$style['version']
+		);
+		wp_enqueue_style( $style['handle'] );
+	}
+
+//	wp_enqueue_style( 'accelerate-fontawesome', get_template_directory_uri() . '/fontawesome/css/font-awesome.css', array(), '4.7.0' );
 
 	wp_enqueue_script( 'html5shiv', ACCELERATE_JS_URL . '/html5shiv.js', array(), '3.7.3', false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );

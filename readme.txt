@@ -51,6 +51,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version 1.5.3 - 2025-06-02 =
+* Update - Fontawesome to 6.7.2.
+
 = Version 1.5.2 - 2024-04-02 =
 * Enhancement - General security measures.
 

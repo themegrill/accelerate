@@ -90,10 +90,12 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// Registering navigation menus.
-		register_nav_menus( array(
-			'primary' => __( 'Primary/Main Menu', 'accelerate' ),
-			'footer'  => __( 'Footer Menu', 'accelerate' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary/Main Menu', 'accelerate' ),
+				'footer'  => __( 'Footer Menu', 'accelerate' ),
+			)
+		);
 
 		// Cropping the images to different sizes to be used in the theme
 		add_image_size( 'featured-blog-large', 720, 300, true );
@@ -102,22 +104,31 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		add_image_size( 'featured-recent-work', 365, 365, true );
 
 		// Setup the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'accelerate_custom_background_args', array(
-			'default-color' => 'eaeaea',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'accelerate_custom_background_args',
+				array(
+					'default-color' => 'eaeaea',
+				)
+			)
+		);
 
 		// Enable support for Post Formats.
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-			'gallery',
-			'chat',
-			'audio',
-			'status',
-		) );
+		add_theme_support(
+			'post-formats',
+			array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+				'gallery',
+				'chat',
+				'audio',
+				'status',
+			)
+		);
 
 		// Adding excerpt option box for pages as well
 		add_post_type_support( 'page', 'excerpt' );
@@ -126,16 +137,20 @@ if ( ! function_exists( 'accelerate_setup' ) ) :
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
 		*/
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
-		add_theme_support( 'custom-logo',
+		add_theme_support(
+			'custom-logo',
 			array(
 				'flex-width'  => true,
 				'flex-height' => true,
@@ -186,26 +201,30 @@ define( 'ACCELERATE_ADMIN_JS_URL', ACCELERATE_ADMIN_URL . '/js' );
 define( 'ACCELERATE_ADMIN_CSS_URL', ACCELERATE_ADMIN_URL . '/css' );
 
 // Theme version.
-$accelerate_theme = wp_get_theme('accelerate');
+$accelerate_theme = wp_get_theme( 'accelerate' );
 define( 'ACCELERATE_THEME_VERSION', $accelerate_theme->get( 'Version' ) );
 
 /** Load functions */
-require_once( ACCELERATE_INCLUDES_DIR . '/custom-header.php' );
-require_once( ACCELERATE_INCLUDES_DIR . '/functions.php' );
-require_once( ACCELERATE_INCLUDES_DIR . '/customizer.php' );
-require_once( ACCELERATE_INCLUDES_DIR . '/header-functions.php' );
+require_once ACCELERATE_INCLUDES_DIR . '/custom-header.php';
+require_once ACCELERATE_INCLUDES_DIR . '/functions.php';
+require_once ACCELERATE_INCLUDES_DIR . '/customizer.php';
+require_once ACCELERATE_INCLUDES_DIR . '/header-functions.php';
 
-require_once( ACCELERATE_ADMIN_DIR . '/meta-boxes.php' );
-
+add_action(
+	'init',
+	function () {
+		require_once ACCELERATE_ADMIN_DIR . '/meta-boxes.php';
+	}
+);
 /** Load Widgets and Widgetized Area */
-require_once( ACCELERATE_WIDGETS_DIR . '/widgets.php' );
+require_once ACCELERATE_WIDGETS_DIR . '/widgets.php';
 
 
 /**
  * Add the Elementor compatibility file
  */
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
-	require_once( ACCELERATE_INCLUDES_DIR . '/elementor/elementor.php' );
+	require_once ACCELERATE_INCLUDES_DIR . '/elementor/elementor.php';
 }
 
 /**
@@ -220,7 +239,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-accelerate-theme-review-notice.php';
 }
 
-include_once ABSPATH . 'wp-admin/includes/plugin.php';
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
  * Load Jetpack compatibility file.

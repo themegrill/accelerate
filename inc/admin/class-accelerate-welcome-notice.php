@@ -32,6 +32,11 @@ class Accelerate_Welcome_Notice {
 	 * Show welcome notice.
 	 */
 	public function welcome_notice_markup() {
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		$dismiss_url = wp_nonce_url(
 			remove_query_arg( array( 'activated' ), add_query_arg( 'accelerate-hide-notice', 'welcome' ) ),
 			'accelerate_hide_notices_nonce',
@@ -43,7 +48,7 @@ class Accelerate_Welcome_Notice {
 
 			<div class="accelerate-message__content">
 				<div class="accelerate-message__image">
-					<img class="accelerate-screenshot" src="<?php echo esc_url(get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img class="accelerate-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Accelerate', 'accelerate' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 
 				<div class="accelerate-message__text">
@@ -97,6 +102,16 @@ class Accelerate_Welcome_Notice {
 	 */
 	public function welcome_notice_import_handler() {
 		check_ajax_referer( 'accelerate_demo_import_nonce', 'security' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error(
+				array(
+					'errorCode'    => 'permission_denied',
+					'errorMessage' => __( 'You do not have permission to perform this action.', 'colormag' ),
+				)
+			);
+			exit;
+		}
 
 		$state = '';
 

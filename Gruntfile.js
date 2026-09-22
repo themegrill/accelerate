@@ -31,6 +31,7 @@ module.exports = function( grunt ){
 					type: 'wp-theme',
 					domainPath: 'languages',
 					potFilename: 'accelerate.pot',
+					potComments: 'Copyright (C) {year} ThemeGrill\nThis file is distributed under the GNU General Public License, version 3 (GPLv3).',
 					potHeaders: {
 						'report-msgid-bugs-to': 'themegrill@gmail.com',
 						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
@@ -84,7 +85,12 @@ module.exports = function( grunt ){
 					'!.*/**',
 					'!Gruntfile.js',
 					'!package.json',
-					'!node_modules/**'
+					'!package-lock.json',
+					'!node_modules/**',
+					'!composer.json',
+					'!composer.lock',
+					'!phpcs.xml.dist',
+					'!vendor/**'
 				],
 				dest: 'accelerate',
 				expand: true

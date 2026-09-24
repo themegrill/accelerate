@@ -1,0 +1,19 @@
+{
+  "runner": "playwright",
+  "package_manager": "npm",
+  "install": "npm ci",
+  "command": "npx playwright test",
+  "config": "playwright.config.ts",
+  "spec_dir": "tests/e2e/specs",
+  "spec_extension": ".spec.ts",
+  "json_report": "test-results/results.json",
+  "env": {
+    "base_url": "ACCELERATE_BASE_URL",
+    "admin_user": "ACCELERATE_ADMIN_USER",
+    "admin_pass": "ACCELERATE_ADMIN_PASS"
+  },
+  "tiers": {
+    "fresh": "@fresh",
+    "demo": "@demo"
+  }
+}

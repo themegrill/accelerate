@@ -21,3 +21,12 @@ project.properties
 
 # Windows junk
 Thumbs.db
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# claudegrill local credentials
+/.themegrill-qa/.env.local

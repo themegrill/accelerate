@@ -108,6 +108,10 @@ confirmed by a maintainer — treat the order as a guess.
     template
 11. **i18n** — string translation via Polylang/WPML for strings that have a
     matching `.po` entry
+12. **homepage** — front page renders with a clean console and one h1
+    (the baseline every other flow assumes)
+13. **assets** — front-end stylesheet/script enqueues (Font Awesome, Google
+    Fonts); five overlapping Font Awesome stylesheets today, ACCELERATE-004
 
 ## Expected behaviour (live-verified 2026-09-21 — safe to treat as ground truth)
 

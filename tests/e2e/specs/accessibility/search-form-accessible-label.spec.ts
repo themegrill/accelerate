@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * @area accessibility
+ * @area search
  * @tier fresh
  * @source accelerate-free-pro-senior-dev-audit.html#ACCELERATE-011
  * @why searchform.php:11 has only a `placeholder` attribute, no <label> or
@@ -11,7 +11,7 @@ import { test, expect } from "@playwright/test";
  *      (unlike the homepage widget area, see ACCELERATE-023).
  */
 // Quarantined: ACCELERATE-011 is not fixed yet. Drop `.fixme` in the PR that fixes it.
-test.fixme("the search form input has an accessible name @accessibility @search @fresh", async ({
+test.fixme("the search form input has an accessible name @search @accessibility @fresh", async ({
   page,
 }) => {
   await page.goto("/this-page-does-not-exist-tgqa/");

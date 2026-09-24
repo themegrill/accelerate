@@ -17,25 +17,29 @@
     "demo": "@demo"
   },
   "area_paths": {
-    "accessibility": [
+    "mobile-menu": [
       "header.php",
-      "searchform.php",
-      "404.php",
-      "js/navigation.js",
-      "js/skip-link-focus-fix.js"
+      "js/navigation.js"
     ],
-    "performance": [
+    "search": [
+      "searchform.php",
+      "search.php",
+      "404.php"
+    ],
+    "assets": [
       "inc/functions.php",
       "fontawesome/**"
     ],
-    "smoke": [
+    "homepage": [
       "functions.php",
       "index.php",
       "home.php",
+      "header.php",
       "footer.php",
       "style.css",
       "inc/header-functions.php",
-      "inc/customizer.php"
+      "inc/customizer.php",
+      "js/skip-link-focus-fix.js"
     ]
   }
 }

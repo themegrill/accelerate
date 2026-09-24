@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * @area accessibility
+ * @area mobile-menu
  * @tier fresh
  * @source accelerate-free-pro-senior-dev-audit.html#ACCELERATE-021
  * @why Live-confirmed 2026-09-21 on both Free and Pro: the toggle is
@@ -12,7 +12,7 @@ import { test, expect } from "@playwright/test";
  *      expected to fail (never reached by Tab) until ACCELERATE-021 is fixed.
  */
 // Quarantined: ACCELERATE-021 is not fixed yet. Drop `.fixme` in the PR that fixes it.
-test.fixme("keyboard users can reach and open the mobile menu at narrow viewports @accessibility @mobile-menu @fresh", async ({
+test.fixme("keyboard users can reach and open the mobile menu at narrow viewports @mobile-menu @accessibility @fresh", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 812 });

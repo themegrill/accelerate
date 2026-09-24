@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * @area performance
+ * @area assets
  * @tier fresh
  * @source accelerate-free-pro-senior-dev-audit.html#ACCELERATE-004
  * @why inc/functions.php:76-113 enqueues 5 overlapping Font Awesome
@@ -12,7 +12,7 @@ import { test, expect } from "@playwright/test";
  *      should be needed.
  */
 // Quarantined: ACCELERATE-004 is not fixed yet. Drop `.fixme` in the PR that fixes it.
-test.fixme("only one Font Awesome stylesheet loads per page @performance @fresh", async ({
+test.fixme("only one Font Awesome stylesheet loads per page @assets @performance @fresh", async ({
   page,
 }) => {
   const fontAwesomeRequests: string[] = [];

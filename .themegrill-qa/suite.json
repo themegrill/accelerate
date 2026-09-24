@@ -15,5 +15,27 @@
   "tiers": {
     "fresh": "@fresh",
     "demo": "@demo"
+  },
+  "area_paths": {
+    "accessibility": [
+      "header.php",
+      "searchform.php",
+      "404.php",
+      "js/navigation.js",
+      "js/skip-link-focus-fix.js"
+    ],
+    "performance": [
+      "inc/functions.php",
+      "fontawesome/**"
+    ],
+    "smoke": [
+      "functions.php",
+      "index.php",
+      "home.php",
+      "footer.php",
+      "style.css",
+      "inc/header-functions.php",
+      "inc/customizer.php"
+    ]
   }
 }

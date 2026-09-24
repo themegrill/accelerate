@@ -27,6 +27,6 @@ test.fixme("only one Font Awesome stylesheet loads per page @performance @fresh"
 
   expect(
     fontAwesomeRequests.length,
-    `expected at most 1 Font Awesome stylesheet request, got ${fontAwesomeRequests.length}: ${fontAwesomeRequests.join(", ")} (ACCELERATE-004)`,
-  ).toBeLessThanOrEqual(1);
+    `expected exactly 1 Font Awesome stylesheet request, got ${fontAwesomeRequests.length}: ${fontAwesomeRequests.join(", ")} (ACCELERATE-004)`,
+  ).toBe(1);
 });

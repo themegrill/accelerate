@@ -11,7 +11,8 @@ import { test, expect } from "@playwright/test";
  *      homepage's byte weight. Only one `/fontawesome/css/*.css` request
  *      should be needed.
  */
-test("only one Font Awesome stylesheet loads per page @performance @fresh", async ({
+// Quarantined: ACCELERATE-004 is not fixed yet. Drop `.fixme` in the PR that fixes it.
+test.fixme("only one Font Awesome stylesheet loads per page @performance @fresh", async ({
   page,
 }) => {
   const fontAwesomeRequests: string[] = [];

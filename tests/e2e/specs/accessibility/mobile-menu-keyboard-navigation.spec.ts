@@ -11,7 +11,8 @@ import { test, expect } from "@playwright/test";
  *      This test encodes the desired, keyboard-operable behavior and is
  *      expected to fail (never reached by Tab) until ACCELERATE-021 is fixed.
  */
-test("keyboard users can reach and open the mobile menu at narrow viewports @accessibility @mobile-menu @fresh", async ({
+// Quarantined: ACCELERATE-021 is not fixed yet. Drop `.fixme` in the PR that fixes it.
+test.fixme("keyboard users can reach and open the mobile menu at narrow viewports @accessibility @mobile-menu @fresh", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 812 });

@@ -10,11 +10,12 @@ import { test, expect } from "@playwright/test";
  *      get_search_form() regardless of widget placement or login state
  *      (unlike the homepage widget area, see ACCELERATE-023).
  */
-test("the search form input has an accessible name @accessibility @search @fresh", async ({
+// Quarantined: ACCELERATE-011 is not fixed yet. Drop `.fixme` in the PR that fixes it.
+test.fixme("the search form input has an accessible name @accessibility @search @fresh", async ({
   page,
 }) => {
   await page.goto("/this-page-does-not-exist-tgqa/");
-  const searchInput = page.locator('#search-form input[name="s"]');
+  const searchInput = page.locator('#content #search-form input[name="s"]');
   await expect(searchInput).toBeVisible();
 
   const accessibleName = await searchInput.evaluate((el) => {

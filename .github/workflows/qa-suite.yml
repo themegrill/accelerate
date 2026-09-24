@@ -56,4 +56,6 @@ jobs:
       product_slug: accelerate
       product_type: theme
       scope: changed
+    secrets:
+      QA_REPO_TOKEN: ${{ secrets.QA_REPO_TOKEN }}
 

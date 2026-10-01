@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * @area homepage
+ * @area assets
  * @tier fresh
  * @guards themegrill/accelerate-pro#21
  * @source themegrill/radiate#73 (same fix); themegrill/spacious#151
@@ -13,10 +13,11 @@ import { test, expect } from "@playwright/test";
  *      off this passes regardless. Asserts no PHP notice markup anywhere in the
  *      response (it is printed inside <head>), not the absence of html5shiv.
  */
-test("front page prints no PHP notices or deprecations @homepage @smoke @fresh", async ({ page }) => {
+test("front page prints no PHP notices or deprecations @assets @smoke @fresh", async ({ page }) => {
   // Read the raw response: PHP prints the notice while wp_head() runs, before
   // <body>, so a body locator would miss it.
   const response = await page.goto("/");
+  expect(response?.ok(), `homepage returned HTTP ${response?.status()}`).toBeTruthy();
   const html = await response!.text();
   expect(html).not.toMatch(/(?:^|>|\s)(?:<b>)?(?:Deprecated|Notice|Warning|Fatal error)(?:<\/b>)?:\s/);
 });

@@ -26,8 +26,14 @@ async function addFeaturedWidget(page: Page, pageIds: number[]): Promise<string>
   expect(created.ok(), `creating the widget failed: HTTP ${created.status()}`).toBeTruthy();
   const id: string = (await created.json()).id;
   // Over HTTP the new widget lands in Inactive Widgets; assigning the sidebar is a separate update.
-  const placed = await page.request.post(`/?rest_route=/wp/v2/widgets/${id}`, { headers: { ...headers, "X-HTTP-Method-Override": "PUT" }, data: { sidebar: "accelerate_right_sidebar" } });
-  expect(placed.ok(), `placing the widget failed: HTTP ${placed.status()}`).toBeTruthy();
+  try {
+    const placed = await page.request.post(`/?rest_route=/wp/v2/widgets/${id}`, { headers: { ...headers, "X-HTTP-Method-Override": "PUT" }, data: { sidebar: "accelerate_right_sidebar" } });
+    expect(placed.ok(), `placing the widget failed: HTTP ${placed.status()}`).toBeTruthy();
+  } catch (error) {
+    // The caller never gets the id, so its cleanup cannot remove this widget.
+    await remove(page, `/wp/v2/widgets/${id}`);
+    throw error;
+  }
   return id;
 }
 

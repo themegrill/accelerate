@@ -66,7 +66,8 @@ function accelerate_scripts_styles_method() {
 		wp_enqueue_script( 'jquery-cycle2-swipe' );
 	}
 
-	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+	// Theme version, so a theme update busts cached copies (false would use the WordPress version).
+	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), ACCELERATE_THEME_VERSION, true );
 
 	// Skip link focus fix JS enqueue.
 	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );

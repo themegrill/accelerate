@@ -93,6 +93,9 @@ class accelerate_recent_work_widget extends WP_Widget {
 			if ( $i % 4 == 0 ) { $class = 'tg-one-fourth tg-one-fourth-last'.' tg-column-'.$i; }
 			elseif( $i % 3 == 0 ) { $class= 'tg-one-fourth tg-after-two-blocks-clearfix'.' tg-column-'.$i; }
 			else { $class = 'tg-one-fourth'.' tg-column-'.$i; }
+			if ( ! has_post_thumbnail() ) {
+				$class .= ' recent-work-no-image';
+			}
 			?>
 			<div class="<?php echo $class; ?>">
 				<?php

@@ -85,21 +85,6 @@ function accelerate_scripts_styles_method() {
 			'file'    => '/all',
 			'version' => '6.7.2',
 		),
-		array(
-			'handle'  => 'font-awesome-solid',
-			'file'    => '/solid',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-regular',
-			'file'    => '/regular',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-brands',
-			'file'    => '/brands',
-			'version' => '6.7.2',
-		),
 	);
 
 	foreach ( $font_awesome_styles as $style ) {

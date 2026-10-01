@@ -537,7 +537,7 @@ msgid "<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
 msgstr ""
 
 #: inc/functions.php:398
-msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
+msgid "<i class=\"fa fa-comment\"></i> 0 Comments"
 msgstr ""
 
 #: inc/functions.php:398

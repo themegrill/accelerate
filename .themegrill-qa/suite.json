@@ -40,6 +40,10 @@
       "inc/header-functions.php",
       "inc/customizer.php",
       "js/skip-link-focus-fix.js"
+    ],
+    "widgets": [
+      "inc/widgets/**",
+      "tests/e2e/utils/**"
     ]
   }
 }

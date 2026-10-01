@@ -62,15 +62,27 @@ test("the submenu caret turns up when a mobile submenu opens and back down when 
 test("a page without the primary navigation throws no script error @mobile-menu @fresh", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.addInitScript(() =>
-    new MutationObserver(() => document.getElementById("site-navigation")?.remove()).observe(document, {
+  await page.addInitScript(() => {
+    const original = Document.prototype.getElementById;
+    // The observer uses the unwrapped lookup, so only the page's own lookups are recorded below.
+    new MutationObserver(() => original.call(document, "site-navigation")?.remove()).observe(document, {
       childList: true,
       subtree: true,
-    }),
-  );
+    });
+    // Record what each lookup of the nav returned, so the test proves the script ran with it already gone.
+    const lookups: boolean[] = [];
+    (window as unknown as { tgqaNavLookups: boolean[] }).tgqaNavLookups = lookups;
+    Document.prototype.getElementById = function (id: string) {
+      const found = original.call(this, id);
+      if ("site-navigation" === id) lookups.push(null === found);
+      return found;
+    };
+  });
 
   await page.goto("/");
   await page.waitForLoadState("networkidle");
-  await expect(page.locator("#site-navigation")).toHaveCount(0);
+  const lookups = await page.evaluate(() => (window as unknown as { tgqaNavLookups: boolean[] }).tgqaNavLookups);
+  expect(lookups.length, "navigation.js never looked up #site-navigation").toBeGreaterThan(0);
+  expect(lookups.every(Boolean), "#site-navigation still existed when the script looked it up").toBe(true);
   expect(errors, "script errors on a page without #site-navigation").toEqual([]);
 });

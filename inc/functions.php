@@ -123,12 +123,65 @@ function accelerate_scripts_styles_method() {
 	}
 }
 
+/**
+ * Enqueue the block editor styles and fonts, with the Customizer primary color.
+ *
+ * Hooked on `enqueue_block_assets` because styles enqueued on `enqueue_block_editor_assets`
+ * stay outside the editor iframe, or only reach it through a path WordPress warns about.
+ */
 function accelerate_block_editor_styles() {
-	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap' );
-	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	// Same fonts as the front end. Google Fonts ignores the version, so none is added.
+	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap', array(), null );
+	// Theme version, so a theme update busts the cached editor stylesheet.
+	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css', array(), ACCELERATE_THEME_VERSION );
+
+	$editor_css = accelerate_block_editor_dynamic_css();
+
+	if ( $editor_css ) {
+		wp_add_inline_style( 'accelerate-block-editor-styles', $editor_css );
+	}
 }
 
-add_action( 'enqueue_block_editor_assets', 'accelerate_block_editor_styles', 1, 1 );
+add_action( 'enqueue_block_assets', 'accelerate_block_editor_styles' );
+
+if ( ! function_exists( 'accelerate_block_editor_dynamic_css' ) ) :
+
+	/**
+	 * Build block editor CSS from the Customizer primary color.
+	 *
+	 * Mirrors the post content rules of accelerate_custom_css(), scoped to the editor canvas.
+	 * Like the front end, the color outputs nothing while it is at its default.
+	 *
+	 * @return string Editor CSS.
+	 */
+	function accelerate_block_editor_dynamic_css() {
+		$wrapper = '.editor-styles-wrapper';
+		$screen  = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		$css     = '';
+
+		$primary_color = accelerate_options( 'accelerate_primary_color', '#77CC6D' );
+
+		if ( '#77CC6D' !== (string) $primary_color ) {
+			$primary_color = wp_strip_all_tags( $primary_color );
+
+			// The front end's `.wp-block-quote` rule beats the primary color, so only classic quotes follow it.
+			$css .= $wrapper . ' blockquote:not(.wp-block-quote), ' . $wrapper . ' input[type="reset"], ' . $wrapper . ' input[type="button"], ' . $wrapper . ' input[type="submit"] { background-color: ' . $primary_color . '; }';
+			$css .= $wrapper . ' a { color: ' . $primary_color . '; }';
+		}
+
+		// The editor title is styled as a post title; a page title is an h1 on the front end.
+		if ( $screen && 'page' === $screen->post_type ) {
+			$css .= $wrapper . ' .editor-post-title__input { font-size: 30px; line-height: 36px; }';
+		}
+
+		return $css;
+	}
+
+endif;
 
 /****************************************************************************************/
 

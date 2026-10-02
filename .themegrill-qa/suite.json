@@ -17,6 +17,11 @@
     "demo": "@demo"
   },
   "area_paths": {
+    "block-editor": [
+      "inc/functions.php",
+      "style-editor-block.css",
+      "tests/e2e/utils/**"
+    ],
     "mobile-menu": [
       "header.php",
       "js/navigation.js"

@@ -11,10 +11,10 @@
 .editor-styles-wrapper > * {
 	color: #666666;
 	font: 16px 'Roboto', sans-serif;
+	font-weight: 300;
 }
 
-.editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
-	color: #444444;
+.editor-styles-wrapper .editor-post-title__input {
 	font-size: 26px;
 	line-height: 32px;
 	font-weight: normal;
@@ -260,6 +260,16 @@
 }
 
 /* Forms */
+/* Like the front end's body, input, select, textarea rule; the editor's own code fields keep their font. */
+.editor-styles-wrapper input,
+.editor-styles-wrapper select,
+.editor-styles-wrapper textarea:not(.block-editor-plain-text) {
+	color: #666666;
+	font: 16px 'Roboto', sans-serif;
+	line-height: 20px;
+	font-weight: 300;
+}
+
 .editor-styles-wrapper input[type="text"],
 .editor-styles-wrapper input[type="email"],
 .editor-styles-wrapper input[type="search"],

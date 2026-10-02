@@ -260,10 +260,11 @@
 }
 
 /* Forms */
-/* Like the front end's body, input, select, textarea rule; the editor's own code fields keep their font. */
+/* Like the front end's body, button, input, select, textarea rule; the editor's own code fields keep their font. */
 .editor-styles-wrapper input,
 .editor-styles-wrapper select,
-.editor-styles-wrapper textarea:not(.block-editor-plain-text) {
+.editor-styles-wrapper textarea:not(.block-editor-plain-text),
+:where(.editor-styles-wrapper) button {
 	color: #666666;
 	font: 16px 'Roboto', sans-serif;
 	line-height: 20px;
@@ -302,7 +303,8 @@
 
 .editor-styles-wrapper input[type="reset"],
 .editor-styles-wrapper input[type="button"],
-.editor-styles-wrapper input[type="submit"] {
+.editor-styles-wrapper input[type="submit"],
+:where(.editor-styles-wrapper) button {
 	margin-bottom: 30px;
 	padding: 10px 20px;
 	background-color: #77CC6D;
@@ -321,8 +323,13 @@
 .editor-styles-wrapper input[type="reset"]:hover,
 .editor-styles-wrapper input[type="button"]:hover,
 .editor-styles-wrapper input[type="submit"]:hover,
-.editor-styles-wrapper button:hover {
+:where(.editor-styles-wrapper) button:hover {
 	background-color: #33363B;
+}
+
+/* The Search block button is not a <button> in the editor; on the front end it keeps the button radius. */
+:where(.editor-styles-wrapper) .wp-block-search__button {
+	border-radius: 4px;
 }
 
 /* Links */

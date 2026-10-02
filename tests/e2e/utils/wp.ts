@@ -21,7 +21,8 @@ export async function login(page: Page): Promise<void> {
   await page.locator("#user_login").fill(adminUser);
   await page.locator("#user_pass").fill(adminPass);
   await page.locator("#wp-submit").click();
-  await expect(page.locator("#wpadminbar")).toBeVisible();
+  // The dashboard can take several seconds to load on a busy site.
+  await expect(page.locator("#wpadminbar")).toBeVisible({ timeout: 30_000 });
 }
 
 /** A REST nonce for the logged-in session, so page.request can call wp/v2. */

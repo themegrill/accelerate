@@ -114,13 +114,8 @@ function accelerate_scripts_styles_method() {
 
 //	wp_enqueue_style( 'accelerate-fontawesome', get_template_directory_uri() . '/fontawesome/css/font-awesome.css', array(), '4.7.0' );
 
-	wp_enqueue_script( 'html5shiv', ACCELERATE_JS_URL . '/html5shiv.js', array(), '3.7.3', false );
-
-	// The 'conditional' data key is deprecated since WP 6.9.0 and has no effect there;
-	// only set it on older versions to keep html5shiv restricted to IE8 and below.
-	if ( version_compare( $GLOBALS['wp_version'], '6.9', '<' ) ) {
-		wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );
-	}
+	// Empty handle kept so scripts that list 'html5shiv' as a dependency still load.
+	wp_register_script( 'html5shiv', false, array(), ACCELERATE_THEME_VERSION, false );
 }
 
 function accelerate_block_editor_styles() {

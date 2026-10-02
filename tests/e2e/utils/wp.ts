@@ -59,9 +59,10 @@ export async function deletePage(page: Page, id: number): Promise<void> {
 
 /** Remove a widget through the REST API (method override, as for pages above). */
 export async function removeWidget(page: Page, id: string): Promise<void> {
-  await page.request.post(`/?rest_route=/wp/v2/widgets/${id}&force=true`, {
+  const res = await page.request.post(`/?rest_route=/wp/v2/widgets/${id}&force=true`, {
     headers: { "X-WP-Nonce": await restNonce(page), "X-HTTP-Method-Override": "DELETE" },
   });
+  expect(res.ok(), `removing test widget ${id} failed: HTTP ${res.status()}`).toBeTruthy();
 }
 
 /**
@@ -95,7 +96,8 @@ export async function addLegacyWidget(
     expect(placed.ok(), `placing the ${idBase} widget failed: HTTP ${placed.status()}`).toBeTruthy();
   } catch (error) {
     // The caller never gets the id, so its cleanup cannot remove this widget.
-    await removeWidget(page, id);
+    // A cleanup failure must not hide the placement error, which is the real cause.
+    await removeWidget(page, id).catch(() => {});
     throw error;
   }
   return id;

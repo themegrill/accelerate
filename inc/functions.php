@@ -165,9 +165,10 @@ if ( ! function_exists( 'accelerate_block_editor_dynamic_css' ) ) :
 
 		$primary_color = accelerate_options( 'accelerate_primary_color', '#77CC6D' );
 
-		if ( '#77CC6D' !== (string) $primary_color ) {
-			$primary_color = wp_strip_all_tags( $primary_color );
+		// Only a valid hex color reaches the CSS, so a stored value cannot break out of its rule.
+		$primary_color = '#77CC6D' !== (string) $primary_color ? sanitize_hex_color( $primary_color ) : '';
 
+		if ( $primary_color ) {
 			// The front end's `.wp-block-quote` rule beats the primary color, so only classic quotes follow it.
 			$css .= $wrapper . ' blockquote:not(.wp-block-quote), ' . $wrapper . ' input[type="reset"], ' . $wrapper . ' input[type="button"], ' . $wrapper . ' input[type="submit"], :where(' . $wrapper . ') button { background-color: ' . $primary_color . '; }';
 			$css .= $wrapper . ' a { color: ' . $primary_color . '; }';

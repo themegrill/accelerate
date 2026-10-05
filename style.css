@@ -480,6 +480,21 @@ button:hover {
 	background-color: #33363B;
 }
 
+/* Search block: the generic button margin above made the input 30px taller than the button,
+and Elementor pages drop core's block CSS that lays the row out, so keep that layout here. */
+.wp-block-search__inside-wrapper {
+	display: flex;
+}
+
+.wp-block-search__input {
+	flex-grow: 1;
+}
+
+.wp-block-search__button {
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+
 .previous a,
 .next a {
 	padding: 5px 0;
@@ -2988,13 +3003,15 @@ iframe#wp-custom-header-video {
 }
 
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+.wc-block-components-button.contained {
 	background-color: #32ACD5;
 	color: #fff;
 }
 
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
-.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
+.wc-block-components-button.contained:hover {
 	background-color: #33363B;
 	color: #fff;
 }

@@ -66,7 +66,8 @@ function accelerate_scripts_styles_method() {
 		wp_enqueue_script( 'jquery-cycle2-swipe' );
 	}
 
-	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+	// Theme version, so a theme update busts cached copies (false would use the WordPress version).
+	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), ACCELERATE_THEME_VERSION, true );
 
 	// Skip link focus fix JS enqueue.
 	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
@@ -83,21 +84,6 @@ function accelerate_scripts_styles_method() {
 		array(
 			'handle'  => 'font-awesome-all',
 			'file'    => '/all',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-solid',
-			'file'    => '/solid',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-regular',
-			'file'    => '/regular',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-brands',
-			'file'    => '/brands',
 			'version' => '6.7.2',
 		),
 	);
@@ -400,7 +386,7 @@ if ( ! function_exists( 'accelerate_entry_meta' ) ) :
 		}
 
 		if ( ! post_password_required() && comments_open() ) { ?>
-			<span class="comments-link"><?php comments_popup_link( __( '<i class="fa fa-comment"></i> 0 Comment', 'accelerate' ), __( '<i class="fa fa-comment"></i> 1 Comment', 'accelerate' ), __( '<i class="fa fa-comments"></i> % Comments', 'accelerate' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( '<i class="fa fa-comment"></i> 0 Comments', 'accelerate' ), __( '<i class="fa fa-comment"></i> 1 Comment', 'accelerate' ), __( '<i class="fa fa-comments"></i> % Comments', 'accelerate' ) ); ?></span>
 		<?php }
 
 		edit_post_link( __( 'Edit', 'accelerate' ), '<span class="edit-link"><i class="fa fa-edit"></i>', '</span>' );

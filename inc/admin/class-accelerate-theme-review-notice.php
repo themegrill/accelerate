@@ -180,7 +180,6 @@ class Accelerate_Theme_Review_Notice {
 	 * Remove the data set after the theme has been switched to other theme.
 	 */
 	public function review_notice_data_remove() {
-		$get_all_users        = get_users();
 		$theme_installed_time = get_option( 'accelerate_theme_installed_time' );
 
 		// Delete options data.
@@ -189,18 +188,18 @@ class Accelerate_Theme_Review_Notice {
 		}
 
 		// Delete user meta data for theme review notice.
-		foreach ( $get_all_users as $user ) {
-			$ignored_notice           = get_user_meta( $user->ID, 'accelerate_ignore_theme_review_notice', true );
-			$ignored_notice_partially = get_user_meta( $user->ID, 'nag_accelerate_ignore_theme_review_notice_partially', true );
+		$meta_keys = array( 'accelerate_ignore_theme_review_notice', 'nag_accelerate_ignore_theme_review_notice_partially' );
 
-			// Delete permanent notice remove data.
-			if ( $ignored_notice ) {
-				delete_user_meta( $user->ID, 'accelerate_ignore_theme_review_notice' );
-			}
+		foreach ( $meta_keys as $meta_key ) {
+			$user_ids = get_users(
+				array(
+					'meta_key' => $meta_key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Indexed lookup, runs once on theme switch.
+					'fields'   => 'ID',
+				)
+			);
 
-			// Delete partial notice remove data.
-			if ( $ignored_notice_partially ) {
-				delete_user_meta( $user->ID, 'nag_accelerate_ignore_theme_review_notice_partially' );
+			foreach ( $user_ids as $user_id ) {
+				delete_user_meta( $user_id, $meta_key );
 			}
 		}
 	}

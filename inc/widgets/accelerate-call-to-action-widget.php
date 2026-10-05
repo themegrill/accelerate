@@ -76,7 +76,7 @@ class accelerate_call_to_action_widget extends WP_Widget {
 		$text_main = empty( $instance['text_main'] ) ? '' : $instance['text_main'];
 		$text_additional = empty( $instance['text_additional'] ) ? '' : $instance['text_additional'];
 		$button_text = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
-		$button_url = isset( $instance[ 'button_url' ] ) ? $instance[ 'button_url' ] : '#';
+		$button_url = empty( $instance['button_url'] ) ? '#' : $instance['button_url'];
 
 		echo $before_widget;
 		?>

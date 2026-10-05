@@ -81,7 +81,7 @@ class accelerate_recent_work_widget extends WP_Widget {
 		$get_featured_pages = new WP_Query( array(
 			'posts_per_page' 			=> -1,
 			'post_type'					=>  array( 'page' ),
-			'post__in'		 			=> $page_array,
+			'post__in'		 			=> ! empty( $page_array ) ? $page_array : array( 0 ),
 			'orderby' 		 			=> 'post__in'
 		) );
 		echo $before_widget;
@@ -93,6 +93,9 @@ class accelerate_recent_work_widget extends WP_Widget {
 			if ( $i % 4 == 0 ) { $class = 'tg-one-fourth tg-one-fourth-last'.' tg-column-'.$i; }
 			elseif( $i % 3 == 0 ) { $class= 'tg-one-fourth tg-after-two-blocks-clearfix'.' tg-column-'.$i; }
 			else { $class = 'tg-one-fourth'.' tg-column-'.$i; }
+			if ( ! has_post_thumbnail() ) {
+				$class .= ' recent-work-no-image';
+			}
 			?>
 			<div class="<?php echo $class; ?>">
 				<?php

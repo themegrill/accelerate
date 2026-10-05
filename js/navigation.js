@@ -75,7 +75,8 @@ jQuery( document ).ready( function() {
 	jQuery( '#site-navigation .sub-toggle' ).click( function() {
 
 		jQuery( this ).parent( '.menu-item-has-children' ).children( 'ul.sub-menu' ).first().slideToggle( '1000' );
-		jQuery( this ).children( '.fa-caret-right' ).first().toggleClass( 'fa-caret-down' );
+		// The icon is created as fa-caret-down; swap it with fa-caret-up so it turns when opened.
+		jQuery( this ).children( '.fa' ).first().toggleClass( 'fa-caret-down fa-caret-up' );
 		jQuery( this ).toggleClass( 'active' );
 
 	} );
@@ -86,6 +87,11 @@ jQuery( document ).ready( function() {
 ( function() {
 
 	var container = document.getElementById( 'site-navigation' );
+
+	// Pages without the primary nav (e.g. Legacy Widget previews in wp-admin) have no container.
+	if ( ! container ) {
+		return;
+	}
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.

@@ -81,7 +81,7 @@ class accelerate_recent_work_widget extends WP_Widget {
 		$get_featured_pages = new WP_Query( array(
 			'posts_per_page' 			=> -1,
 			'post_type'					=>  array( 'page' ),
-			'post__in'		 			=> $page_array,
+			'post__in'		 			=> ! empty( $page_array ) ? $page_array : array( 0 ),
 			'orderby' 		 			=> 'post__in'
 		) );
 		echo $before_widget;

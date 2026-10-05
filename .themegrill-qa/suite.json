@@ -21,6 +21,7 @@
       "header.php",
       "js/navigation.js"
     ],
+    "elementor": ["inc/elementor/**", "style.css", "inc/functions.php"],
     "search": [
       "searchform.php",
       "search.php",

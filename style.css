@@ -1908,7 +1908,9 @@ a.slide-next:hover {
 
 /* =WIDGETS ICON
 ----------------------------------------------- */
-#secondary h3 span:before, .footer-widgets-area h3 span:before {
+#secondary h3 span:before,
+.footer-widgets-area h3 span:before,
+.elementor-widget-container .widget h3 span:before {
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;

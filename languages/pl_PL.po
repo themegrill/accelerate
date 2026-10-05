@@ -270,7 +270,7 @@ msgstr ""
 "<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
 
 #: inc/functions.php:285
-msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
+msgid "<i class=\"fa fa-comment\"></i> 0 Comments"
 msgstr "<i class=\"fa fa-comment\"></i> Brak komentarzy"
 
 #: inc/functions.php:285

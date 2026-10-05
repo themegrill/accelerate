@@ -17,7 +17,7 @@ Resources packed within the theme.
   https://stocksnap.io/photo/code-coding-MRF1628S9A
   https://pxhere.com/en/photo/915145
   https://pxhere.com/en/photo/1451093
-  
+
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
@@ -51,6 +51,22 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version 1.6.0 - 2026-10-06 =
+* Dev - WordPress tested up to 7.1.
+* Dev - Minimum WordPress version to 5.8 and PHP version to 7.4.
+* Dev - Remove unused Font Awesome style files and the IE8 html5shiv script.
+* Tweak  - Improve performance of the theme review notice cleanup on sites with many users.
+* Tweak  - Assets now use the theme version for cache busting, so updates load without clearing the cache.
+* Fix    - Widgets losing their styling when used inside Elementor.
+* Fix    - Submenu caret not turning when a mobile submenu is opened.
+* Fix    - Custom background hidden behind the page in the full-width layout.
+* Fix    - Image Service widget showing empty markup when no pages are selected.
+* Fix    - Recent Work widget items collapsing when a page has no featured image.
+* Fix    - JavaScript error on pages without a primary menu, such as Legacy Widget previews.
+* Fix    - Search block button and form fields not matching the front end in the block editor.
+* Fix    - PHP warnings in the slider and Call to Action widget when an image or button link is missing.
+* Fix    - Block editor typography (fonts, sizes, and colors) didn't reflect the Customizer's configured settings.
+
 = Version 1.5.4 - 2025-08-12 =
 * Enhancement - General security measures.
 

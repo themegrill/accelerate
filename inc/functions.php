@@ -66,7 +66,8 @@ function accelerate_scripts_styles_method() {
 		wp_enqueue_script( 'jquery-cycle2-swipe' );
 	}
 
-	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+	// Theme version, so a theme update busts cached copies (false would use the WordPress version).
+	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), ACCELERATE_THEME_VERSION, true );
 
 	// Skip link focus fix JS enqueue.
 	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
@@ -85,21 +86,6 @@ function accelerate_scripts_styles_method() {
 			'file'    => '/all',
 			'version' => '6.7.2',
 		),
-		array(
-			'handle'  => 'font-awesome-solid',
-			'file'    => '/solid',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-regular',
-			'file'    => '/regular',
-			'version' => '6.7.2',
-		),
-		array(
-			'handle'  => 'font-awesome-brands',
-			'file'    => '/brands',
-			'version' => '6.7.2',
-		),
 	);
 
 	foreach ( $font_awesome_styles as $style ) {
@@ -114,21 +100,70 @@ function accelerate_scripts_styles_method() {
 
 //	wp_enqueue_style( 'accelerate-fontawesome', get_template_directory_uri() . '/fontawesome/css/font-awesome.css', array(), '4.7.0' );
 
-	wp_enqueue_script( 'html5shiv', ACCELERATE_JS_URL . '/html5shiv.js', array(), '3.7.3', false );
+	// Empty handle kept so scripts that list 'html5shiv' as a dependency still load.
+	wp_register_script( 'html5shiv', false, array(), ACCELERATE_THEME_VERSION, false );
+}
 
-	// The 'conditional' data key is deprecated since WP 6.9.0 and has no effect there;
-	// only set it on older versions to keep html5shiv restricted to IE8 and below.
-	if ( version_compare( $GLOBALS['wp_version'], '6.9', '<' ) ) {
-		wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );
+/**
+ * Enqueue the block editor styles and fonts, with the Customizer primary color.
+ *
+ * Hooked on `enqueue_block_assets` because styles enqueued on `enqueue_block_editor_assets`
+ * stay outside the editor iframe, or only reach it through a path WordPress warns about.
+ */
+function accelerate_block_editor_styles() {
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	// Same fonts as the front end. Google Fonts ignores the version, so none is added.
+	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap', array(), null );
+	// Theme version, so a theme update busts the cached editor stylesheet.
+	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css', array(), ACCELERATE_THEME_VERSION );
+
+	$editor_css = accelerate_block_editor_dynamic_css();
+
+	if ( $editor_css ) {
+		wp_add_inline_style( 'accelerate-block-editor-styles', $editor_css );
 	}
 }
 
-function accelerate_block_editor_styles() {
-	wp_enqueue_style( 'accelerate-editor-googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap' );
-	wp_enqueue_style( 'accelerate-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
-}
+add_action( 'enqueue_block_assets', 'accelerate_block_editor_styles' );
 
-add_action( 'enqueue_block_editor_assets', 'accelerate_block_editor_styles', 1, 1 );
+if ( ! function_exists( 'accelerate_block_editor_dynamic_css' ) ) :
+
+	/**
+	 * Build block editor CSS from the Customizer primary color.
+	 *
+	 * Mirrors the post content rules of accelerate_custom_css(), scoped to the editor canvas.
+	 * Like the front end, the color outputs nothing while it is at its default.
+	 *
+	 * @return string Editor CSS.
+	 */
+	function accelerate_block_editor_dynamic_css() {
+		$wrapper = '.editor-styles-wrapper';
+		$screen  = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		$css     = '';
+
+		$primary_color = accelerate_options( 'accelerate_primary_color', '#77CC6D' );
+
+		// Only a valid hex color reaches the CSS, so a stored value cannot break out of its rule.
+		$primary_color = '#77CC6D' !== (string) $primary_color ? sanitize_hex_color( $primary_color ) : '';
+
+		if ( $primary_color ) {
+			// The front end's `.wp-block-quote` rule beats the primary color, so only classic quotes follow it.
+			$css .= $wrapper . ' blockquote:not(.wp-block-quote), ' . $wrapper . ' input[type="reset"], ' . $wrapper . ' input[type="button"], ' . $wrapper . ' input[type="submit"], :where(' . $wrapper . ') button { background-color: ' . $primary_color . '; }';
+			$css .= $wrapper . ' a { color: ' . $primary_color . '; }';
+		}
+
+		// The editor title is styled as a post title; a page title is an h1 on the front end.
+		if ( $screen && 'page' === $screen->post_type ) {
+			$css .= $wrapper . ' .editor-post-title__input { font-size: 30px; line-height: 36px; }';
+		}
+
+		return $css;
+	}
+
+endif;
 
 /****************************************************************************************/
 
@@ -400,7 +435,7 @@ if ( ! function_exists( 'accelerate_entry_meta' ) ) :
 		}
 
 		if ( ! post_password_required() && comments_open() ) { ?>
-			<span class="comments-link"><?php comments_popup_link( __( '<i class="fa fa-comment"></i> 0 Comment', 'accelerate' ), __( '<i class="fa fa-comment"></i> 1 Comment', 'accelerate' ), __( '<i class="fa fa-comments"></i> % Comments', 'accelerate' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( '<i class="fa fa-comment"></i> 0 Comments', 'accelerate' ), __( '<i class="fa fa-comment"></i> 1 Comment', 'accelerate' ), __( '<i class="fa fa-comments"></i> % Comments', 'accelerate' ) ); ?></span>
 		<?php }
 
 		edit_post_link( __( 'Edit', 'accelerate' ), '<span class="edit-link"><i class="fa fa-edit"></i>', '</span>' );
@@ -451,7 +486,7 @@ function accelerate_custom_css() {
 	$primary_color = accelerate_options( 'accelerate_primary_color', '#77CC6D' );
 	$primary_dark  = accelerate_darkcolor( $primary_color, -50 );
 	if ( $primary_color != '#77CC6D' ) {
-		$accelerate_internal_css .= ' .accelerate-button,blockquote,button,input[type=button],input[type=reset],input[type=submit]{background-color:' . $primary_color . '}a{color:' . $primary_color . '}#page{border-top:3px solid ' . $primary_color . '}#site-title a:hover{color:' . $primary_color . '}#search-form span,.main-navigation a:hover,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor a,.main-navigation ul li.current-menu-item a,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current_page_ancestor a,.main-navigation ul li.current_page_item a,.main-navigation ul li:hover>a,.main-small-navigation li:hover > a{background-color:' . $primary_color . '}.site-header .menu-toggle:before{color:' . $primary_color . '}.main-small-navigation li:hover{background-color:' . $primary_color . '}.main-small-navigation ul>.current-menu-item,.main-small-navigation ul>.current_page_item{background:' . $primary_color . '}.footer-menu a:hover,.footer-menu ul li.current-menu-ancestor a,.footer-menu ul li.current-menu-item a,.footer-menu ul li.current_page_ancestor a,.footer-menu ul li.current_page_item a,.footer-menu ul li:hover>a{color:' . $primary_color . '}#featured-slider .slider-read-more-button,.slider-title-head .entry-title a{background-color:' . $primary_color . '}a.slide-prev,a.slide-next,.slider-title-head .entry-title a{background-color:' . $primary_color . '}#controllers a.active,#controllers a:hover{background-color:' . $primary_color . ';color:' . $primary_color . '}.format-link .entry-content a{background-color:' . $primary_color . '}#secondary .widget_featured_single_post h3.widget-title a:hover,.widget_image_service_block .entry-title a:hover{color:' . $primary_color . '}.pagination span{background-color:' . $primary_color . '}.pagination a span:hover{color:' . $primary_color . ';border-color:' . $primary_color . '}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover{color:' . $primary_color . '}.comments-area .comment-author-link span{background-color:' . $primary_color . '}#wp-calendar #today,.comment .comment-reply-link:hover,.nav-next a,.nav-previous a{color:' . $primary_color . '}.widget-title span{border-bottom:2px solid ' . $primary_color . '}#secondary h3 span:before,.footer-widgets-area h3 span:before{color:' . $primary_color . '}#secondary .accelerate_tagcloud_widget a:hover,.footer-widgets-area .accelerate_tagcloud_widget a:hover{background-color:' . $primary_color . '}.footer-widgets-area a:hover{color:' . $primary_color . '}.footer-socket-wrapper{border-top:3px solid ' . $primary_color . '}.footer-socket-wrapper .copyright a:hover{color:' . $primary_color . '}a#scroll-up{background-color:' . $primary_color . '}.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,.post .entry-title a:hover{color:' . $primary_color . '}.entry-meta .post-format i{background-color:' . $primary_color . '}.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,.main-navigation li.menu-item-has-children:hover,.entry-meta .tag-links a:hover{color:' . $primary_color . '}.more-link span,.read-more{background-color:' . $primary_color . '}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce span.onsale {background-color: ' . $primary_color . ';}.woocommerce ul.products li.product .price .amount,.entry-summary .price .amount,.woocommerce .woocommerce-message::before{color: ' . $primary_color . ';},.woocommerce .woocommerce-message { border-top-color: ' . $primary_color . ';}';
+		$accelerate_internal_css .= ' .accelerate-button,blockquote,button,input[type=button],input[type=reset],input[type=submit]{background-color:' . $primary_color . '}a{color:' . $primary_color . '}#page{border-top:3px solid ' . $primary_color . '}#site-title a:hover{color:' . $primary_color . '}#search-form span,.main-navigation a:hover,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor a,.main-navigation ul li.current-menu-item a,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current_page_ancestor a,.main-navigation ul li.current_page_item a,.main-navigation ul li:hover>a,.main-small-navigation li:hover > a{background-color:' . $primary_color . '}.site-header .menu-toggle:before{color:' . $primary_color . '}.main-small-navigation li:hover{background-color:' . $primary_color . '}.main-small-navigation ul>.current-menu-item,.main-small-navigation ul>.current_page_item{background:' . $primary_color . '}.footer-menu a:hover,.footer-menu ul li.current-menu-ancestor a,.footer-menu ul li.current-menu-item a,.footer-menu ul li.current_page_ancestor a,.footer-menu ul li.current_page_item a,.footer-menu ul li:hover>a{color:' . $primary_color . '}#featured-slider .slider-read-more-button,.slider-title-head .entry-title a{background-color:' . $primary_color . '}a.slide-prev,a.slide-next,.slider-title-head .entry-title a{background-color:' . $primary_color . '}#controllers a.active,#controllers a:hover{background-color:' . $primary_color . ';color:' . $primary_color . '}.format-link .entry-content a{background-color:' . $primary_color . '}#secondary .widget_featured_single_post h3.widget-title a:hover,.widget_image_service_block .entry-title a:hover{color:' . $primary_color . '}.pagination span{background-color:' . $primary_color . '}.pagination a span:hover{color:' . $primary_color . ';border-color:' . $primary_color . '}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover{color:' . $primary_color . '}.comments-area .comment-author-link span{background-color:' . $primary_color . '}#wp-calendar #today,.comment .comment-reply-link:hover,.nav-next a,.nav-previous a{color:' . $primary_color . '}.widget-title span{border-bottom:2px solid ' . $primary_color . '}#secondary h3 span:before,.footer-widgets-area h3 span:before,.elementor-widget-container .widget h3 span:before{color:' . $primary_color . '}#secondary .accelerate_tagcloud_widget a:hover,.footer-widgets-area .accelerate_tagcloud_widget a:hover{background-color:' . $primary_color . '}.footer-widgets-area a:hover{color:' . $primary_color . '}.footer-socket-wrapper{border-top:3px solid ' . $primary_color . '}.footer-socket-wrapper .copyright a:hover{color:' . $primary_color . '}a#scroll-up{background-color:' . $primary_color . '}.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,.post .entry-title a:hover{color:' . $primary_color . '}.entry-meta .post-format i{background-color:' . $primary_color . '}.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,.main-navigation li.menu-item-has-children:hover,.entry-meta .tag-links a:hover{color:' . $primary_color . '}.more-link span,.read-more{background-color:' . $primary_color . '}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce span.onsale {background-color: ' . $primary_color . ';}.woocommerce ul.products li.product .price .amount,.entry-summary .price .amount,.woocommerce .woocommerce-message::before{color: ' . $primary_color . ';}.woocommerce .woocommerce-message { border-top-color: ' . $primary_color . ';}';
 	}
 
 	if ( ! empty( $accelerate_internal_css ) ) {

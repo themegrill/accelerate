@@ -64,6 +64,9 @@ class accelerate_image_service_widget extends WP_Widget {
 			if( !empty( $page_id ) )
 				array_push( $page_array, $page_id );// Push the page id in the array
 		}
+		if( empty( $page_array ) ) {
+			return;
+		}
 		$display_read_more = !empty( $instance[ 'display_read_more' ] ) ? 1 : 0;
 		$get_featured_pages = new WP_Query( array(
 			'posts_per_page' 			=> -1,

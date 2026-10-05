@@ -292,7 +292,8 @@ a.slide-prev {
 }
 
 #secondary h3 span:before,
-.footer-widgets-area h3 span:before {
+.footer-widgets-area h3 span:before,
+.elementor-widget-container .widget h3 span:before {
     padding-left: 5px;
 }
 

@@ -20,7 +20,7 @@ add_filter( 'elementor/widgets/wordpress/widget_args', 'accelerate_elementor_wid
 
 function accelerate_elementor_widget_render_filter( $args ) {
 	return array(
-		'before_widget' => '<aside class="widget ' . accelerate_widget_class_names( $args['widget_id'] ) . '">',
+		'before_widget' => '<aside class="widget ' . esc_attr( accelerate_widget_class_names( $args['widget_id'] ) ) . '">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',
 		'after_title'   => '</span></h3>',
@@ -43,6 +43,17 @@ function accelerate_widget_class_names( $widgets_id ) {
 	$classes = accelerate_widgets_classes();
 
 	$return_value = isset( $classes[ $widgets_id ] ) ? $classes[ $widgets_id ] : '';
+
+	if ( '' === $return_value ) {
+		global $wp_widget_factory;
+
+		foreach ( $wp_widget_factory->widgets as $widget ) {
+			if ( $widget->id_base === $widgets_id && ! empty( $widget->widget_options['classname'] ) ) {
+				$return_value = $widget->widget_options['classname'];
+				break;
+			}
+		}
+	}
 
 	return $return_value;
 }

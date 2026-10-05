@@ -1305,6 +1305,11 @@ a.slide-next:hover {
 	z-index: 1000;
 }
 
+/* Without a featured image the title is the item's only content: keep it in the flow so the item has a height. */
+.widget_recent_work .recent-work-no-image .recent_work_title {
+	position: static;
+}
+
 .widget_recent_work .recent_work_title .title_box {
 	text-align: center;
 }

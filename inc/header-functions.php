@@ -91,7 +91,7 @@ if ( ! function_exists( 'accelerate_featured_image_slider' ) ) :
 							?>
 							<div class="<?php echo $classes; ?>">
 								<figure>
-									<img width="<?php echo esc_attr( $image_value[1] ); ?>" height="<?php echo esc_attr( $image_value[2] ); ?>" alt="<?php echo esc_attr( $image_alt_text ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
+									<img <?php echo $image_value ? 'width="' . esc_attr( $image_value[1] ) . '" height="' . esc_attr( $image_value[2] ) . '"' : ''; ?> alt="<?php echo esc_attr( $image_alt_text ); ?>" src="<?php echo esc_url( $accelerate_slider_image ); ?>">
 								</figure>
 								<div class="<?php echo $classes2; ?>">
 									<?php if ( ! empty( $accelerate_slider_title ) || ! empty( $accelerate_slider_text ) ) { ?>

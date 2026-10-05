@@ -17,10 +17,16 @@
     "demo": "@demo"
   },
   "area_paths": {
+    "block-editor": [
+      "inc/functions.php",
+      "style-editor-block.css",
+      "tests/e2e/utils/**"
+    ],
     "mobile-menu": [
       "header.php",
       "js/navigation.js"
     ],
+    "elementor": ["inc/elementor/**", "style.css", "inc/functions.php"],
     "search": [
       "searchform.php",
       "search.php",
@@ -40,6 +46,10 @@
       "inc/header-functions.php",
       "inc/customizer.php",
       "js/skip-link-focus-fix.js"
+    ],
+    "widgets": [
+      "inc/widgets/**",
+      "tests/e2e/utils/**"
     ]
   }
 }

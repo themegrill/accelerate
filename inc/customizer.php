@@ -544,7 +544,7 @@ add_action( 'customize_register', 'accelerate_customize_register' );
  * @since Accelerate 1.3.3
  */
 function accelerate_customize_preview_js() {
-	wp_enqueue_script( 'accelerate-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+	wp_enqueue_script( 'accelerate-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), ACCELERATE_THEME_VERSION, true );
 }
 
 add_action( 'customize_preview_init', 'accelerate_customize_preview_js' );

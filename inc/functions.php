@@ -39,9 +39,9 @@ function accelerate_scripts_styles_method() {
 	/**
 	 * Loads our main stylesheet.
 	 */
-	wp_enqueue_style( 'accelerate_style', get_stylesheet_uri() );
+	wp_enqueue_style( 'accelerate_style', get_stylesheet_uri(), array(), ACCELERATE_THEME_VERSION );
 
-	wp_register_style( 'accelerate_googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap' );
+	wp_register_style( 'accelerate_googlefonts', '//fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Slab:700,400&display=swap', array(), ACCELERATE_THEME_VERSION );
 	wp_enqueue_style( 'accelerate_googlefonts' );
 
 	/**
@@ -56,7 +56,7 @@ function accelerate_scripts_styles_method() {
 	 * Register JQuery cycle js file for slider.
 	 */
 	wp_register_script( 'jquery_cycle', ACCELERATE_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
-	wp_register_script( 'jquery-cycle2-swipe', ACCELERATE_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
+	wp_register_script( 'jquery-cycle2-swipe', ACCELERATE_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), ACCELERATE_THEME_VERSION, true );
 
 	/**
 	 * Enqueue Slider setup js file.
@@ -70,9 +70,9 @@ function accelerate_scripts_styles_method() {
 	wp_enqueue_script( 'accelerate-navigation', ACCELERATE_JS_URL . '/navigation.js', array( 'jquery' ), ACCELERATE_THEME_VERSION, true );
 
 	// Skip link focus fix JS enqueue.
-	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+	wp_enqueue_script( 'accelerate-skip-link-focus-fix', ACCELERATE_JS_URL . '/skip-link-focus-fix.js', array(), ACCELERATE_THEME_VERSION, true );
 
-	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL . '/accelerate-custom.js', array( 'jquery' ) );
+	wp_enqueue_script( 'accelerate-custom', ACCELERATE_JS_URL . '/accelerate-custom.js', array( 'jquery' ), ACCELERATE_THEME_VERSION );
 
 	// Font Awesome 6.7.2.
 	$font_awesome_styles = array(

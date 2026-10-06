@@ -25,7 +25,7 @@ class accelerate_custom_tag_widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		endif;
 
-		wp_tag_cloud( 'smallest=13&largest=13px&unit=px' );
+		wp_tag_cloud( 'smallest=13&largest=13&unit=px' );
 
 		echo $after_widget;
 	}

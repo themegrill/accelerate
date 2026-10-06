@@ -90,7 +90,13 @@ module.exports = function( grunt ){
 					'!composer.json',
 					'!composer.lock',
 					'!phpcs.xml.dist',
-					'!vendor/**'
+					'!vendor/**',
+					'!tests/**',
+					'!test-results/**',
+					'!playwright-report/**',
+					'!blob-report/**',
+					'!playwright.config.ts',
+					'!pnpm-lock.yaml'
 				],
 				dest: 'accelerate',
 				expand: true

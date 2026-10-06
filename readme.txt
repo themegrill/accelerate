@@ -57,9 +57,12 @@ If you want to translate this theme to your language, Please visit:- https://tra
 * Dev - Remove unused Font Awesome style files and the IE8 html5shiv script.
 * Tweak  - Improve performance of the theme review notice cleanup on sites with many users.
 * Tweak  - Assets now use the theme version for cache busting, so updates load without clearing the cache.
+* Fix    - PHP 8 warning in the Tag widget.
 * Fix    - Widgets losing their styling when used inside Elementor.
 * Fix    - Submenu caret not turning when a mobile submenu is opened.
 * Fix    - Custom background hidden behind the page in the full-width layout.
+* Fix    - Primary color not applying to the block Cart and Checkout buttons.
+* Fix    - Search block input and button heights not matching on the front end.
 * Fix    - Image Service widget showing empty markup when no pages are selected.
 * Fix    - Recent Work widget items collapsing when a page has no featured image.
 * Fix    - JavaScript error on pages without a primary menu, such as Legacy Widget previews.
@@ -191,7 +194,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 = Version 1.2.4 =
 * Content width adjusted according to the layout choosed
 * Fontawesome icons updated to version 4.5.0
-* Removed backward compatability for WOrdPress title tag
+* Removed backward compatability for WordPress title tag
 
 = Version 1.2.3 =
 * Some fixes for better SEO.

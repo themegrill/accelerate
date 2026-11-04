@@ -33,3 +33,4 @@ get_header(); ?>
 	<?php do_action( 'accelerate_after_body_content' ); ?>
 
 <?php get_footer(); ?>
+// Pilot test: harmless change to trigger the lint workflow.
